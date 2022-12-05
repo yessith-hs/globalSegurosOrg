@@ -2,10 +2,12 @@
   <section class="post">
     <h2>Entradas Pasadas</h2>
     <div class="postWrapper">
-      <template for:each={posts} for:item="post">
-          <c-clbins-card-post key={post.key} post={post}></c-clbins-card-post>
+      <template for:each={entries} for:item="entrie">
+        <c-clbins-card-post key={entrie.key} post={entrie}></c-clbins-card-post>
       </template>
     </div>
-    <button onclick={handleGetEntries}>Cargar más</button>
+    <template if:true={hasEntries}>
+      <button onclick={nextEntries}>Cargar más</button>
+    </template>
   </section>
 </template>
