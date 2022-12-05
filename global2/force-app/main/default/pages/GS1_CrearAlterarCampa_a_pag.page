@@ -1,0 +1,243 @@
+<!-- <apex:page controller="GS1_CrearAlterarCampa_a_ctr">
+<apex:pageBlock>
+<apex:pageblocksection columns="1" id="conjutoCampos1" title="Campaña Nueva">
+<apex:form>
+<table style="margin:0 auto;">
+<apex:repeat value="{!$ObjectType.Campaign.FieldSets.Globa_Visualforce_Campa_a}" var="f" >
+<tr>
+<th>{!f.Label} </th><th Style='padding-left:5em;'> <apex:inputField value="{!ncampana[f]}" /> </th>
+</tr>
+</apex:repeat> 
+</table><br/>
+<center><apex:commandButton action="{!save}" value="Crear" style="margin:0 auto;" /></center>
+</apex:form>
+</apex:pageblocksection>
+</apex:pageBlock>
+</apex:page> -->
+
+
+
+<apex:page controller="GS1_CrearAlterarCampa_a_ctr" doctype="HTML-5.0" tabstyle="Campaign" id="idPage" lightningStylesheets="true">
+    
+    <apex:form id="form">
+        <div class="bPageBlock brandSecondaryBrd bEditBlock secondaryPalette" id="ep">
+            <apex:pageMessages />
+            <apex:actionFunction name="selectclick" action="{!ClickRight}" rerender="BoxPanel"/>
+            <apex:actionFunction name="unselectclick" action="{!ClickLeft}" rerender="BoxPanel"/>  
+            
+            <apex:pageBlock title="Modificar Campaña" id="pageBlcok">
+                
+                <apex:pageBlockButtons location="top">
+                    <apex:commandButton value="Guardar" action="{!save}"/>
+                    <apex:commandButton value="Guardar y nuevo"/>
+                    <apex:commandButton value="Cancelar"/>
+                </apex:pageBlockButtons>
+                
+                <apex:pageblocksection columns="2" id="infoCompania" title="Informacion de la compañia">
+                    
+                    <!--     <apex:inputText label="{!$Label.Gbc_CodigoCampana}" value="{!codCampain}"/>
+<apex:outputLabel /> -->
+                    
+                    <apex:selectList label="{!$Label.Gbc_Compa_ia}" size="1" value="{!compania}">
+                        <apex:selectOptions value="{!lstCompaniaCampaing}"/>
+                    </apex:selectList>
+                    <apex:inputCheckbox label="{!$Label.Gbc_Activo}" value="{!esActivo}"/>
+                    
+                    
+                    <apex:pageBlockSectionItem >
+                        {!$Label.Gbc_Nombre} <div Style="background-color: #c00;position: absolute;left: 102%;width: 1.5%;top: 15%;bottom: 15%;"/>
+                        <apex:inputText label="{!$Label.Gbc_Nombre}" value="{!nombreCampain}" required="true"/>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:inputField label="{!$Label.Gbc_Ciudad}" value="{!objContact.Ciudad__c}"/> 
+                    
+                    <apex:pageBlockSectionItem >
+                        {!$Label.Gbc_Campa_aPrincipal} <div Style="background-color: #c00;position: absolute;left: 102%;width: 1.5%;top: 15%;bottom: 85%;"/>
+                        <apex:inputField value="{!objOpportunity.CampaignId}"  required="true"/>
+                    </apex:pageBlockSectionItem>
+                    
+                    <!-- <apex:inputField value="{!objCampaign.FuerzaVentas__c}"/> -->
+                    
+                    <!-- <apex:selectList label="Fuerza de ventas" value="{!strfuerzaVenta}" multiselect="true" onfocus="getSelectedID('{!$Component.empid}');">
+<apex:selectOptions value="{!lstFuerzaVentasCampaing}"/>
+</apex:selectList> -->
+                    
+                    <!-- <apex:attribute name="aLeftLabel" description="Label on left listbox." type="String" required="true" />
+<apex:attribute name="aRightLabel" description="Label on right listbox." type="String" required="true" />
+<apex:attribute name="aSize" description="Size of listboxes." type="Integer" required="true" />
+<apex:attribute name="aWidth" description="Width of listboxes." type="String" required="true" />
+<apex:attribute name="aInitialRightList" description="Initial record Ids in right box." type="String[]" required="false" assignTo="{!InitialRightList}" />
+<apex:attribute name="aCurrentRightList" description="Current record Ids in right box." type="String[]" required="true" assignTo="{!CurrentRightList}" />   -->
+                    
+                    
+                    <apex:outputPanel id="BoxPanel">
+                        <table>
+                            <tr>
+                                <th style="width:50%" class="selectTitle">{!$Label.Gbc_FuerzaDeVentas}</th>
+                            </tr>
+                            <tr>
+                                <th style="width:50%" class="selectTitle">Disponible</th>
+                                <th style="width:30px"></th>
+                                <th style="width:50%" class="selectTitle">Seleccionado</th>
+                            </tr>
+                            <tr>
+                                <td><apex:selectList value="{!strfuerzaVenta}" multiselect="true" style="width:100%;height:200px;" id="fventas">
+                                    <apex:selectOptions value="{!lstFuerzaVentasCampaing}" />
+                                    </apex:selectList></td>
+                                
+                                <td style="vertical-align: middle;">
+                                    <div> 
+                                            <apex:image styleClass="picklistArrowRight" height="40px" width="40px" value="{!$Resource.rightArrow}">
+                                                <apex:actionSupport event="onclick" action="{!ClickRight}" reRender="idPage:form"/>
+                                            </apex:image>
+                                        <br /> <br />
+                                            <apex:image styleClass="picklistArrowLeft" height="27px" width="27px"  value="{!$Resource.leftArrow}">
+                                                <apex:actionSupport event="onclick" action="{!ClickLeft}" reRender="idPage:form" />
+                                            </apex:image>
+                                    </div>
+                                </td>
+                                
+                                <td><apex:selectList value="{!strfuerzaElegida}" multiselect="true" style="width:100%;height:200px;" id="elegido">
+                                    <apex:selectOptions value="{!lstFuerzaElegida}" />
+                                    </apex:selectList></td>
+                            </tr>
+                        </table>
+                    </apex:outputPanel>
+                    
+                    
+                    <apex:pageBlockSectionItem >
+                        {!$Label.Gbc_Estado} <div Style="background-color: #c00;position: absolute;left: 102%;width: 1.5%;top: 15%;bottom: 15%;"/>
+                        <apex:selectList label="{!$Label.Gbc_Estado}" size="1" value="{!estado}">
+                            <apex:selectOptions value="{!lstEstadosCampaing}"/>
+                        </apex:selectList>
+                    </apex:pageBlockSectionItem>
+                    <apex:outputLabel />
+                    
+                    <!-- <center>Fecha inicial  <input type="date" label="Fecha inicial" value="{!fechaini}"/><br></br><br></br> -->
+                    <apex:pageBlockSectionItem >
+                        {!$Label.Gbc_FechaInicio} <div Style="background-color: #c00;position: absolute;left: 102%;width: 1.5%;top: 15%;bottom: 15%;"/>
+                        <apex:inputField label="{!$Label.Gbc_FechaInicio}" value="{!objContact.FechaVinculacion__c}"/> 
+                    </apex:pageBlockSectionItem>
+                    <apex:outputLabel />
+                    
+                    <apex:pageBlockSectionItem >
+                        {!$Label.Gbc_FechaFinal} <div Style="background-color: #c00;position: absolute;left: 102%;width: 1.5%;top: 15%;bottom: 15%;"/>
+                        <apex:inputField label="{!$Label.Gbc_FechaFinal}" value="{!objContact.FechaDesvinculacion__c}"/> 
+                    </apex:pageBlockSectionItem>
+                    <apex:outputLabel />
+                    
+                    
+                    
+                </apex:pageblocksection>
+                
+                <apex:pageblocksection columns="2" id="infoAdicional" title="Informacion adicional">
+                    
+                    <apex:outputPanel id="BoxPanel3">
+                        <table>
+                            <tr>
+                                <th style="width:50%" class="selectTitle">{!$Label.Gbc_Tipo}</th>
+                            </tr>
+                            <tr>
+                                <th style="width:50%" class="selectTitle">Disponible</th>
+                                <th style="width:30px"></th>
+                                <th style="width:50%" class="selectTitle">Seleccionado</th>
+                            </tr>
+                            <tr>
+                                <td><apex:selectList value="{!tipo}" multiselect="true" style="width:100%;height: 200px;" id="fventasTipo">
+                                    <apex:selectOptions value="{!lstTiposCampaing}" />
+                                    </apex:selectList></td>
+                                
+                                <td style="vertical-align: middle;">
+                                    <div>
+                                        <!-- <apex:commandButton value="->" action="{!ClickRight}" reRender="idPage:form:pageBlcok:infoCompania:BoxPanel" /> -->
+                                            <apex:image styleClass="picklistArrowRight" height="40px" width="40px" value="{!$Resource.rightArrow}">
+                                                <apex:actionSupport event="onclick" action="{!ClickRightTipo}" reRender="idPage:form"/>
+                                            </apex:image>
+                                        <br /> <br />
+                                            <apex:image styleClass="picklistArrowLeft"  height="27px" width="27px"  value="{!$Resource.leftArrow}">
+                                                <apex:actionSupport event="onclick" action="{!ClickLeftTipo}" reRender="idPage:form" />
+                                            </apex:image>
+                                    </div>
+                                </td>
+                                <td><apex:selectList value="{!tipoElegido}" multiselect="true" style="width:100%;height:200px;" id="elegido2">
+                                    <apex:selectOptions value="{!lstTiposElegidos}" />
+                                    </apex:selectList></td>
+                            </tr>
+                        </table>
+                    </apex:outputPanel>
+                    
+                    <!-- <apex:selectList label="{!$Label.Gbc_Tipo}" size="1" value="{!tipo}">
+<apex:selectOptions value="{!lstTiposCampaing}"/>
+</apex:selectList> -->
+                    
+                    <!-- <apex:selectList label="{!$Label.Gbc_Producto}" value="{!strproducto}" multiselect="true">
+<apex:selectOptions value="{!lstproductosCampaing}"/>
+</apex:selectList> -->
+                    
+                    <apex:outputPanel id="BoxPanel2">
+                        <table>
+                            <tr>
+                                <th style="width:50%" class="selectTitle">{!$Label.Gbc_Producto}</th>
+                            </tr>
+                            <tr>
+                                <th style="width:50%" class="selectTitle">Disponible</th>
+                                <th style="width:30px"></th>
+                                <th style="width:50%" class="selectTitle">Seleccionado</th>
+                            </tr>
+                            <tr>
+                                <td><apex:selectList value="{!strproducto}" multiselect="true" style="width:100%;height:200px;" id="fventas">
+                                    <apex:selectOptions value="{!lstproductosCampaing}" />
+                                    </apex:selectList></td>
+                                
+                                <td style="vertical-align: middle;">
+                                    <div>
+                                        <!-- <apex:commandButton value="->" action="{!ClickRight}" reRender="idPage:form:pageBlcok:infoCompania:BoxPanel" /> -->
+                                            <apex:image styleClass="picklistArrowRight" height="40px" width="40px" value="{!$Resource.rightArrow}">
+                                                <apex:actionSupport event="onclick" action="{!ClickRightProd}" reRender="idPage:form"/>
+                                            </apex:image>
+                                        <br /> <br /> 
+                                            <apex:image styleClass="picklistArrowLeft"  height="27px" width="27px"  value="{!$Resource.leftArrow}">
+                                                <apex:actionSupport event="onclick" action="{!ClickLeftProd}" reRender="idPage:form" />
+                                            </apex:image>
+                                    </div>
+                                </td>
+                                <td><apex:selectList value="{!strproductoElegido}" multiselect="true" style="width:100%;height:200px;" id="elegido1">
+                                    <apex:selectOptions value="{!lstproductoselegidos}" />
+                                    </apex:selectList></td>
+                            </tr>
+                        </table>
+                    </apex:outputPanel>
+                    
+                    <!-- <apex:inputField value="{!objCampaign2.Producto__c}"/>-->
+                    <apex:inputTextarea label="{!$Label.Gbc_Cual}" value="{!strCual}"/>
+                    <!--     <apex:inputCheckbox label="{!$Label.Gbc_ValidoPorJuridico}" value="{!boolValidado}"/>
+<apex:selectList label="{!$Label.Gbc_CuentaMayor}" size="1" value="{!strCuentaMayor}">
+<apex:selectOptions value="{!lstCuentaMayorCampaing}"/>
+</apex:selectList> -->
+                </apex:pageblocksection>
+                
+                <apex:pageblocksection columns="1" id="descripcion" title="Descripción">
+                    <!-- <apex:inputTextarea label="Descripcion" value='{!descripcion}'/> -->
+                    <apex:inputTextarea label="{!$Label.Gbc_Descripcion}" value="{!descripcion}" cols="75" id="cpn4"  onchange="handleTextAreaElementChangeWithByteCheck('cpn4', 32000, 0, 'restante', 'por encima del límite');" onclick="handleTextAreaElementChangeWithByteCheck('cpn4', 32000, 0, 'restante', 'por encima del límite');" onkeydown="handleTextAreaElementChangeWithByteCheck('cpn4', 32000, 0, 'restante', 'por encima del límite');" onkeyup="handleTextAreaElementChangeWithByteCheck('cpn4', 32000, 0, 'restante', 'por encima del límite');" onmousedown="handleTextAreaElementChangeWithByteCheck('cpn4', 32000, 0, 'restante', 'por encima del límite');" rows="6" tabindex="22"/>
+                </apex:pageblocksection>
+                
+                <apex:pageblocksection columns="2" id="planificacion" title="Planificación">
+                    <apex:inputText label="{!$Label.Gbc_NumeroDeAsistentes}" value="{!intNumAsistentes}"/>
+                    <apex:inputText label="{!$Label.Gbc_CostoDePatrocinio}" value="{!strCostoPat}"/> 
+                    
+                    
+                    <apex:inputText label="{!$Label.Gbc_N_ProspectosEsperado}" value="{!intNumProsp}"/>
+                    <apex:inputText label="{!$Label.Gbc_CostoMateriales}" value="{!strCostoMat}" disabled="{!ocultarCostoMateriales}"/>
+                    <!-- <apex:outputLabel/> -->
+                    
+                    <apex:inputText label="{!$Label.Gbc_RespuestaPrevista}" value="{!intResp}"/>
+                    <apex:inputText label="{!$Label.Gbc_CostoReal}" value="{!strCostoReal}" disabled="{!ocultarCostoReal}"/>
+                    <!-- <apex:outputLabel/> -->
+                </apex:pageblocksection>
+                
+            </apex:pageBlock>
+        </div>
+    </apex:form>
+    
+    
+</apex:page>

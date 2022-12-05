@@ -1,0 +1,7 @@
+.sliderWrapper{
+  overflow: hidden;
+  padding: 1.5rem 0.7rem;
+  background-color: #EEF2FC;
+  display: grid;
+  gap: 2rem;
+}

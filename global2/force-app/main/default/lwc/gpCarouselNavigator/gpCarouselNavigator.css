@@ -1,0 +1,52 @@
+@import 'c/cssLibrary';
+
+/* The dots/bullets/indicators */
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+.dot {
+    cursor: pointer;
+    height: 0rem;
+    margin: 0px 9px 0px 0px;
+    background-color: #bbb;
+    border-radius: 3px;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    opacity: 0.5;
+}
+
+/*'width: 36px; height: 0px; cursor: pointer;  opacity: 0.5;',*/
+.dot_border_003696 {
+    border: 2px solid var(--global-portal-color-003696);
+}
+
+.dot_border_ffffff {
+    border: 2px solid var(--global-portal-color-ffffff);
+}
+
+.dot_width16 {
+    width: 16px;
+}
+
+.dot_width30 {
+    width: 30px;
+}
+
+.dot_width36 {
+    width: 36px;
+}
+
+.active, .dot:hover {
+    opacity: 1;
+}
+
+.texto {
+    font-family: var(--global-portal-font-family-asap);
+    font-style: var(--global-portal-font-style-normal);
+    font-weight: var(--global-portal-font-weight-normal);
+    font-size: var(--global-portal-font-size-12);
+    line-height: var(--global-portal-line-spacing-12);
+    letter-spacing: var(--global-portal-character-spacing-0);
+    color: var(--global-portal-color-003696);
+}

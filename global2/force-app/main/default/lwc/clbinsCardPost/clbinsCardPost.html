@@ -1,0 +1,13 @@
+<template>
+  <article class="postContainer">
+    <div class="postWrapper">
+      <figure><img src={post.imageUrl} alt={post.imageAltText} loading="lazy" ></figure>
+      <div class="postContent">
+        <time datetime={post.date} title={post.date}>{post.date}</time>
+        <h3>{post.title}</h3>
+        <p>{post.descripcion}</p>
+      </div>
+      <span onclick={handleClick} data-id={post.key}>Leer más</span>
+    </div>
+  </article>
+</template>

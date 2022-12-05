@@ -1,0 +1,3 @@
+<apex:page standardController="Account" extensions="vistaRestringida_ctr" showheader="false" sidebar="false">
+    <!-- <apex:iframe src="apex/consultaCuentaRestringida?cuentaid={!id}&userId={!UserSession}&sfdc.override=1" scrolling="true" id="theIframe"/>  -->
+</apex:page>

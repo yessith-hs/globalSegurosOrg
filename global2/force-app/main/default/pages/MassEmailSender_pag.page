@@ -1,0 +1,89 @@
+<apex:page controller="MassEmailSender_ctr"  lightningStylesheets="true">
+
+    <style type="text/css">
+        .mainInfo {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .fieldLabel {
+            display: block;
+            width: 80px;
+        }
+        .selectListBig {
+            width: 500px;
+        }
+        .selectListSmall {
+            width: 250px;
+        }
+    </style>
+
+    <apex:form id="_formulario">
+        
+        <apex:pageBlock id="pgbMain">
+            <apex:outputpanel >
+                <apex:actionstatus id="status">
+                        <apex:facet name="start">
+                            <div class="waitingSearchDiv" id="el_loading" style="background-color: #fbfbfb;
+                                   height: 100%;opacity:0.65;width:100%;"> 
+                                <div class="waitingHolder" style="top: 74.2px; width: 91px;">
+                                    <img class="waitingImage" src="/img/loading.gif" title="Por favor espere..." />
+                                    <span class="waitingDescription">Enviando correos...</span>
+                                </div>
+                            </div>
+                        </apex:facet>
+                </apex:actionstatus>
+            </apex:outputpanel>
+            <br/>
+            <apex:pageBlockSection title="Envío de correo masivo" collapsible="false" columns="1">
+                <apex:pageBlockSectionItem dataStyle="border:0px" labelStyle="border:0px" id="_seccionDatos">
+                    <apex:outputPanel styleClass="mainInfo">
+                        <apex:outputText escape="false" value="{!$Label.MES_INF_MassEmailDesc}"/>
+                        <apex:outputText escape="false" value="<br/><br/>"/>
+                        <apex:outputText escape="false" value="{0}" id="_cabecera">
+                            <apex:param value="{!textoCabecera}" />
+                        </apex:outputText>
+                        <apex:outputText escape="false" value="<br/>"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageMessages />
+                
+                <apex:pageBlockSectionItem dataStyle="border:0px" labelStyle="border:0px">
+                    <apex:outputLabel value="Plantilla:" styleClass="fieldLabel" />
+                    <apex:selectList value="{!idTemplateId}" multiselect="false" size="1" required="true" styleClass="selectListBig" disabled="{!blnDisable}">
+                        <apex:selectOptions value="{!lstAvailableTemplates}"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+
+                <apex:pageBlockSectionItem dataStyle="border:0px" labelStyle="border:0px">
+                    <apex:outputLabel value="Reporte:" styleClass="fieldLabel"/>
+                    <apex:selectList value="{!idReportId}" multiselect="false" size="1" required="true" styleClass="selectListBig" disabled="{!blnDisable}">
+                        <apex:selectOptions value="{!lstAvailableReports}"/>
+                        <apex:actionSupport event="onchange" reRender="idColumnName, emailColumnName"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+
+                <apex:pageBlockSectionItem dataStyle="border:0px" labelStyle="border:0px">
+                    <apex:outputLabel value="Campo Id:" styleClass="fieldLabel"/>
+                    <apex:selectList value="{!strIdColumnName}" multiselect="false" size="1" id="idColumnName" disabled="{!IF(blnIdFieldDisabled == False, blnDisable, blnIdFieldDisabled)}" required="true" styleClass="selectListSmall">
+                        <apex:selectOptions value="{!idColumNames}"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+
+                <apex:pageBlockSectionItem dataStyle="border:0px" labelStyle="border:0px">
+                    <apex:outputLabel value="Campo Email:" styleClass="fieldLabel"/>
+                    <apex:selectList value="{!strEmailColumnName}" multiselect="false" size="1" id="emailColumnName" disabled="{!IF(blnEmailFieldDisabled == False, blnDisable, blnEmailFieldDisabled)}" required="true" styleClass="selectListSmall">
+                        <apex:selectOptions value="{!emailColumNames}"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="Enviar Correos" action="{!sendMassEmail}" rerender="_formulario" status="status" disabled="{!blnDisable}"/>
+            </apex:pageBlockButtons>
+
+        </apex:pageBlock>
+    
+    </apex:form>
+  
+</apex:page>

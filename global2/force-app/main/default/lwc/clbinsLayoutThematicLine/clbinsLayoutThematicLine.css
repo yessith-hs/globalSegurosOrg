@@ -1,0 +1,7 @@
+.partnersWrapper {
+  background-color: #fff;
+  border-radius: 0.31rem;
+  padding: 1rem;
+  display: grid;
+  gap: 2rem;
+}

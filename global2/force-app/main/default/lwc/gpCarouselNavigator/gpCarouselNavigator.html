@@ -1,0 +1,12 @@
+<template>
+    <div class="container">
+        <div>
+            <template for:each={getItems} for:item="item">
+                <span class="dot" key={item.id} data-id="dotBoton" onselect={handleSelect} style={dotStyle}></span>
+            </template>
+        </div>
+        <p class="texto">
+            {active} de {items.length}
+        </p>
+    </div>
+</template>

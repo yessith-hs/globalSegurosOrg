@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Asap", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+p {
+  color: #003696;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.s0 {
+  fill: none;
+  stroke: #003696;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+.s1 {
+  fill: none;
+  stroke: #da031b;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+.s3 {
+  fill: none;
+  stroke: #003696;
+  stroke-linecap: round;
+  stroke-width: 3;
+}
+
+.main_container {
+  background-color: white;
+  width: 100%;
+}
+.menu_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1.5rem;
+}
+.logo figure svg {
+  width: 200px;
+}
+.logo .hamb_icon svg {
+  width: 29px;
+  cursor: pointer;
+}
+.buttons_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f2f2f2;
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+}
+
+.button_container--right {
+  position: relative;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  /* padding: 1rem; */
+  /* justify-content: space-between; */
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.payment {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  gap: 10px;
+}
+.payment:hover {
+  background-color: #ffd314;
+}
+
+.services {
+  border: 1px solid #003696;
+  justify-content: stretch;
+  width: 100%;
+}
+
+.services div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 80%;
+  padding: 1rem;
+}
+
+.services .arrow_button {
+  padding: 1rem;
+  border-left: 1px solid #003696;
+  width: 20%;
+  text-align: center;
+}
+.services .arrow_button svg {
+  width: 20px;
+}
+.dropdown_menu {
+  position: absolute;
+  height: auto;
+
+  width: 100%;
+  margin-top: 5px;
+  z-index: 1;
+}
+.dropdown_menu ul a li {
+  background-color: #ffff;
+  padding: 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: #5d5d5d;
+}
+
+.dropdown_menu ul a li:hover {
+  background-color: #003696;
+  color: #ffff;
+  z-index: 1;
+}
+
+.dropdown_menu ul > a:first-child li {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.dropdown_menu ul > a:last-child li {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.hide {
+  display: none;
+}
+
+.dynamicButton {
+  background-color: #ffd314;
+  border: none;
+}
+@media (max-width: 480px) {
+  .buttons_container {
+    gap: 10px;
+  }
+}
+@media (min-width: 480px) {
+  .buttons_container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 1rem; */
+    gap: 10px;
+  }
+
+  .button_container--left {
+    width: 40%;
+  }
+  .button_container--right {
+    width: 60%;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu_container {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1375px;
+    margin: 0 auto;
+  }
+  .hamb_icon {
+    display: none;
+  }
+  .buttons_container {
+    align-items: stretch;
+    background-color: #ffff;
+    max-width: 500px;
+    padding: 0.8rem 1.5rem 0 0;
+  }
+  .button_container {
+    padding-bottom: 0.5rem;
+  }
+  .button_container--border {
+    border-bottom: 4px solid #ffd314;
+  }
+}

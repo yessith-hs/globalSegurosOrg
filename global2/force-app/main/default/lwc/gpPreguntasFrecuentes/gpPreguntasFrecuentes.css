@@ -1,0 +1,34 @@
+@import 'c/cssLibrary';
+
+.gp-faq-container {
+    padding: 0 1rem 0 1rem;
+    min-width: 21.875rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-titulo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--global-portal-color-003696);
+    border-radius: 5px 5px 0 0;
+}
+
+.faq-titulo {
+    font-family: var(--global-portal-font-family-asap);
+    font-style: var(--global-portal-font-style-normal);
+    font-weight: var(--global-portal-font-weight-bold);
+    font-size: var(--global-portal-font-size-20);
+    line-height: var(--global-portal-line-spacing-23);
+    letter-spacing: var(--global-portal-character-spacing-0);
+    color: var(--global-portal-color-fbfcff);
+}
+
+.faq-icono {
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+    padding-left: 0.8rem;
+    margin-right: 6px;
+}

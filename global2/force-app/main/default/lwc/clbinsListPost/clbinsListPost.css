@@ -1,0 +1,80 @@
+.post {
+  padding: 2rem 0.7rem 0;
+  background-color: #eef2fc;
+  display: grid;
+  gap: 1rem;
+}
+
+.post h2 {
+  color: #003696;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.post button {
+  justify-self: center;
+  border: none;
+  outline: none;
+  height: 40px;
+  width: 150px;
+  color: #003696;
+  background-color: #ffd300;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+}
+
+.postWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+/* *estilos cards */
+
+.postContainer {
+  background-color: #fff;
+  height: 400px;
+  font-weight: 400;
+  border-radius: 5px;
+}
+
+.postContainer a {
+  display: flex;
+  color: #464646;
+  text-decoration: none;
+  flex-direction: column;
+  height: 100%;
+}
+
+.postLink figure {
+  height: 180px;
+}
+
+.postLink figure img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.postContainer a > span {
+  text-decoration: underline;
+  color: #003696;
+  padding-left: 1rem;
+}
+
+.postContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 1rem 0.3rem;
+}
+
+.postContent span {
+  font-size: 0.7rem;
+}
+
+.postContent h3 {
+  font-weight: 700;
+}

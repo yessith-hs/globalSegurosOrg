@@ -1,0 +1,24 @@
+<apex:page standardController="Opportunity" extensions="Cotizador_ctr"  sidebar="false" >
+   <apex:form id="idForm">
+    
+     <apex:pageBlock id="Botones">
+         <apex:pageBlockButtons location="top"  >
+       <!--         <apex:commandButton value="{!descCotizadorUno}"     onclick="popUpCotizador('{!urlCot1}');return false;" rendered="{!senalVerCotizadorUno}"/>
+                <apex:commandButton value="{!descCotizadorDos}"     onclick="popUpCotizador('{!urlCot2}');return false;" rendered="{!senalVerCotizadorDos}"/>-->
+                <apex:commandButton value="{!descCotizadorTres}"    onclick="popUpCotizador('{!urlCot3}');return false;" rendered="{!senalVerCotizadorTres }"/>
+        </apex:pageBlockButtons>
+       </apex:pageBlock>     
+       
+
+        <apex:iframe src="{!url}"  height="500"  width="100%" scrolling="true" rendered="{!display}"/>
+        <apex:pageMessage summary="{!errorMessage}" severity="warning" strength="1" rendered="{!displayError}"/> 
+        <apex:pageMessages />
+
+    </apex:form>
+    <script>
+    // --- INICIO DE POP UP'S ---
+    function popUpCotizador(urlCot){
+              window.open(urlCot, '_blank', 'left=20,top=20,width=920,height=500,scrollbars=yes,toolbar=1,resizable=1');
+    } 
+    </script>
+</apex:page>

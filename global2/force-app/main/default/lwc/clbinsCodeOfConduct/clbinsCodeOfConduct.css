@@ -1,0 +1,89 @@
+.conductWrapper {
+  background-color: #fff;
+  margin: 1rem 0.7rem 0;
+  border-radius: 0.7rem;
+}
+
+.conductWrapper figure {
+  position: relative;
+}
+
+.conductWrapper figure img {
+  border-top-left-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+}
+
+.conductMain {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.conductMain,
+.conductContent {
+  padding: 0 0.7rem;
+}
+
+.conductContent {
+  display: grid;
+  gap: 2rem;
+  position: relative;
+  bottom: 4rem;
+  background-color: #fff;
+  padding: 1rem 0.7rem 0;
+  border-radius: 0.5rem;
+}
+
+.conductContent h1,
+.conductContent h2 {
+  color: #033278;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+
+.conductBtn {
+  border: none;
+  outline: none;
+  height: 40px;
+  background-color: #ffd300;
+  border-radius: 0.5rem;
+}
+
+.conductBtn a {
+  text-decoration: none;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  place-content: center;
+  color: #033278;
+  font-size: 0.7rem;
+}
+
+@media only screen and (min-width: 700px) {
+  .conductWrapper figure {
+    height: 350px;
+  }
+  .conductMain,
+  .conductContent {
+    padding: 1rem 5rem 0;
+  }
+  .conductContent h1 {
+    margin-bottom: 0;
+  }
+
+  .conductHead {
+    display: flex;
+    place-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .conductWrapper figure img {
+    width: 100%;
+    height: 100%;
+  }
+}

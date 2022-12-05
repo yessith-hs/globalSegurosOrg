@@ -1,0 +1,123 @@
+@import 'c/cssLibrary';
+
+.container {
+    display: flex;
+    gap: 0.6rem;
+    padding: 0 0.6rem 1.5rem 0.6rem;
+}
+
+.cabecera {
+    position: relative;
+    display: none;
+}
+
+.ico-container-agenda, .ico-container-servicio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 10.625rem;
+    min-height: 10.187rem;
+    box-shadow: 0px 3px 6px #00000029;
+    background-color: var(--global-portal-color-ffffff);
+    border-radius: 5px;
+    opacity: 1;
+}
+
+.card-agenda-cita, .card-servicio-cliente {
+    width: 2.477rem;
+    height: 2.927rem;
+    display: block;
+    margin: auto;
+}
+
+.boton-agenda-cita {
+    width: 135px;
+    height: 46px;
+    margin: 0.8rem 0 2rem 0.6rem;
+
+}
+
+.titulo {
+    font-family: var(--global-portal-font-family-asap);
+    font-style: var(--global-portal-font-style-normal);
+    font-weight: var(--global-portal-font-weight-bold);
+    font-size: var(--global-portal-font-size-20);
+    line-height: var(--global-portal-line-spacing-23);
+    letter-spacing: var(--global-portal-character-spacing-0);
+    color: var(--global-portal-color-003696);
+    padding: 0 0.6rem 0 1rem;
+    margin: 0;
+}
+
+.titulo-contactarte {
+    font-family: var(--global-portal-font-family-asap);
+    font-style: var(--global-portal-font-style-normal);
+    font-weight: var(--global-portal-font-weight-bold);
+    font-size: var(--global-portal-font-size-20);
+    line-height: var(--global-portal-line-spacing-23);
+    letter-spacing: var(--global-portal-character-spacing-0);
+    color: var(--global-portal-color-ffffff);
+    padding: 0 0.6rem 0 1rem;
+    margin: 0;
+    max-width: 20.563rem;
+}
+
+.texto {
+    font-family: var(--global-portal-font-family-asap);
+    font-style: var(--global-portal-font-style-normal);
+    font-weight: var(--global-portal-font-weight-normal);
+    font-size: var(--global-portal-font-size-13);
+    line-height: var(--global-portal-line-spacing-10);
+    letter-spacing: var(--global-portal-character-spacing-0);
+    color: var(--global-portal-color-464646);
+    padding: 1rem 0 0 0.6rem;
+    margin: 0;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.cabecera-titulo {
+    position: absolute;
+    top: 1.6rem;
+    left: 11.625rem
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .ico-container-agenda {
+        display: none;
+    }
+
+    .cabecera {
+        display: inline;
+    }
+
+    .caso-exito-card {
+        position: absolute;
+        width: 24.812rem;
+        height: 19.75rem;
+        top: 10.847rem;
+        right: 5.5rem;
+    }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+    .ico-container-agenda {
+        display: none;
+    }
+
+    .cabecera {
+        display: inline;
+    }
+
+    .caso-exito-card {
+        position: absolute;
+        width: 24.812rem;
+        height: 19.75rem;
+        top: 10.847rem;
+        right: 5.5rem;
+    }
+}

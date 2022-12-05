@@ -1,0 +1,10 @@
+.mainContent {
+/* height: 100vh; */
+background-color: #EEF2FC;
+}
+
+@media only screen and (min-width:1024px) {
+  .mainContent {
+    overflow-y: scroll;
+  }
+}

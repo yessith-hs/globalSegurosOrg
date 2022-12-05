@@ -1,0 +1,128 @@
+.details {
+  margin: 0 .7rem;
+  background-color: #EEF2FC;
+  /* padding: 0 .7rem; */
+  /* border-radius: 5px;
+  padding-bottom: 1rem; */
+}
+
+.details+figure {
+  height: 120px;
+  width: 100%;
+}
+
+.details img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.detailWrapper{
+  background-color: #fff;
+  padding-bottom: 1rem;
+  border-radius: 5px;
+}
+
+.detailContainer {
+  font-weight: 400;
+  display: grid;
+  gap: .5rem;
+  padding: .5rem;
+}
+
+.detailContainer h2 {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.detailContent {
+  display: grid;
+  gap: .5rem;
+}
+
+.detailCategories {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detailPlus {
+  display: none;
+}
+
+.detailPlus h2 {
+  font-size: 1.5rem;
+  color: #003696;
+}
+
+.detailCategories .detailLink {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+  width: 100px;
+  padding: 0.5rem 0.3rem;
+  background-color: #003696;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.detailLink h3 {
+  color: #fff;
+  font-weight: 400;
+  font-size: .7rem;
+}
+
+.detailBtn {
+  border: none;
+  outline: none;
+  height: 40px;
+  width: 80px;
+  background-color: #FFD300;
+  margin-left: 0.5rem;
+  border-radius: .5rem;
+}
+
+.detailBtn a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  place-content: center;
+  color: #033278;
+  font-size: .9rem;
+}
+
+@media only screen and (min-width:768px) {
+  .detailWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .detailPlus {
+    display: initial;
+    margin-left: .5rem;
+  }
+}
+
+@media only screen and (min-width:375px) {
+  .detailCategories {
+    padding: 0.5rem;
+}
+}
+
+@media only screen and (min-width:1366px) {
+  .details {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 65% auto;
+    height: 500px;
+    gap: 2rem;
+  }
+
+  .detailWrapper {
+    grid-template-columns: initial;
+    width: 350px;
+  }
+}

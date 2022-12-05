@@ -1,0 +1,55 @@
+:host {
+    /*
+     *  VARIABLES GLOBAL SEGUROS 
+     */
+
+    /* Colors: */
+    --global-portal-color-000000: #000000;
+    --global-portal-color-0070ba: #0070BA;
+    --global-portal-color-d10611: #D10611;
+    --global-portal-color-707070: #707070;
+    --global-portal-color-c8c8c8: #C8C8C8;
+    --global-portal-color-003278: #003278;
+    --global-portal-color-0087dc: #0087DC;
+    --global-portal-color-fbfcff: #FBFCFF;
+    --global-portal-color-2d4a84: #2D4A84;
+    --global-portal-color-bdbcbc: #BDBCBC;
+    ---da031b-vida: #DA031B;
+    --global-portal-color-ffd300: #FFD300;
+    --global-portal-color-46464600: #46464600;
+    --global-portal-color-ffffff: #FFFFFF;
+    --global-portal-color-eef2fc: #EEF2FC;
+    --global-portal-color-003696: #003696;
+    --global-portal-color-0264c6: #0264C6;
+    --global-portal-color-464646: #464646;
+
+    /* Font/text values */
+    --global-portal-font-family-asap: 'Asap', sans-serif;;
+    --global-portal-font-style-normal: normal;
+    --global-portal-font-weight-600: 600px;
+    --global-portal-font-weight-medium: medium;
+    --global-portal-font-weight-bold: bold;
+    --global-portal-font-weight-normal: normal;
+    --global-portal-font-size-10: 10px;
+    --global-portal-font-size-12: 12px;
+    --global-portal-font-size-13: 13px;
+    --global-portal-font-size-15: 15px;
+    --global-portal-font-size-20: 20px;
+    --global-portal-font-size-25: 25px;
+    --global-portal-font-size-35: 35px;
+    --global-portal-character-spacing-0: 0px;
+    --global-portal-line-spacing-10: 10px;
+    --global-portal-line-spacing-11: 11px;
+    --global-portal-line-spacing-12: 12px;
+    --global-portal-line-spacing-14: 14px;
+    --global-portal-line-spacing-17: 17px;
+    --global-portal-line-spacing-23: 23px;
+    --global-portal-line-spacing-25: 25px;
+    --global-portal-line-spacing-28: 28px;
+    --global-portal-line-spacing-40: 40px;
+    --global-portal-decoration-underline: underline;
+    --global-portal-text-transform-lowercase: lowercase;
+    /*
+     *  FIN VARIABLES GLOBAL SEGUROS 
+     */
+}

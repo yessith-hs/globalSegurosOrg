@@ -1,0 +1,58 @@
+<apex:page standardController="Account" extensions="vistaRestringida_ctr" action="{!ValidaUser}" lightningStylesheets="true">
+<apex:slds />
+      <apex:relatedList list="Datos_Contacto_Comercial__r" />
+    <apex:form >
+          <apex:pageblock id="vistaRestringida" rendered="{!vistaPRM}" title="Datos de cliente">
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!nuevaOpty}" value="Nueva Oportunidad"/>
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockSection columns="2">
+                <apex:pageBlockSectionItem >
+                    <apex:outputText value="Nombre :   {!Account.Name}" />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputText value="Identificación :  {!Account.NumeroDocumento__c}" />
+                 </apex:pageBlockSectionItem> 
+                 
+                <apex:pageBlockSectionItem >
+                    <apex:facet name="header"> 
+                        <apex:outputText value="Fecha de Nacimiento" />
+                    </apex:facet>
+                    <apex:outputText value="{0, date, dd/MM/yyyy hh:mm:ss a}"> 
+                        <apex:param value="{!Account.PersonBirthdate}"/>
+                    </apex:outputText>
+                </apex:pageBlockSectionItem> 
+                                                         
+            </apex:pageBlockSection>
+            </apex:pageblock>
+             </apex:form>
+             <apex:relatedList list="Datos_Contacto_Comercial__r" />
+             <apex:form >
+             <apex:pageblock id="vistaRestringida2" rendered="{!vistaPRM}" title="Datos de cliente">
+            
+            <apex:pageBlockSection columns="1" title="Pólizas">
+                <apex:pageBlockTable value="{!lstPolizas}" var="p" id="table_pol">
+                    <apex:column value="{!p.N_PolizaPlan__c}" />
+                    <apex:column value="{!p.Estado__c}" />
+                    <apex:column value="{!p.NumeroSolicitud__c}" />
+                    <apex:column value="{!p.ProductoPlan__c}" />
+                    <apex:column value="{!p.FechaInicioVigencia__c}" />
+                    <apex:column value="{!p.Nombre_Tomador__c}" />
+                    <apex:column value="{!p.NombreDesignado__c}" />
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="1" title="Oportunidades">
+                <apex:pageBlockTable value="{!lstOptys}" var="o" id="table_opt">
+                    <apex:column value="{!o.Name}" />
+                    <apex:column value="{!o.StageName}" />
+                    <apex:column value="{!o.CloseDate}" />
+                    <apex:column value="{!o.Amount}" />
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+          </apex:pageblock>
+        
+    </apex:form>
+  
+</apex:page>

@@ -1,0 +1,12 @@
+<template>
+    <div class="caso-exito-card">
+        <div class="tipo-seguro" style={getStyleRamoSeguro}>
+            <p class="category-title">{casoExito.ramoSeguros}</p>
+            <span class="category-dot" style={getStyleRamoSeguro}></span>
+        </div>
+        <h2 class="titulo">{casoExito.titulo}</h2>
+        <p class="category-description">{casoExito.subTitulo}</p>
+        <p class="testimonio">{casoExito.contenido}</p>
+        <img src={botonAgendaCitaImg} alt="Botón agenda tu cita" class="boton-agenda-cita">
+    </div>
+</template>

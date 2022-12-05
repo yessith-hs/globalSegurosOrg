@@ -1,0 +1,54 @@
+@import 'c/cssLibrary';
+
+.container {
+    height: 20.75rem;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 5px;
+    opacity: 1;
+    padding: 1rem 1rem 0 1rem;
+    margin: 1rem 1rem 0 1rem;
+    border-radius: 5px;
+    background-color: var(--global-portal-color-ffffff);
+}
+
+/* .logo-aliado {
+    padding-top: 1.399rem;
+} */
+
+.logo-cicol {
+    height: 2.043rem;
+    width: 5.89rem;
+}
+
+.logo-estudia {
+    padding-top: 1rem;
+    height: 2.170rem;
+    width: 8.437rem;
+}
+
+.logo-cleveru {
+    padding-top: 1rem;
+    height: 2.137rem;
+    width: 3.312rem;
+}
+
+.texto-aliado {
+    font-family: var(--global-portal-font-family-asap);
+    font-style: var(--global-portal-font-style-bold);
+    font-weight: var(--global-portal-font-weight-normal);
+    font-size: var(--global-portal-font-size-12);
+    line-height: var(--global-portal-line-spacing-12);
+    letter-spacing: var(--global-portal-character-spacing-0);
+    color: var(--global-portal-color-707070);
+}
+
+.titulo {
+    font-family: var(--global-portal-font-family-asap);
+    font-style: var(--global-portal-font-style-normal);
+    font-weight: var(--global-portal-font-weight-bold);
+    font-size: var(--global-portal-font-size-20);
+    line-height: var(--global-portal-line-spacing-23);
+    letter-spacing: var(--global-portal-character-spacing-0);
+    color: var(--global-portal-color-003696);
+    padding-left: 1rem;
+}

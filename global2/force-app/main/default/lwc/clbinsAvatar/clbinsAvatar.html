@@ -1,0 +1,46 @@
+<template>
+  <div class="menu-avatar mobile">
+    <figure>
+      <svg viewBox="-3 0 50 50" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
+        <defs>
+          <filter id="a" x="0" y="0" width="45" height="45" filterUnits="userSpaceOnUse">
+            <feOffset dy="3" />
+            <feGaussianBlur stdDeviation="3" result="blur" />
+            <feFlood flood-color="#fbfcff" flood-opacity=".251" />
+            <feComposite operator="in" in2="blur" />
+            <feComposite in="SourceGraphic" />
+          </filter>
+          <filter id="b" x="0" y="0" width="45" height="45" filterUnits="userSpaceOnUse">
+            <feOffset dy="3" />
+            <feGaussianBlur stdDeviation="3" result="blur-2" />
+            <feFlood flood-color="#fbfcff" flood-opacity=".251" />
+            <feComposite operator="in" in2="blur-2" />
+            <feComposite in="SourceGraphic" />
+          </filter>
+          <clipPath id="c" />
+        </defs>
+        <g data-name="Grupo 672">
+          <g filter="url(#b)">
+            <circle data-name="Elipse 77" cx="13.5" cy="13.5" r="13.5" transform="translate(9 6)" fill="#fff" />
+          </g>
+          <g data-name="Enmascarar grupo 3" transform="translate(-184 -109)" clip-path="url(#c)">
+            <g data-name="Grupo 671" fill="none" stroke="#003278" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="1.5">
+              <path data-name="Trazado 1247"
+                d="M206.5 129.646a4.006 4.006 0 1 0-4.006-4.006 4.006 4.006 0 0 0 4.006 4.006Z" />
+              <path data-name="Trazado 1248"
+                d="M212.176 134.702v-.036a8.007 8.007 0 0 0-5.659-2.343h-.04a8.008 8.008 0 0 0-5.661 2.343l.02.018a7.994 7.994 0 0 0-2.332 5.648V143h15.986v-2.668a7.979 7.979 0 0 0-2.314-5.63Z" />
+            </g>
+          </g>
+        </g>
+      </svg>
+    </figure>
+    <div class="menu-avatar_details">
+      <h3>Nombre del tomador</h3>
+      <div class="menu-avatar_id">
+        <span>Tomador</span>
+        <span>- ID: 1234567890</span>
+      </div>
+    </div>
+  </div>
+</template>

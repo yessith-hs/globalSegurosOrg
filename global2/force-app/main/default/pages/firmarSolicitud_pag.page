@@ -1,0 +1,29 @@
+<apex:page standardController="Opportunity" extensions="firmarSolicitud_ctr"  sidebar="false" showHeader="false" lightningStylesheets="true">
+  <style type="text/css">       
+    #title{ text-align: center; }
+  </style>
+  <script language='javascript' type='text/javascript'>
+     window.onload = function init() 
+     {
+        window.setTimeout(starProcess, 200);
+     }
+     function cerrar() {
+        window.opener.location.reload();    
+     }   
+   </script> 
+   <apex:form id="FormFirma">
+    <apex:pageBlock title="firmar Solicitud" id="title" mode="edit" >    
+    <apex:outputText value="{!IdOportunidad}" rendered="false"/>  
+     <apex:actionFunction id="starProcess" name="starProcess" action="{!actualizar}" rerender="FormFirma" status="loadingStatus"/>
+      <apex:actionStatus id="loadingStatus">
+      <apex:facet name="start">
+       <c:Loading Titulo="{!$Label.Gbc_Processing}" Subtitulo="{!$Label.Gbc_Wait}" numeroImagen="7"/>
+      </apex:facet>
+      </apex:actionStatus>   
+     <apex:pageMessages id="FormFirma" showDetail="false"/>
+     <apex:pageBlockButtons location="bottom">       
+       <apex:commandButton value="Cerrar" action="{!refrescar}"  onclick="cerrar();return false;" />
+     </apex:pageBlockButtons>   
+     </apex:pageBlock>
+    </apex:form>
+</apex:page>

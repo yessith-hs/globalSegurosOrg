@@ -1,0 +1,102 @@
+<apex:page standardcontroller="Case" extensions="FichaCustomer_ctr" showHeader="true" title="Comunidad de Clientes" Id="pag" lightningStylesheets="true">
+    <style>
+        .paginador {font-weight: bold;}
+    </style>
+
+    <script>
+
+    </script>
+
+
+    <apex:form title="Persona Consultar" id="idform2">
+
+            <apex:pageBlock id="pbResult" title="Bandeja Casos por Cliente" >
+
+            <apex:pageBlockButtons id="idPBB1" location="bottom">
+                <apex:commandButton action="{!Save}" value="Nuevo Caso"/>
+            </apex:pageBlockButtons>
+                
+                <div style="width: 1100px;overflow-y: hidden; overflow:auto; height: 100%;">
+                
+                    <apex:pageBlockTable value="{!lstCase}" var="n" id="theTable" width="100%">
+                    
+                        <apex:column >
+                            <apex:facet name="header">Número Caso</apex:facet>
+                            <apex:outputLink onclick="mostrarDetalleCasoJs('{!n.Id}','{!senalViewCase}');return false;">
+                                {!n.CaseNUmber}
+                            </apex:outputLink>
+                        </apex:column>
+
+                        <apex:column >
+                            <apex:facet name="header">Asunto</apex:facet>
+                            <apex:outputText value="{!n.Subject}"/>
+                        </apex:column>
+
+                        
+                        <apex:column >
+                        <apex:facet name="header">Fecha/Hora Recibido</apex:facet>
+                       <apex:outputText value=" {0,date,yyyy.MM.dd G 'at' HH:mm:ss z}">
+                           <apex:param value="{!n.FechaHoraRecibido__c}" />
+                       </apex:outputText>
+                       </apex:column>
+
+
+                        <apex:column >
+                            <apex:facet name="header">Estado</apex:facet>
+                            <apex:outputText value="{!n.Status}"/>
+                        </apex:column>
+
+                        <apex:column >
+                            <apex:facet name="header">Poliza/Plan</apex:facet>
+                            <apex:outputText value="{!n.Poliza__r.Name}"/>
+                        </apex:column>
+                                                                                                                        
+                    </apex:pageBlockTable>
+                    
+                </div>
+    
+                <table cellpadding="10" border="0" > 
+                    <tr>
+                        <td>
+                            <apex:commandLink action="{!FirstPage}" value="<<Primera" id="lnkPrimera" rendered="{!NOT(blnIsFirst)}" reRender="pag:idform2:pbResult" styleClass="paginador" status="loadingStatus"/>
+                            <apex:outputText value="<<Primera" rendered="{!blnIsFirst}" styleClass="paginador"/>
+                        </td>
+                        <td>
+                            <apex:commandLink action="{!PreviousPage}" value="<Anterior" id="btnPrev" rendered="{!NOT(blnIsFirst)}" reRender="pag:idform2:pbResult" styleClass="paginador" status="loadingStatus"/> 
+                            <apex:outputText value="<Anterior" rendered="{!blnIsFirst}" styleClass="paginador"/>
+                        </td>
+                        <td>
+                            <apex:commandLink action="{!NextPage}" value="Siguiente>" id="btnnext" rendered="{!NOT(blnIsLast)}" reRender="pag:idform2:pbResult" styleClass="paginador" status="loadingStatus"/>      
+                            <apex:outputText value="Siguiente>" rendered="{!blnIsLast}" styleClass="paginador"/>    
+                        </td>
+                        <td>
+                            <apex:commandLink action="{!LastPage}" value="Última>>" id="lnkUltima" rendered="{!NOT(blnIsLast)}" reRender="pag:idform2:pbResult" styleClass="paginador" status="loadingStatus"/>
+                            <apex:outputText value="Última>>" rendered="{!blnIsLast}" styleClass="paginador"/>  
+                        </td>
+                        <td></td>
+                        <td>
+                            <apex:outputText value="Casos encontrados: " styleClass="paginador"/>
+                            <apex:outputText value="{!strTotalHits}"/> 
+                        </td>
+                    </tr>
+                </table>
+        </apex:pageBlock>
+
+        <apex:pageBlock id="pbResult2" title="Detalle Caso"  >
+            <div style="width: 1100px;overflow-y: hidden; overflow:auto; height: 100%;">
+                <apex:outputPanel >
+                     <apex:iframe src="/clientes/{!idCasoDetail}?isdtp=mn" scrolling="true" height="2000" width="1200"/> 
+                </apex:outputPanel>
+            </div>
+            <apex:actionFunction action="{!setCaseDetail}" name="mostrarDetalleCasoJs" rerender="pag:idform2:pbResult2"  status="loadingStatus" >
+                <apex:param name="firstParam" assignTo="{!parametro}" value="" /> 
+                <apex:param name="SecondParam" assignTo="{!senalViewCase}" value="" /> 
+            </apex:actionFunction>      
+        </apex:pageBlock> 
+                                
+    </apex:form>
+    
+
+    
+
+</apex:page>

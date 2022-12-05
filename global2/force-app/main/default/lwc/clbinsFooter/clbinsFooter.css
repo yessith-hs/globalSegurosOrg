@@ -1,0 +1,137 @@
+/* :root {
+  --brand-color_blue: rgb(0, 50, 120);
+  --brand-color_red: rgb(220, 35, 25);
+  --brand-color_gray: rgb(70, 70, 70);
+  --brand-color_withe: rgb(255, 255, 255);
+  --brand-color_education: rgb(00, 135, 220);
+  --brand-color_pension: rgb(00, 180, 120);
+  --brand-color_voluntary_income: rgb(155, 80, 145);
+  --brand-color_Life: rgb(255, 85, 85);
+  --brand-color_annuity: rgb(240, 160, 0);
+  --brand-color_provisional_invalidity: rgb(140, 95, 70);
+  --brand-color_accident: rgb(190, 45, 85);
+} */
+.GS_footer {
+  background-color: rgb(0, 50, 120);
+  display: grid;
+  place-items: center;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.GS_container {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.GS_brand {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  place-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.GS_brand h3 {
+  font-size: .95rem;
+}
+
+.GS_brand a {
+  font-size: .80rem;
+}
+
+.GS_social {
+  display: grid;
+  place-items: center;
+  gap: .5rem;
+}
+
+.GS_social_hand {
+  display: flex;
+  place-items: center;
+  gap: 1rem;
+  flex-direction: column;
+  color: #fff;
+}
+
+.GS_social_hand h3 {
+  font-size: .95rem;
+}
+
+.GS_social_hand figure {
+  background-color: #fff;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  place-items: center;
+  place-content: center;
+}
+
+.GS_social_link {
+  display: flex;
+  gap: 1rem;
+  color: #fff;
+  place-items: center;
+}
+
+.GS_social_link ul {
+  display: flex;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.GS_social_link h3 {
+  font-weight: 400;
+}
+
+.GS_content {
+   border-top: 1px solid;
+    color: #fff;
+    text-align: center;
+    width: 90%;
+    display: grid;
+    gap: .5rem;
+    padding-top: 0.5rem;
+    font-size: .75rem;
+}
+
+@media only screen and (min-width:768px) {
+  .GS_container {
+    width: 100%;
+    grid-auto-flow: column;
+  }
+
+  .GS_brand {
+    flex-direction: row;
+    text-align: initial;
+  }
+
+  .GS_social{
+    place-items: initial;
+  }
+
+  .GS_social_hand {
+    flex-direction: row;
+  }
+
+  .GS_content{
+    grid-auto-flow: column;
+  }
+  .GS_content span{
+    justify-self: start;
+
+  }
+
+  .GS_content a{
+    justify-self: end;
+  }
+
+ .GS_content a:nth-child(2){
+    margin-left: 6rem;
+  }
+}

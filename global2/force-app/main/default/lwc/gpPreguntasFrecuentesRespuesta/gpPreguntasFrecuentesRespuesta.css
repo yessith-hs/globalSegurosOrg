@@ -1,0 +1,47 @@
+@import 'c/cssLibrary';
+
+.resp-container {
+    padding: 0 1rem 0 1rem;
+    background-color: var(--global-portal-color-ffffff);
+    border-radius: 5px;
+}
+
+.img-respuesta {
+    height: 8.783rem;
+    max-width: 100%;
+}
+
+.pregunta {
+    font-family: var(--global-portal-font-family-asap);
+    font-style: var(--global-portal-font-style-normal);
+    font-weight: var(--global-portal-font-weight-bold);
+    font-size: var(--global-portal-font-size-15);
+    line-height: var(--global-portal-line-spacing-15);
+    letter-spacing: var(--global-portal-character-spacing-0);
+    color: var(--global-portal-color-464646);
+    margin: 0;
+    padding-top: 1rem;
+}
+
+.resp-body {
+    font-family: var(--global-portal-font-family-asap);
+    font-style: var(--global-portal-font-style-normal);
+    font-weight: var(--global-portal-font-weight-normal);
+    font-size: var(--global-portal-font-size-12);
+    line-height: var(--global-portal-line-spacing-12);
+    letter-spacing: var(--global-portal-character-spacing-0);
+    color: var(--global-portal-color-707070);
+    margin-bottom: 0;
+}
+
+.respuesta-container {
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 5px;
+    background-color: var(--global-portal-color-ffffff);;
+}
+
+.resp-body {
+    margin: 0;
+    padding: 1rem 0 0.75rem 0;;
+     
+}

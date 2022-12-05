@@ -1,0 +1,33 @@
+<apex:page standardController="Case"  extensions="SendMailCase_ctr"> 
+    <apex:pageMessages />	
+	<apex:pageBlock title="Previo" id="previo">
+		<apex:form >
+	        <apex:outputLabel value="Asunto" for="Subject"/><br/>	 
+			<apex:inputText value="{!strSubjectPrevious}"  disabled="true" style="width:99%"  id="Subject"  maxlength="200" /><br/>
+			
+			
+			
+			<apex:outputLabel value="Mensaje" for="Body"/><br/>
+    		<apex:inputTextarea value="{!strBodyPrevious}"  rows="8" disabled="true" id="Body" richText="true" /><br/> 
+    	</apex:form>	
+    </apex:pageBlock>	
+	<apex:pageBlock title="Agregar comentarios">	
+    	
+		<apex:form >
+			<apex:outputPanel layout="block">
+	            <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+	             <apex:outputLabel value="Adicional Para" for="aditionalto"/><br/>	 
+			     <apex:inputText value="{!strAditionalTo}"    style="width:99%"  id="aditionalto"  html-placeholder="Ingrese los correos separados por coma"  /><br/>
+	            <apex:inputfield style="height:50px"  value="{!objCase.Mensaje_cierre_de_caso__c}"/>
+			</apex:outputPanel>    
+			<br/><br/>
+			<apex:outputPanel styleClass="requiredInput" layout="block">
+	           
+			    <apex:inputFile value="{!blbAttachment}" alt="Adjuntar archivo"  title="Adjuntar archivo" filename="{!strFileName}"  />
+			</apex:outputPanel>     
+			<br/><br/>
+			<apex:commandButton value="Enviar y cerrar caso" action="{!send}"  />&nbsp;&nbsp;&nbsp;
+			<apex:commandButton value="Cancelar" action="{!cancel}"/>
+		</apex:form>
+	</apex:pageBlock>
+</apex:page>

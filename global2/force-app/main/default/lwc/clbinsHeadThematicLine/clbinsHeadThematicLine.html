@@ -1,0 +1,33 @@
+<template>
+  <section class="thematic">
+    <article class="thematicHead">
+      <div class="thematicTitle">
+        <h2>Conexión Global</h2>
+        <figure>
+          <img src={icon} alt={title}>
+        </figure>
+      </div>
+      <div class="thematicContent">
+        <figure><img src={image} alt=""></figure>
+        <h2>{title}</h2>
+        <p>{content}</p>
+      </div>
+    </article>
+    <div class="lastEntries">
+      <h2>Últimas Entradas</h2>
+      <template for:each={posts} for:item="post">
+        <article class="entriesWrapper" key={post.key}>
+          <div class="entriesLink">
+            <figure><img src={post.imageUrl} alt={post.imageAltText}></figure>
+            <div class="entriesContent">
+              <time datetime={post.date} title={post.date}>{post.date}</time>
+              <h3>{post.title}</h3>
+              <p>{post.descripcion}</p>
+              <span onclick={handleClick} data-id={post.key}>Leer más</span>
+            </div>
+          </div>
+        </article>
+      </template>
+    </div>
+  </section>
+</template>

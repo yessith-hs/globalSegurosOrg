@@ -1,0 +1,18 @@
+<apex:page standardController="Case"  extensions="ValidarCierreCaso_ctr"> 
+    <script>
+
+       var previousOnload = window.onload;        
+       window.onload = function() { 
+           if (previousOnload) { 
+               previousOnload();
+           }
+           init();
+       }
+       
+       function init() {
+                alert('No se puede ejecutar la acción. Debe usar el botón Cerrar Caso desde la página del Caso' ); 
+                var rutaPagina = '/{!strIdPoliza}'; 
+                window.location.href = window.location.protocol + '//' + window.location.hostname + rutaPagina;
+       }
+    </script>
+</apex:page>

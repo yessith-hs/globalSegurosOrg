@@ -1,0 +1,26 @@
+.partners{
+  padding: 0 .7rem;
+}
+.partnersTitle {
+  color: #003696;
+  margin: 1rem 0;
+}
+
+.partnersWrapper {
+  background-color: #fff;
+  border-radius: 0.31rem;
+  padding: 1rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.partnersContent p {
+  font-weight: 400;
+  margin-top: 1rem;
+}
+
+@media only screen and (min-width:768px) {
+  .partnersWrapper{
+    grid-auto-flow: column;
+  }
+}

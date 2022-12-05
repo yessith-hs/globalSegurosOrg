@@ -1,0 +1,54 @@
+.menu-avatar {
+  display: grid;
+  place-items: center;
+  gap: 0.5rem;
+}
+
+.menu-avatar figure {
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+}
+
+.menu-avatar.mobile {
+  display: none;
+}
+
+.menu-avatar_details {
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.menu-avatar_details h3 {
+  font-size: .95rem;
+}
+
+.menu-avatar_details a {
+  padding-top: 0.3rem;
+  display: block;
+  text-decoration: underline;
+  color: white;
+  font-size: .75rem;
+}
+
+.menu-avatar_id {
+  font-size: .75rem;
+  display: flex;
+  gap: 0.3rem;
+}
+
+.menu-avatar_id span:first-child {
+  color: #ffd300;
+}
+
+@media only screen and (min-width:600px) {
+  .menu-avatar.mobile {
+    display: flex;
+    gap: 0.5rem;
+    place-items: center;
+  }
+}
+@media only screen and (min-width:1024px) {
+  .menu-avatar.mobile {
+    display: none;
+  }
+}

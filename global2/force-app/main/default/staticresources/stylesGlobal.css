@@ -1,0 +1,14 @@
+body{
+  background-color: rgb(238, 242, 252)!important;
+}
+
+a{
+  text-decoration: none!important;
+  cursor: pointer;
+}
+c-clbins-card-post {
+  flex: 0 0 260px;
+}
+.column-content.community_layout-column_column {
+    overflow: hidden!important;
+}

@@ -1,0 +1,16 @@
+<aura:component implements="forceCommunity:layout" access="global" description="Sample Custom Theme Layout">
+
+  <aura:attribute name="sideBar" type="Aura.Component[]" required="false" />
+  <aura:attribute name="footer" type="Aura.Component[]" required="false" />
+  <div class="container">
+    <div>
+      {!v.sideBar}
+    </div>
+    <div class="mainContentArea">
+      {!v.body}
+    </div>
+    <div>
+      {!v.footer}
+    </div>
+  </div>
+</aura:component>

@@ -1,0 +1,23 @@
+<template>
+    <h2 class="titulo">Casos de éxito</h2>
+    <div class="caso-exito-container">
+        <div class="cabecera">
+            <img src={casoExitoImg} alt="Gestiona tus seguros" class="img-caso-exito">
+            <div class="slogan"><img src={sloganImg} alt="Logo casos de exito"></div>
+            <a href="" class="link-navegacion-left"><img src={caretLeftImg} alt="left"
+                    class="boton-navegar-left"></a>
+            <a href="" class="link-navegacion-right"><img src={caretRightImg} alt="rigth"
+                    class="boton-navegar-right"></a>
+        </div>
+        <div class="card-container">
+            <!-- <template for:each={items} for:item="item">
+                <c-gp-casos-exito-card key={item.id} caso-exito={item}></c-gp-casos-exito-card>
+            </template> -->
+            <c-gp-casos-exito-card caso-exito={currentItem}></c-gp-casos-exito-card>
+        </div>
+        <div class="navigator-container">
+            <c-gp-carousel-navigator color="#003696" width="36px" maxitems="4"></c-gp-carousel-navigator>
+        </div>
+    </div>
+
+</template>

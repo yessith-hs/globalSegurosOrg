@@ -1,0 +1,49 @@
+.postContainer {
+  background-color: #fff;
+  height: 380px;
+  font-weight: 400;
+  border-radius: 5px;
+}
+
+.postWrapper {
+  display: flex;
+  color: #464646;
+  text-decoration: none;
+  flex-direction: column;
+  height: 100%;
+}
+
+.postWrapper figure {
+  height: 180px;
+}
+
+.postWrapper figure img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.postWrapper span {
+  text-decoration: underline;
+  color: #003696;
+  padding-left: 1rem;
+  cursor: pointer;
+}
+
+.postContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.postContent time {
+  font-size: 0.7rem;
+}
+
+.postContent h3 {
+  font-size: 1rem;
+  font-weight: 700;
+}

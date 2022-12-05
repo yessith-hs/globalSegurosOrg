@@ -1,0 +1,109 @@
+@import 'c/cssLibrary';
+
+.gp-detalle-container {
+    margin: 0;
+}
+
+.header-container {
+    background-color: var(--global-portal-color-ffffff);
+    padding: 0 0.6rem 0.6rem 0.6rem;
+    margin-bottom: 1rem;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 5px;
+}
+
+.container {
+    min-width: 21.875rem;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--global-portal-color-ffffff);
+    padding: 0 0.6rem 0.6rem 0.6rem;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    overflow: auto;
+}
+
+.titulo {
+    font-family: var(--global-portal-font-family-asap);
+    font-style: var(--global-portal-font-style-normal);
+    font-weight: var(--global-portal-font-weight-bold);
+    font-size: var(--global-portal-font-size-13);
+    line-height: var(--global-portal-line-spacing-10);
+    letter-spacing: var(--global-portal-character-spacing-0);
+    color: var(--global-portal-color-003696);
+    padding: 0.8rem 0 0.8rem 0;
+    margin: 0;
+}
+
+.titulo-detalle {
+    font-family: var(--global-portal-font-family-asap);
+    font-style: var(--global-portal-font-style-normal);
+    font-weight: var(--global-portal-font-weight-bold);
+    font-size: var(--global-portal-font-size-20);
+    line-height: var(--global-portal-line-spacing-23);
+    letter-spacing: var(--global-portal-character-spacing-0);
+    color: var(--global-portal-color-003696);
+    padding: 0.8rem 0 0.8rem 0;
+    margin: 0;
+}
+
+.contenido {
+    font-family: var(--global-portal-font-family-asap);
+    font-style: var(--global-portal-font-style-normal);
+    font-weight: var(--global-portal-font-weight-normal);
+    font-size: var(--global-portal-font-size-12);
+    line-height: var(--global-portal-line-spacing-10);
+    letter-spacing: var(--global-portal-character-spacing-0);
+    color: var(--global-portal-color-464646);
+    padding: 0 0 0.6rem 0;
+    margin: 0;
+    max-width: 80%;
+}
+
+.contenido-detalle {
+    font-family: var(--global-portal-font-family-asap);
+    font-style: var(--global-portal-font-style-normal);
+    font-weight: var(--global-portal-font-weight-normal);
+    font-size: var(--global-portal-font-size-12);
+    line-height: var(--global-portal-line-spacing-10);
+    letter-spacing: var(--global-portal-character-spacing-0);
+    color: var(--global-portal-color-464646);
+    padding: 0 0 0.6rem 0;
+    margin: 0;
+    max-width: 95%;
+}
+
+.boton-pagar_en_linea {
+    height: 2.87rem;
+    width: 11.88rem;
+    margin-bottom: 0.6rem;
+
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .header-container {
+        max-width: 24.813rem;
+        max-height: 12.438rem;
+        position: absolute;
+        top: 10.688rem;
+        right: 5.125rem;
+    }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+    .header-container {
+        max-width: 24.813rem;
+        max-height: 12.438rem;
+        position: absolute;
+        top: 11.5rem;
+        right: 3.875rem;
+    }
+}

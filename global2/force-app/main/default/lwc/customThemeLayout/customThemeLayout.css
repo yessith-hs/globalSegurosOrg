@@ -1,0 +1,13 @@
+:host {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+
+@media only screen and (min-width: 1024px) {
+  :host {
+    grid-template-columns: auto 1fr;
+  }
+}

@@ -1,0 +1,98 @@
+<apex:page standardController="Opportunity" extensions="ListaCotizaciones_ctr" lightningStylesheets="true">
+     <script>     
+        //--- INICIO DE POP UP's
+        function popUpGetCotizador(strUrlCotizador){
+            window.open(strUrlCotizador, '_blank', 'left=20,top=20,width=920,height=500,scrollbars=yes,toolbar=1,resizable=1');
+        } 
+        
+      </script>    
+    <apex:form >
+        <apex:pageBlock title="" >
+            <apex:outputPanel layout="block" style="overflow:auto;height:150px" >
+            <apex:pageBlockTable value="{!wrap}" var="item" rendered="{!bolTabla}"> 
+                                                
+                <apex:column >
+                    <apex:facet name="header"> 
+                        <apex:outputText value="{!lblstrNumeroCotizacion}" />
+                    </apex:facet>
+                    <apex:outputLink style="text-align: left;" onclick="popUpGetCotizador('{!item.strUrlCotizador}');return false;" >
+                            {!item.strNumeroCotizacion}</apex:outputLink>
+                </apex:column>
+
+                <apex:column >
+                    <apex:facet name="header"> 
+                        <apex:outputText value="{!lbldatFechaCotizacion}" />
+                    </apex:facet>
+                    <apex:outputText value="{0, date, dd/MM/yyyy}"> 
+                        <apex:param value="{!item.datFechaCotizacion}"/>
+                    </apex:outputText>
+                </apex:column>
+
+                <apex:column >
+                    <apex:facet name="header">
+                        <apex:outputText value="{!lblstrProducto}" />
+                    </apex:facet>
+                    <apex:outputText value="{!item.strProducto}" />
+                </apex:column>              
+                
+                <apex:column >
+                    <apex:facet name="header">
+                        <apex:outputText value="{!lbldecValorPrima}" />
+                    </apex:facet>
+                        <apex:outputText value="{0, number,###,###,##0}">
+                        <apex:param value="{!item.decValorPrima}" />
+                        </apex:outputText>  
+                </apex:column>  
+
+            
+                <apex:column >
+                    <apex:facet name="header">
+                        <apex:outputText value="{!lblAnexoEnfermedadesGraves}" rendered="{!bolSenalVida}"/>
+                    </apex:facet>
+                    <apex:inputCheckbox value="{!item.bolAnexoEnfermedadesGraves}" rendered="{!bolSenalVida}" disabled="true"/>
+                </apex:column>
+                
+                <apex:column >
+                    <apex:facet name="header">
+                        <apex:outputText value="{!lblAnexoInvalidezTotalPermanente}" rendered="{!bolSenalVida}"/>
+                    </apex:facet>
+                    <apex:inputCheckbox value="{!item.bolAnexoInvalidezTotalPermanente}" rendered="{!bolSenalVida}" disabled="true"/>
+                </apex:column>
+                
+                <apex:column >
+                    <apex:facet name="header">
+                        <apex:outputText value="{!lblAnexosMuerteAccidental}" rendered="{!bolSenalVida}"/>
+                    </apex:facet>
+                    <apex:inputCheckbox value="{!item.bolAnexosMuerteAccidental}" rendered="{!bolSenalVida}" disabled="true"/>
+                </apex:column>
+                
+                <apex:column >
+                    <apex:facet name="header">
+                        <apex:outputText value="{!lblAnioMaduracion}" rendered="{!bolSenalEducativo}"/>
+                    </apex:facet>
+                    <apex:outputText value="{!item.decAnioMaduracion}" rendered="{!bolSenalEducativo}"/>
+                </apex:column>
+
+                <apex:column >
+                    <apex:facet name="header">
+                        <apex:outputText value="{!lblOpcionCotizacion}" rendered="{!bolSenalPensiones}"/>
+                    </apex:facet>
+                    <apex:outputText value="{!item.strOpcionCotizacion}" rendered="{!bolSenalPensiones}"/>
+                </apex:column>
+                
+                
+                <apex:column >
+                    <apex:facet name="header">
+                        <apex:outputText value="{!lblValorAsegurado}" rendered="{!bolSenalVida}" />
+                    </apex:facet>
+                        <apex:outputText value="{0, number,###,###,##0}">
+                        <apex:param value="{!item.decValorAsegurado}" />    
+                        </apex:outputText>              
+                </apex:column>                                                                          
+
+                
+            </apex:pageBlockTable> 
+            </apex:outputPanel>
+    </apex:pageBlock> 
+    </apex:form>    
+</apex:page>

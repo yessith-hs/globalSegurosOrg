@@ -1,0 +1,26 @@
+<apex:page standardController="Poliza__c" extensions="AccountSelection_ctr" lightningStylesheets="true">
+    <apex:slds />
+    <!--<div class="slds-box slds-theme_default">-->
+        <apex:sectionHeader title="Caso" subtitle="Creación de Caso" 
+                            description="Seleccionar una cuenta para la Creación del caso"/>
+        <apex:form >
+            
+            <apex:pageBlock >
+                <apex:pageBlockButtons location="bottom">
+                    <apex:commandButton value="Continuar" action="{!continuar}"/>
+                    <apex:commandButton value="Cancelar" action="{!cancel}"/>
+                </apex:pageBlockButtons>
+                <apex:pageMessages />
+                <apex:pageBlockSection columns="1">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Cuentas"/>
+                        <apex:selectList value="{!strOpcion}" multiselect="false" size="1">
+                            <apex:selectOptions value="{!items}"/>
+                        </apex:selectList>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+            
+        </apex:form> 
+ <!--   </div> -->
+</apex:page>

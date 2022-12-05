@@ -1,0 +1,25 @@
+<apex:page standardController="Case"  extensions="viewCases_ctr" tabStyle="Case"  sidebar="true" showHeader="true">  
+      <apex:sectionHeader title="Casos" subtitle="Inicio" 
+ 	  description=""/>
+      <apex:form >                     
+            <apex:pageBlock >
+                <apex:pageBlockButtons >
+                <apex:commandButton action="{!URLFOR($Action.Case.NewCase)}" value="Nuevo Caso"/>
+                </apex:pageBlockButtons>
+                <apex:pageBlockTable value="{!lstCases}" var="c" rows="50" id="cases_table" >
+                    <apex:column >
+                        <apex:facet name="header">Número del caso</apex:facet>
+                        <a target="_parent" href="{!URLFOR($Action.Case.View, c.id)}">{!c.CaseNumber}</a>                       
+                    </apex:column>
+                    <apex:column value="{!c.imagenSemaforo__c}" />
+                    <apex:column value="{!c.FechaHoraRecibido__c}"></apex:column>
+                    <apex:column value="{!c.Asuntos__c}" />
+                    <apex:column value="{!c.Status}" />
+                    <apex:column value="{!c.Origin}" />
+                    <apex:column value="{!c.Poliza__c}" />
+                    <apex:column value="{!c.ContactId}" />                    
+              </apex:pageBlockTable>            
+        </apex:pageBlock>
+    </apex:form>
+    <base target="_parent"/>    
+</apex:page>

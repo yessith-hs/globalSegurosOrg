@@ -1,0 +1,66 @@
+@import 'c/cssLibrary';
+
+.global-card {
+    background-color: var(--global-portal-color-ffffff);
+    border-radius: 5px;
+    min-width: 16.25rem;
+}
+
+.img-container {
+    border-radius: 5px 5px 0 0;
+}
+
+.imagen {
+    border-radius: 5px;
+    width: 100%;
+}
+
+.contenido {
+    font-family: var(--global-portal-font-family-asap);
+    font-style: var(--global-portal-font-style-normal);
+    font-weight: var(--global-portal-font-weight-normal);
+    font-size: var(--global-portal-font-size-12);
+    line-height: var(--global-portal-line-spacing-12);
+    letter-spacing: var(--global-portal-character-spacing-0);
+    color: var(--global-portal-color-707070);
+    padding: 0;
+}
+
+.subtitulo {
+    font-family: var(--global-portal-font-family-asap);
+    font-style: var(--global-portal-font-style-normal);
+    font-weight: var(--global-portal-font-weight-bold);
+    font-size: var(--global-portal-font-size-15);
+    line-height: var(--global-portal-line-spacing-17);
+    letter-spacing: var(--global-portal-character-spacing-0);
+    color: var(--global-portal-color-464646);
+    padding: 0.6rem 0 0.6rem 0;
+    margin: 0;
+}
+
+.video-icono {
+    height: 1.rem;
+    width: 1.1rem;
+}
+
+.enlace {
+    font-family: var(--global-portal-font-family-asap);
+    font-style: var(--global-portal-font-style-normal);
+    font-weight: var(--global-portal-font-weight-normal);
+    font-size: var(--global-portal-font-size-12);
+    line-height: var(--global-portal-line-spacing-12);
+    letter-spacing: var(--global-portal-character-spacing-0);
+    color: var(--global-portal-color-2d4a84);
+    padding-bottom: 0.4rem;
+    padding-right: 0.6rem;
+    padding-left: 0.6rem;
+    text-decoration: underline;
+}
+
+.ver-video {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 5px 5px 0 0;
+    margin-top: 0.6rem;
+}

@@ -1,0 +1,26 @@
+@import 'c/cssLibrary';
+
+.gp-prensa-container {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    min-width: 21.875rem;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    overflow: auto;
+}
+
+.titulo {
+    font-family: var(--global-portal-font-family-asap);
+    font-style: var(--global-portal-font-style-normal);
+    font-weight: var(--global-portal-font-weight-bold);
+    font-size: var(--global-portal-font-size-20);
+    line-height: var(--global-portal-line-spacing-23);
+    letter-spacing: var(--global-portal-character-spacing-0);
+    color: var(--global-portal-color-003696);
+}

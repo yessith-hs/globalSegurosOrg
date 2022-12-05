@@ -1,0 +1,14 @@
+<template>
+  <div class="sliderContainer">
+    <div class="sliderTitle">
+      <figure><img src={srcimg} alt={topic}></figure>
+      <h2>{title}</h2>
+      <button><a href={url}>Ver todo</a></button>
+    </div>
+    <div class="sliderContent">
+      <template for:each={posts} for:item="post">
+        <c-clbins-card-post key={post.key} post={post}></c-clbins-card-post>
+      </template>
+    </div>
+  </div>
+</template>
