@@ -2,12 +2,18 @@ import { LightningElement, api, wire, track } from 'lwc'
 import getContentList from '@salesforce/apex/ManagedContentController.getContentList'
 import basePath from '@salesforce/community/basePath'
 import { formatDate } from 'c/clbinsUtils'
+
+import Id from '@salesforce/community/Id'
+import { listContent } from 'lightning/cmsDeliveryApi'
 export default class ClbinsListPost extends LightningElement {
   @api topic
   hasEntries
   listEntries
   maxEntries = 10
   @track maxEntriesShow = 2
+
+  @wire(listContent, { communityId: '$Id' })
+  cmsRecords
 
   // * Get Content List CMS
   @wire(getContentList, {
@@ -43,8 +49,12 @@ export default class ClbinsListPost extends LightningElement {
     this.maxEntriesShow += 2
   }
 
-  get entries() {
+  get entries () {
     if (this.listEntries) {
+      console.log(
+        '🚀 ~ file: clbinsListPost.js:61 ~ ClbinsListPost ~ cmsRecords',
+        this.cmsRecords
+      )
       const totalEntries = this.listEntries.length
       this.hasEntries = this.maxEntriesShow >= totalEntries ? false : true
 
@@ -52,3 +62,4 @@ export default class ClbinsListPost extends LightningElement {
     }
   }
 }
+
