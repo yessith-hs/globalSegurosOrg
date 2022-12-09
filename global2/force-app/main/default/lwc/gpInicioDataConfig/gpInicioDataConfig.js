@@ -270,5 +270,53 @@ const getDataCasosExito = () => {
     };
 };
 
+const getDataSolucionesRecomendadas = () => {
+    return {
+        id: 'gp-soluciones-recomendadas',
+        items: [
+            {
+                id: '78333a26-3924-44e0-9g57-3eadf3b73846',
+                ramoSeguros: 'Seguro Educativo',
+                colorRamoSeguros: '#0087dc',
+                link: 'seguro-educativo',
+                contenido: 'Ver a los hijos felices y graduados como profesionales, es un logro que muchos padres por eventualidades financieras no pueden alcanzar.',
+                imagen: 'gp-soluciones-seguro-educativo.jpg'
+            },
+            {
+                id: '78333a26-3924-44e0-9g57-3eadf3b75846',
+                ramoSeguros: 'Seguro Vida',
+                colorRamoSeguros: '#ff5555',
+                link: 'seguro-vida',
+                contenido: 'La vida está llena de momentos que nos sacan de nuestra zona de confort.',
+                imagen: 'gp-soluciones-seguro-vida.jpg'
+            },
+            {
+                id: '68333a26-3924-44e0-9g57-3eadf3b73846',
+                ramoSeguros: 'Pensión Voluntaria',
+                colorRamoSeguros: '#0087dc',
+                link: 'pension-voluntaria',
+                contenido: 'Protege el futuro de tu familia y todo lo que has construido, proyectando una pensión adicional que te garantice la libertad financiera que deseas.',
+                imagen: 'gp-soluciones-pension-voluntaria.jpg'
+            },
+            {
+                id: '58333a26-3924-44e0-9g57-3eadf3b73846',
+                ramoSeguros: 'Accidentes personales',
+                colorRamoSeguros: '#be2d55',
+                link: 'accidentes-personales',
+                contenido: 'Los accidentes suceden en cualquier situación, desde pasear a tu perro, hasta en el camino al trabajo.',
+                imagen: 'gp-soluciones-accidentes-personales.jpg'
+            },
+            {
+                id: '48333a26-3924-44e0-9g57-3eadf3b73846',
+                ramoSeguros: 'Renta Voluntaria',
+                colorRamoSeguros: '#9b5091',
+                link: 'renta-voluntaria',
+                contenido: 'Todos tenemos proyectos que nos gustaría realizar, pero pocos pensamos en haber construido un capital en el pasado para hacerlos realidad.',
+                imagen: 'gp-soluciones-renta-voluntaria.jpg'
+            }
+        ]
+    };
+};
+
 export { getDataProductoDestacado, getDataProdDestDetalle, getDataFAQ, getDataPrensa,
-    getDataConexionGlobal, getDataCasosExito }
+    getDataConexionGlobal, getDataCasosExito, getDataSolucionesRecomendadas}
