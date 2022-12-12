@@ -63,7 +63,7 @@ main .main_container {
 
 .blog_header {
   width: 90%;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
 }
 
 .blog_header .date {

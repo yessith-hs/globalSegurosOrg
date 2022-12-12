@@ -1,9 +1,8 @@
 import { LightningElement, track, wire } from 'lwc'
 import { CurrentPageReference } from 'lightning/navigation'
-import baseUrl from '@salesforce/community/basePath'
-import getContent from '@salesforce/apex/ManagedContentController.getContent'
-import basePath from '@salesforce/community/basePath'
 import { formatDate } from 'c/clbinsUtils'
+import basePath from '@salesforce/community/basePath'
+import getContent from '@salesforce/apex/ManagedContentController.getContent'
 
 // * Assets
 import URL_HEADER from '@salesforce/resourceUrl/header'
@@ -12,7 +11,7 @@ import URL_AVATAR from '@salesforce/resourceUrl/avatar'
 export default class ClbinsBlogLayout extends LightningElement {
   headerImg = URL_HEADER
   avatarImg = URL_AVATAR
-  educationalUrl = baseUrl
+
 
   @track blogId
   topicUrl
@@ -27,9 +26,9 @@ export default class ClbinsBlogLayout extends LightningElement {
 
   // * get url topic
   URL_TOPICS = {
-    'Orientación educativa': `${baseUrl}/conexion-global/orientacion-educativa`,
-    'Desarrollo integral': `${baseUrl}/conexion-global/desarrollo-integral`,
-    'Habilidades socioemocionales': `${baseUrl}/conexion-global/habilidades-socioemocionales`
+    'Orientación educativa': `${basePath}/conexion-global/orientacion-educativa`,
+    'Desarrollo integral': `${basePath}/conexion-global/desarrollo-integral`,
+    'Habilidades socioemocionales': `${basePath}/conexion-global/habilidades-socioemocionales`
   }
 
   // * get id post
@@ -50,7 +49,6 @@ export default class ClbinsBlogLayout extends LightningElement {
   })
   wiredContent({ data, error }) {
     if (data) {
-      console.log("🚀 ~ file: clbinsBlogLayout.js:52 ~ ClbinsBlogLayout ~ wiredContent ~ data", data)
       const {
         tematica,
         fechapublicacion,
@@ -74,7 +72,7 @@ export default class ClbinsBlogLayout extends LightningElement {
       this.error = undefined
       this.topicUrl = this.URL_TOPICS[this._topic]
         ? this.URL_TOPICS[this._topic]
-        : baseUrl
+        : basePath
     }
     if (error) {
       console.log('Error: ' + JSON.stringify(error))
