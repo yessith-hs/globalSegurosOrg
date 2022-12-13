@@ -47,6 +47,25 @@
   gap: 1rem;
 }
 
+.sliderContent::-webkit-scrollbar {
+  width: 1rem;
+  height: 0.5rem;
+}
+
+.sliderContent::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.sliderContent::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 50, 120);
+  border-radius: 1rem;
+  outline: none
+}
+
+.sliderContent::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 50, 120,.5);
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
 
 
 

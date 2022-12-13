@@ -1,21 +1,11 @@
 .container {
-  margin: 0;
+  margin: 0 0.7rem;
   padding: 0;
-  font-family: "Asap", sans-serif;
   background-color: #fff;
 }
 
 .blog_container {
   margin-bottom: 2rem;
-}
-
-header {
-  /* min-height: 19.169rem;
-  background-image: url('https://i.ibb.co/b130N3B/Recta-ngulo-459-3x.png');
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-position:center;
-  position: relative; */
 }
 
 .header_button {

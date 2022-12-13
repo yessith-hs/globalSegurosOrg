@@ -1,25 +1,18 @@
 .details {
-  margin: 0 .7rem;
-  background-color: #EEF2FC;
-  /* padding: 0 .7rem; */
-  /* border-radius: 5px;
-  padding-bottom: 1rem; */
-}
-
-.details+figure {
-  height: 120px;
-  width: 100%;
+  margin: 0 0.7rem;
+  background-color: #eef2fc;
 }
 
 .details img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  aspect-ratio: 16/9;
+
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
 
-.detailWrapper{
+.detailWrapper {
   background-color: #fff;
   padding-bottom: 1rem;
   border-radius: 5px;
@@ -28,8 +21,8 @@
 .detailContainer {
   font-weight: 400;
   display: grid;
-  gap: .5rem;
-  padding: .5rem;
+  gap: 0.5rem;
+  padding: 0.5rem;
 }
 
 .detailContainer h2 {
@@ -39,7 +32,7 @@
 
 .detailContent {
   display: grid;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .detailCategories {
@@ -71,7 +64,7 @@
 .detailLink h3 {
   color: #fff;
   font-weight: 400;
-  font-size: .7rem;
+  font-size: 0.7rem;
 }
 
 .detailBtn {
@@ -79,9 +72,9 @@
   outline: none;
   height: 40px;
   width: 80px;
-  background-color: #FFD300;
+  background-color: #ffd300;
   margin-left: 0.5rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 .detailBtn a {
@@ -91,10 +84,21 @@
   place-items: center;
   place-content: center;
   color: #033278;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
-@media only screen and (min-width:768px) {
+@media only screen and (min-width: 375px) {
+  .detailCategories {
+    padding: 0.5rem;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .details>figure {
+    height: 300px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
   .detailWrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -102,23 +106,20 @@
 
   .detailPlus {
     display: initial;
-    margin-left: .5rem;
+    margin-left: 0.5rem;
   }
 }
 
-@media only screen and (min-width:375px) {
-  .detailCategories {
-    padding: 0.5rem;
-}
-}
-
-@media only screen and (min-width:1366px) {
+@media only screen and (min-width: 1366px) {
   .details {
     background-color: #fff;
     display: grid;
     grid-template-columns: 65% auto;
-    height: 500px;
     gap: 2rem;
+  }
+
+  .details>figure {
+    height: 400px;
   }
 
   .detailWrapper {
