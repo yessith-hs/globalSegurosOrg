@@ -2,7 +2,7 @@
 
 .gp-conexion-global-container {
     margin: 0;
-    padding: 0;
+    padding: 0 0.6rem;
 }
 
 .gp-inicio-conexion-global {
@@ -13,8 +13,10 @@
     display: flex;
     flex-direction: row;
     column-gap: 1rem;
-    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: scroll;
     margin-bottom: 1rem;
+    margin-left: 0.6rem;
 }
 
 .titulo-container {
@@ -29,6 +31,10 @@
     display: none;
 }
 
+.bottom-navigator {
+    padding-left: 0.6rem;
+}
+
 .titulo {
     font-family: var(--global-portal-font-family-asap);
     font-style: var(--global-portal-font-style-normal);
@@ -38,6 +44,41 @@
     letter-spacing: var(--global-portal-character-spacing-0);
     color: var(--global-portal-color-003696);
     padding-bottom: 0rem;
-    padding-left: 0.6rem;
     margin: 0;
+    flex: 0 0 11rem;
+}
+
+.ver-todo {
+    flex: 1;
+}
+
+.boton-ver-todo {
+    height: 2.875rem;
+    width: 5.375rem;
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .bottom-navigator {
+        display: none;
+    }
+
+    .top-navigator {
+        display: inline;
+    }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+    .gp-conexion-global-container {
+        max-width: 58.012rem;
+    }
+
+    .bottom-navigator {
+        display: none;
+    }
+
+    .top-navigator {
+        display: inline;
+    }
 }

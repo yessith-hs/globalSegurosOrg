@@ -1,0 +1,24 @@
+<template>
+  <article>
+    <header class="">
+      <div class="">
+        <h3>Número de Póliza</h3>
+        <span>{insurance.policyNumber}</span>
+      </div>
+      <span>punto</span>
+      <h2>{insurance.insuranceName}</h2>
+    </header>
+    <main class="">
+      <div class=""><span>Próximo pago</span>
+        <template if:true={insurance.isExpired}>
+          <span>Vencido</span>
+        </template>
+        <template if:false={insurance.isExpired}>
+          <time datetime={insurance.nextPaymentDate} title={insurance.nextPaymentDate}>{insurance.nextPaymentDate}</time>
+        </template>
+      </div>
+      <span class="">{insurance.amount}</span>
+      <span onclick={handleClick} data-id={insurance.key}>Ver más detalles</span>
+    </main>
+  </article>
+</template>

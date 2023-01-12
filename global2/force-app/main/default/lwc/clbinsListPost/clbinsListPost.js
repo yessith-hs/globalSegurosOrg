@@ -55,4 +55,3 @@ export default class ClbinsListPost extends LightningElement {
     }
   }
 }
-

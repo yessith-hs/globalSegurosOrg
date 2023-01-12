@@ -1,10 +1,12 @@
 <template>
     <div class="global-card">
         <div class="img-container">
-            <video width=260 class="imagen" controls>
-                <source src={getVideo} type="video/mp4">
+<!--             <video width=260 class="imagen" controls>
+                <source src={contenidoCard.urlVideo} type="video/mp4">
                 Your browser does not support the video tag.
-            </video>
+            </video> -->
+
+            <iframe width="260" class="imagen" src={contenidoCard.urlVideo} title="YouTube video player"></iframe>
         </div>
         <div class="card-content">
             <p class="subtitulo">{contenidoCard.titulo} </p>

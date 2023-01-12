@@ -1,0 +1,16 @@
+<template>
+    <div class="solucion-card">
+        <div class="img-container">
+            <img src={getSolucionImagen} alt="imagen nota" class="imagen">
+        </div>
+        <div class="card-content">
+            <div class="titulo-container">
+                <p class="subtitulo">{contenido.ramoSeguros} </p>
+                <span class="category-dot" style={getStyleRamoSeguro}></span>
+            </div>
+            <p class="contenido">{contenido.contenido}</p>
+            <a href={getSolucionLink} class="ver-todo"><img src={botonConocerMasImg}
+                alt="" class="boton-ver-todo"></a>
+        </div>
+    </div>
+</template>

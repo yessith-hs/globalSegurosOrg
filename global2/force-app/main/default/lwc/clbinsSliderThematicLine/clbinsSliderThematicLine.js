@@ -17,8 +17,3 @@ export default class ClbinsSliderThematicLine extends LightningElement {
   integralDevelopmentlUrl = `${baseUrl}/conexion-global/desarrollo-integral`;
   socioEmotionallUrl = `${baseUrl}/conexion-global/habilidades-socioemocionales`;
 }
-/**
- * orientacion_educativa
- * desarrollo_integral
- * habilidades_socioemocionales
- */

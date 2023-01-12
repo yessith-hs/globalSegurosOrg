@@ -1,0 +1,31 @@
+.moreEntries {
+  margin-top: 1rem;
+  margin-left: 0.7rem;
+  color: #003696;
+}
+.sliderContent {
+  overflow-x: scroll;
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0.7rem 0;
+}
+
+.sliderContent::-webkit-scrollbar {
+  width: 1rem;
+  height: 0.5rem;
+}
+
+.sliderContent::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.sliderContent::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 50, 120);
+  border-radius: 1rem;
+  outline: none;
+}
+
+.sliderContent::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 50, 120, 0.5);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}

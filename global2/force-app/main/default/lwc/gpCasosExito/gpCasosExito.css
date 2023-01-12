@@ -36,14 +36,18 @@
 
 .link-navegacion-left {
     position: absolute;
-    top: 40%;
+    top: 20%;
     left: 20px;
+    background-color: #003278a8;
+    opacity: 0.4;
 }
 
 .link-navegacion-right {
     position: absolute;
-    top: 40%;
-    left: 320px;
+    top: 20%;
+    right: 25px;
+    background-color: #003278a8;
+    opacity: 0.4;
 }
 
 .card-container {
@@ -69,12 +73,43 @@
 /* TABLET */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .caso-exito-container {
-        max-width: 50.5rem;
+        /* max-width: 58.012rem; */
+    }
+
+    .img-caso-exito {
+        min-height: 26.625rem;
+        min-width: 45.5rem;
     }
 
     .slogan {
         top: 2.601rem;
         right: 3.3rem;
+    }
+
+    .white-navigator {
+        display: block;
+        position: absolute;
+        top: 11.1rem;
+        right: -0.1755rem;
+        width: 24.8rem;
+    }
+    
+    .blue-navigator {
+        display: none;
+    }
+
+    .link-navegacion-left {
+        position: absolute;
+        top: 35%;
+    }
+    
+    .link-navegacion-right {
+        position: absolute;
+        top: 35%;
+    }
+
+    .navigator-container {
+        display: none;
     }
 }
 
@@ -84,8 +119,37 @@
         max-width: 58.25rem;
     }
 
+    .img-caso-exito {
+        min-height: 26.625rem;
+        min-width: 45.5rem;
+    }
+
     .slogan {
         top: 2.541rem;
         right: 2.92rem;
+    }
+
+    .link-navegacion-left {
+        top: 40%;
+    }
+    
+    .link-navegacion-right {
+        top: 40%;
+    }
+
+    .white-navigator {
+        display: block;
+        position: absolute;
+        top: 12.2rem;
+        right: -0.1755rem;
+        width: 24.8rem;
+    }
+    
+    .blue-navigator {
+        display: none;
+    }
+
+    .navigator-container {
+        display: none;
     }
 }

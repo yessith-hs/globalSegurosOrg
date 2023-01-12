@@ -2,6 +2,8 @@ import { LightningElement } from 'lwc';
 
 import globalSegurosPortal from '@salesforce/resourceUrl/global_seguros_portal';
 
+import BASE_PATH from "@salesforce/community/basePath";
+
 export default class GestionSeguros extends LightningElement {
 
     gestionSeguroImg = globalSegurosPortal + '/images/gp-gestion-seguros.png';
@@ -12,4 +14,5 @@ export default class GestionSeguros extends LightningElement {
     documentosImg = globalSegurosPortal + '/images/gp-certificados-documentos.svg';
     beneficiosImg = globalSegurosPortal + '/images/gp-pago-mis-beneficios.svg';
 
+    urlSolucionesRecomendadas = `${BASE_PATH}/soluciones-pensadas-para-ti`;
 }

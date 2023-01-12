@@ -1,17 +1,17 @@
 <template>
     <div class="global-card">
         <div class="img-container">
-            <img src={getConexionImagen} alt="imagen nota" class="imagen">
+            <img src={conexionDetail.imagen} alt="imagen nota" class="imagen">
             <div class="ver-mas">
                 <p class="nota-ver-mas">Ver más de</p>
-                    <a href="#" class="link-ver-mas">{conexionDetail.linkBoton}</a>
+                <a href="#" class="link-ver-mas">{conexionDetail.linkBoton}</a>
             </div>
         </div>
         <div class="card-content">
             <h2 class="fecha">{conexionDetail.fecha}</h2>
             <p class="subtitulo">{conexionDetail.titulo} </p>
-            <p class="contenido">{conexionDetail.contenido}</p>
-            <div class="link-ver-mas"><a class="link" href="#">Leer más</a></div>
+            <p class="contenido">{contenido}</p>
+            <a class="link-ver-mas" href="#">Leer más</a>
         </div>
-    </div> 
+    </div>
 </template>

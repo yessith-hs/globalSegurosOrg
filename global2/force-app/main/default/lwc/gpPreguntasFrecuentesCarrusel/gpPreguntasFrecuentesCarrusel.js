@@ -3,7 +3,7 @@ import { LightningElement, api } from 'lwc';
 import globalSegurosPortal from '@salesforce/resourceUrl/global_seguros_portal';
 
 export default class PreguntasFrecuentesCarrusel extends LightningElement {
-    @api config;
+    @api items;
     active;
     items;
     currentItem;

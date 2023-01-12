@@ -1,0 +1,8 @@
+<template>
+  <h2 class="moreEntries">Más entradas</h2>
+  <div class="sliderContent">
+    <template for:each={posts} for:item="post">
+      <c-clbins-card-post key={post.key} post={post}></c-clbins-card-post>
+    </template>
+  </div>
+</template>

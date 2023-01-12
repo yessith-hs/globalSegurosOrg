@@ -1,0 +1,40 @@
+<template>
+    <div class="titulo-contenedor">
+        <h2 class="titulo">Soluciones recomendadas para ti</h2>
+        <a href={urlSolucionesRecomendadas} class="ver-todo">
+            <img src={botonVolverAtrasImg} alt="" class="boton-volver-atras"></a>
+    </div>
+    <div class="container">
+        <div class="titulo-container">
+            <p class="subtitulo">Seguro Educativo </p>
+            <span class="category-dot" style={getStyleRamoSeguro}></span>
+        </div>
+        <div class="solucion-detalle">
+            <div class="solucion-card">
+                <p class="titulo">Información del Producto</p>
+                <div class="img-container">
+                    <img src={getSolucionImagen} alt="imagen nota" class="imagen-solucion">
+                </div>
+                <p class="contenido">Ver a los hijos felices y graduados como profesionales, es un logro que muchos padres por
+                    eventualidades financieras no pueden alcanzar.</p>
+                <p class="contenido">Por eso es importante anticiparte destinando desde hoy parte de tus ingresos para garantizar su
+                    educación superior, eligiendo entre nuestras 25 opciones de seguro educativo que te ayudarán a lograrlo con los
+                    siguientes beneficios: </p>
+                <!-- <p class="contenido1">Asegúrate con todos los beneficios:</p> -->
+                <ul class="lista">
+                    <li>Elegir en Colombia la institución y programa académico de educación superior que prefieran.</li>
+                    <li>Escoger según tus posibilidades económicas planes de cobertura total o parcial.</li>
+                    <li>Opción de adquirir semestre por semestre hasta completar 10 periodos académicos.</li>
+                    <li>Recibes un amparo de vida que te cubre en caso llegar a sufrir una incapacidad total y permanente o la muerte.
+                    </li>
+                    <li>Opción de adquirirlo desde los 7 meses de gestación y hasta 6 años antes de finalizar el colegio.</li>
+                </ul>
+            </div>
+            <div class="contactanos-card">
+                <img src={getContactanosImagen} alt="imagen nota" class="contactanos-imagen">
+                <p class="contactanos">Puedes contactarte con tu asesor de confianza o nuevo.</p>
+                <img src={botonAgendaCitaImg} alt="agenda cita" class="boton-agenda-cita">
+            </div>
+        </div>
+    </div>
+</template>

@@ -19,7 +19,7 @@
     font-style: var(--global-portal-font-style-normal);
     font-weight: var(--global-portal-font-weight-medium);
     font-size: var(--global-portal-font-size-13);
-    line-height: var(--global-portal-line-spacing-10);
+    line-height: var(--global-portal-line-spacing-12);
     letter-spacing: var(--global-portal-character-spacing-0);
     color: var(--global-portal-color-0087dc);
     margin: 0;
@@ -40,7 +40,7 @@
     font-style: var(--global-portal-font-style-normal);
     font-weight: var(--global-portal-font-weight-bold);
     font-size: var(--global-portal-font-size-12);
-    line-height: var(--global-portal-line-spacing-10);
+    line-height: var(--global-portal-line-spacing-12);
     letter-spacing: var(--global-portal-character-spacing-0);
     color: var(--global-portal-color-464646);
     padding: 0 1rem 0.6rem 0.6rem;
@@ -51,7 +51,7 @@
     font-style: var(--global-portal-font-style-normal);
     font-weight: var(--global-portal-font-weight-normal);
     font-size: var(--global-portal-font-size-12);
-    line-height: var(--global-portal-line-spacing-10);
+    line-height: var(--global-portal-line-spacing-12);
     letter-spacing: var(--global-portal-character-spacing-0);
     color: var(--global-portal-color-464646);
     padding-left: 0.6rem;
@@ -61,7 +61,7 @@
 .boton-agenda-cita {
     width: 135px;
     height: 46px;
-    margin: 0.8rem 0 2rem 0.6rem;
+    margin: 0.8rem 0 0 0.6rem;
 
 }
 
@@ -86,6 +86,14 @@
         top: 10.847rem;
         right: 5.5rem;
     }
+
+    .category-description {
+        max-width: 19.82rem;
+    }
+
+    .testimonio { 
+        max-width: 20.8rem;
+    }
 }
 
 /* DESKTOP */
@@ -94,7 +102,15 @@
         position: absolute;
         width: 24.812rem;
         height: 19.75rem;
-        top: 10.847rem;
+        top: 9.847rem;
         right: 5.5rem;
+    }
+
+    .category-description {
+        max-width: 19.82rem;
+    }
+
+    .testimonio { 
+        max-width: 20.8rem;
     }
 }

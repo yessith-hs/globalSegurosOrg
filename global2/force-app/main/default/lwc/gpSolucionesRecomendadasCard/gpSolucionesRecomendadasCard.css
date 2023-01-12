@@ -1,0 +1,62 @@
+@import 'c/cssLibrary';
+
+.solucion-card {
+    background-color: var(--global-portal-color-ffffff);
+    border-radius: 5px;
+    min-width: 15.25rem;
+    max-width: 15.25rem;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 3px 6px #00000029;
+}
+
+.imagen {
+    height: 8.375rem;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.titulo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem;
+}
+
+.contenido {
+    font-family: var(--global-portal-font-family-asap);
+    font-style: var(--global-portal-font-style-normal);
+    font-weight: var(--global-portal-font-weight-normal);
+    font-size: var(--global-portal-font-size-12);
+    line-height: var(--global-portal-line-spacing-12);
+    letter-spacing: var(--global-portal-character-spacing-0);
+    color: var(--global-portal-color-707070);
+    padding: 0 0.6rem 0.6rem 0.6rem;
+    flex-grow: 1;
+}
+
+.subtitulo {
+    font-family: var(--global-portal-font-family-asap);
+    font-style: var(--global-portal-font-style-normal);
+    font-weight: var(--global-portal-font-weight-bold);
+    font-size: var(--global-portal-font-size-15);
+    line-height: var(--global-portal-line-spacing-17);
+    letter-spacing: var(--global-portal-character-spacing-0);
+    color: var(--global-portal-color-464646);
+    margin: 0;
+}
+
+.category-dot {
+    height: 12px;
+    width: 12px;
+    border: 1px solid;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.boton-ver-todo {
+    margin: 0.6rem;
+    width: 93%;
+}

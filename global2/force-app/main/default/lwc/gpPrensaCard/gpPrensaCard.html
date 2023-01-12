@@ -1,11 +1,12 @@
 <template>
     <div class="prensa-card">
-        <img src={notaPrensaImagen} alt="imagen nota" class="imagen">
-        <div>
-            <h2 class="editor">{notaPrensa.publica}</h2>
-            <p class="titulo">{notaPrensa.titular} </p>
-            <p class="contenido">{notaPrensa.contenido}</p>
-            <div class="link"><a class="link" href="#">Leer la nota completa</a></div>
+        <div><img src={notaPrensa.imagen} alt="imagen nota" class="imagen"></div>
+        <div class="nota-prensa">
+            <img src={notaPrensa.logoPrensa} alt="imagen nota" class="logo-prensa">
+            <p class="titulo">{notaPrensa.titulo} </p>
+            <p class="contenido">{notaPrensa.descripcion}</p>
+            <div class="link"><a class="link" href={notaPrensa.urlPrensa}>
+                    Leer la nota completa</a></div>
         </div>
-    </div>    
+    </div>
 </template>

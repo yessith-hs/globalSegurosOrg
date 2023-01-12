@@ -1,8 +1,8 @@
 <template>
     <div class="container">
         <div class="faq-carrousel">
-            <template for:each={config.items} for:item="item">
-                <div key={item.id} class="pregunta-container">
+            <template for:each={items} for:item="item">
+                <div key={item.key} class="pregunta-container">
                     <p class="gp-faq-pregunta">{item.pregunta} </p>
                     <p class="texto-pregunta"><a href="" class="link-mas"><img src={botonMasInactivo} alt="Boton ampliar pregunta" class="boton-mas"></a></p>
                 </div>
@@ -10,7 +10,9 @@
         </div>
         <div class="faq-navigator">
             <a href="#" class="boton-todas"><img src={botonVerTodas} alt="Boton ver todas" class="boton-ver_todas"></a>
-            <c-gp-carousel-navigator color="#ffffff" width="30.18px" maxitems="5"></c-gp-carousel-navigator>
+            <div class="bottom-navigator">
+                <c-gp-carousel-navigator color="#ffffff" width="30.18px" maxitems="5"></c-gp-carousel-navigator>
+            </div>
         </div>
     </div>
 </template>

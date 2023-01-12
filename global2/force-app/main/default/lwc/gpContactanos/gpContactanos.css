@@ -2,13 +2,22 @@
 
 .container {
     display: flex;
-    gap: 0.6rem;
-    padding: 0 0.6rem 1.5rem 0.6rem;
+    padding: 0.6rem 0.6rem 1.5rem 0.6rem;
+    align-items: center;
+    gap: 1rem;
 }
 
 .cabecera {
     position: relative;
     display: none;
+    width: 100%;
+    max-height: 9.125rem;
+}
+
+.contactanos-img {
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 5px;
+    width: 100%;
 }
 
 .ico-container-agenda, .ico-container-servicio {
@@ -34,7 +43,6 @@
     width: 135px;
     height: 46px;
     margin: 0.8rem 0 2rem 0.6rem;
-
 }
 
 .titulo {
@@ -46,7 +54,7 @@
     letter-spacing: var(--global-portal-character-spacing-0);
     color: var(--global-portal-color-003696);
     padding: 0 0.6rem 0 1rem;
-    margin: 0;
+    margin-top: 1.5rem;
 }
 
 .titulo-contactarte {
@@ -67,7 +75,7 @@
     font-style: var(--global-portal-font-style-normal);
     font-weight: var(--global-portal-font-weight-normal);
     font-size: var(--global-portal-font-size-13);
-    line-height: var(--global-portal-line-spacing-10);
+    line-height: var(--global-portal-line-spacing-12);
     letter-spacing: var(--global-portal-character-spacing-0);
     color: var(--global-portal-color-464646);
     padding: 1rem 0 0 0.6rem;
@@ -90,16 +98,15 @@
         display: none;
     }
 
-    .cabecera {
-        display: inline;
+    .ico-container-servicio {
+        display: flex;
+        padding: 0.6rem;
+        min-width: 9.562rem;
+        min-height: 9.187rem;
     }
 
-    .caso-exito-card {
-        position: absolute;
-        width: 24.812rem;
-        height: 19.75rem;
-        top: 10.847rem;
-        right: 5.5rem;
+    .cabecera {
+        display: flex;
     }
 }
 
@@ -109,15 +116,22 @@
         display: none;
     }
 
-    .cabecera {
-        display: inline;
+    .ico-container-servicio {
+        display: flex;
+        padding: 0.6rem;
+        min-width: 9.562rem;
+        min-height: 9.187rem;
     }
 
-    .caso-exito-card {
-        position: absolute;
-        width: 24.812rem;
-        height: 19.75rem;
-        top: 10.847rem;
-        right: 5.5rem;
+    .cabecera {
+        display: flex;
+    }
+
+    .contactanos-img {
+        max-height: 9.187rem;
+    }
+
+    .container {
+        max-width: 58.25rem;
     }
 }

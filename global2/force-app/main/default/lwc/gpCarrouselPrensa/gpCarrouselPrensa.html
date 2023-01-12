@@ -3,9 +3,9 @@
         <h2 class="titulo">Prensa</h2>
         <div class="container">
             <template for:each={items} for:item="item">
-               <c-gp-prensa-card key={item.id} nota-prensa={item}></c-gp-prensa-card> 
+                <c-gp-prensa-card key={item.key} nota-prensa={item}></c-gp-prensa-card>
             </template>
         </div>
-        <c-gp-carousel-navigator color="#003696" width="36px" maxitems="3"></c-gp-carousel-navigator>
     </div>
+    <c-gp-carousel-navigator color="#003696" width="36px" maxitems="3"></c-gp-carousel-navigator>
 </template>

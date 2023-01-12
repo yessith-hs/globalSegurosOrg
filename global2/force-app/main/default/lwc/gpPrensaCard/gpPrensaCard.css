@@ -3,7 +3,11 @@
 .imagen {
     height: 13.375rem;
     border-radius: 5px;
-    width: 100%;
+}
+
+.logo-prensa {
+    height: 1.7rem;
+    margin: 0.6rem;
 }
 
 .editor {
@@ -45,6 +49,8 @@
     background-color: var(--global-portal-color-ffffff);
     border-radius: 5px;
     min-width: 16.25rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .titulo {
@@ -58,4 +64,28 @@
     padding-left: 1rem;
     padding-right: 1rem;
     margin: 0;
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .imagen {
+        height: 19rem; 
+    }
+
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+    .prensa-card {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nota-prensa {
+        min-width: 22rem;
+    }
+
+    .imagen {
+        max-width: fit-content;
+    }
 }

@@ -29,4 +29,8 @@ export default class GpCarouselNavigator extends LightningElement {
     get dotStyle() {
         return 'border: 2px solid ' +  this.color + '; width: ' + this.width + ';';
     }
+
+    get textoStyle() {
+        return 'color: ' + this.color;
+    }
 }

@@ -1,0 +1,53 @@
+.insuranceTitle {
+  padding-left: 0.7rem;
+}
+
+.insuranceWrapper {
+  margin: 0 0.7rem;
+  background: aqua;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.cardNewInsurance {
+  background-color: #003696;
+  color: #fff;
+  padding: 1em;
+  border-radius: 0.3rem;
+}
+
+.cardNewInsurance h2 {
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: inset 0 -2px 0 0 rgb(255, 255, 255);
+}
+
+.btnWrapper {
+  display: grid;
+  gap: 1rem;
+  place-items: center;
+  place-content: center;
+}
+
+.btnWrapper a {
+  display: flex;
+  place-items: center;
+  place-content: center;
+  gap: 0.5rem;
+  height: 46px;
+  width: 300px;
+  cursor: pointer;
+  border-radius: 0.3rem;
+}
+
+.btnWrapper a:first-child {
+  background-color: #7e99cb;
+  color: #fff;
+}
+
+.btnWrapper a:nth-child(2) {
+  background-color: #ffd300;
+  color: #003696;
+}

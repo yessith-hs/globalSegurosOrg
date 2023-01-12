@@ -16,7 +16,7 @@ export default class ClbinsCarouselCms extends NavigationMixin(
 
   @wire(getContentList, {
     page: 0,
-    pageSize: 10,
+    pageSize: 6,
     language: "es",
     filterby: "$topic"
   })
