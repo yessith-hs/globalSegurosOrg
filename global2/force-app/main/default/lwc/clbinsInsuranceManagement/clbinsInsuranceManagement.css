@@ -1,20 +1,24 @@
 .insuranceTitle {
-  padding-left: 0.7rem;
+  padding: 1rem 0.7rem;
+  font-size: 1.4rem;
+  color: #003696;
 }
 
 .insuranceWrapper {
   margin: 0 0.7rem;
-  background: aqua;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 1rem;
 }
 
 .cardNewInsurance {
   background-color: #003696;
   color: #fff;
-  padding: 1em;
+  padding: 1rem;
   border-radius: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .cardNewInsurance h2 {
@@ -37,7 +41,7 @@
   place-content: center;
   gap: 0.5rem;
   height: 46px;
-  width: 300px;
+  width: 250px;
   cursor: pointer;
   border-radius: 0.3rem;
 }

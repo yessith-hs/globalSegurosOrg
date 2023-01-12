@@ -1,24 +1,26 @@
 <template>
-  <article>
-    <header class="">
-      <div class="">
+  <article class="insuranceCard">
+    <header style={getStyleRamoSeguroBorder} class="insuranceHead">
+      <div class="insuranceHead_title">
         <h3>Número de Póliza</h3>
         <span>{insurance.policyNumber}</span>
       </div>
-      <span>punto</span>
+      <span style={getStyleRamoSeguro}></span>
       <h2>{insurance.insuranceName}</h2>
     </header>
-    <main class="">
-      <div class=""><span>Próximo pago</span>
+    <main class="insuranceMain">
+      <div class="insuranceBody">
+        <h3>Próximo pago</h3>
         <template if:true={insurance.isExpired}>
           <span>Vencido</span>
         </template>
         <template if:false={insurance.isExpired}>
-          <time datetime={insurance.nextPaymentDate} title={insurance.nextPaymentDate}>{insurance.nextPaymentDate}</time>
+          <time datetime={insurance.nextPaymentDate}
+            title={insurance.nextPaymentDate}>{insurance.nextPaymentDate}</time>
         </template>
       </div>
-      <span class="">{insurance.amount}</span>
-      <span onclick={handleClick} data-id={insurance.key}>Ver más detalles</span>
+      <span class="insuranceAmount">${insurance.amount}</span>
+      <span class="insuranceBtn" data-id={insurance.id} onclick={handleClick}>Ver más detalles </span>
     </main>
   </article>
 </template>
