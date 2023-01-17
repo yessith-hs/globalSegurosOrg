@@ -1,3 +1,5 @@
 import { LightningElement } from 'lwc';
-
-export default class ClbinsFooter extends LightningElement {}
+import BASE_PATH from '@salesforce/community/basePath'
+export default class ClbinsFooter extends LightningElement {
+  urlSolucionesRecomendadas = `${BASE_PATH}/soluciones-pensadas-para-ti`
+}

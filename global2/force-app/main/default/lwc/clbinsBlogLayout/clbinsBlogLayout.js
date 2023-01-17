@@ -33,6 +33,7 @@ export default class ClbinsBlogLayout extends LightningElement {
   }
   TOPICS = {
     'orientación educativa': 'orientacion_educativa',
+    'orientacion educativa': 'orientacion_educativa',
     'desarrollo integral': 'desarrollo_integral',
     'habilidades socioemocionales': 'habilidades_socioemocionales'
   }

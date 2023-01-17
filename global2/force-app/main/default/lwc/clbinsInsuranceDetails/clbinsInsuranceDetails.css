@@ -1,0 +1,155 @@
+/** insurance Detail Header  */
+.insuranceDetailHead {
+  padding: 0 0.7rem;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.insuranceDetailHead h1,
+.insuranceDetailDocumentsBox h2,
+.insuranceDetailHeader_title h3,
+.insuranceDetailHeader_btn {
+  color: #003696;
+}
+.insuranceDetailHead h1 {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.insuranceDetailHead a {
+  height: 50px;
+  width: 200px;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  border-radius: 0.3rem;
+  background-color: #003696;
+}
+
+.insuranceDetailMain {
+  background-color: #fff;
+  margin: 0 0.7rem;
+}
+
+.insuranceDetailHeader {
+  padding: 1rem 0.5rem;
+  box-shadow: 0 2px 0 0 #003696;
+}
+
+.insuranceDetailHeader,
+.insuranceDetailHeader_title {
+  position: relative;
+}
+
+.insuranceDetailHeader_title h3,
+.insuranceDetailHeader_title span {
+  font-size: 0.8331rem;
+}
+
+.insuranceDetailHeader_title h2,
+.insuranceDetailDocumentsBox h2 {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.insuranceDetailBullet {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 3px;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: #003696;
+}
+
+.insuranceDetailHeader_btn {
+  height: 50px;
+  margin: 1rem auto 0;
+
+  border: 1px solid #003696;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  border-radius: 0.3rem;
+  max-width: 300px;
+}
+
+.insuranceDetailContent {
+  padding: 0 0.5rem;
+  margin-top: 1rem;
+}
+
+/** insurance documents */
+.insuranceDetailDocumentsBox {
+  box-shadow: 0 -2px 0 0 #003696;
+  margin-top: 2rem;
+  padding: 0 0.5rem 1rem;
+}
+
+.insuranceDetailDocumentsBox h2 {
+  padding: 1rem 0;
+}
+.insuranceDetailDocuments {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.insuranceDetailDocuments_card {
+  background-color: #f2f2f2;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.3rem;
+}
+
+.insuranceDetailDocuments_card h3 {
+  font-weight: 700;
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+@media only screen and (min-width: 600px) {
+  .insuranceDetailHead {
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: initial;
+  }
+
+  .insuranceDetailHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .insuranceDetailHeader_btn {
+    margin: initial;
+    width: 250px;
+    margin-right: 1.5rem;
+  }
+
+  .insuranceDetailDocuments_card {
+    flex-direction: column;
+  }
+
+  .insuranceDetailDocuments_card h3 {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .insuranceDetailContent {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 2fr 1fr;
+  }
+  c-clbins-insurance-details-payment {
+    grid-area: 1/2/2/3;
+  }
+}

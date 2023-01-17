@@ -33,7 +33,7 @@
 
 .insuranceMain {
   display: grid;
-  padding: 0 1rem 1rem;
+  padding: 0 0.5rem 1rem;
 }
 
 .insuranceBody span {

@@ -1,0 +1,117 @@
+.insuranceDetailPayment {
+  background-color: #f2f2f2;
+  font-size: 0.8331rem;
+  color: #0264c6;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.insuranceDetailPayment span {
+  color: inherit;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.insuranceDetailPayment a {
+  height: 50px;
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+  color: #003696;
+  background-color: #ffd300;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  border-radius: 0.3rem;
+}
+
+/* Card Cupón */
+
+.insuranceDetailCoupon {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.insuranceDetailCoupon_card {
+  background-color: #f2f2f2;
+  border-radius: 0.3rem;
+  padding-bottom: 1rem;
+}
+
+.insuranceDetailCoupon_card figure {
+  height: 150px;
+}
+
+.insuranceDetailCoupon_card figure img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+}
+
+.insuranceDetailCoupon_card p{
+  padding: 1rem;
+}
+
+.insuranceDetailCoupon_card a {
+  height: 50px;
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+  background-color: #003696;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  border-radius: 0.3rem;
+}
+
+.insuranceDetailPQR {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.insuranceDetailPQR a {
+  height: 50px;
+  width: 100%;
+  max-width: 150px;
+  color: #003696;
+  background-color: #ffd300;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  border-radius: 0.3rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .insuranceDetailPayment {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .insuranceDetailPayment a {
+    margin: initial;
+  }
+  .insuranceDetailCoupon {
+    flex-direction: row;
+  }
+}
+
+
+
+@media only screen and (min-width: 1024px) {
+  .insuranceDetailPayment {
+    flex-direction: column;
+    justify-content: initial;
+  }
+
+  .insuranceDetailCoupon {
+    flex-direction: column;
+  }
+}
