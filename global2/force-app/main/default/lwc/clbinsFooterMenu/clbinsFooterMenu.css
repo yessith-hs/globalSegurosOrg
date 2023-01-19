@@ -46,6 +46,7 @@
   font-size: 0.80rem;
   border-radius: 0.5rem;
   text-decoration: none;
+  color: #FFF;
 }
 
 .footerMenu_item a:hover, a:hover svg path {

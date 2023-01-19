@@ -115,6 +115,10 @@
   gap: 1rem;
 }
 
+.navMenu_header figure:nth-child(2){
+  cursor: pointer;
+}
+
 .navMenu_container {
   display: flex;
   flex-direction: column;
@@ -162,11 +166,12 @@
   border-radius: 0.5rem;
   padding-left: 0.4rem;
   text-decoration: none;
+  color: #FFF;
 }
 
 .navMenu_list a:hover, a:hover svg path {
   background-color: #FFF;
-  color: rgb(0, 50, 120);
+  color: rgb(0, 50, 120)!important;
   stroke: rgb(0, 50, 120);
 }
 

@@ -1,16 +1,3 @@
-/* :root {
-  --brand-color_blue: rgb(0, 50, 120);
-  --brand-color_red: rgb(220, 35, 25);
-  --brand-color_gray: rgb(70, 70, 70);
-  --brand-color_withe: rgb(255, 255, 255);
-  --brand-color_education: rgb(00, 135, 220);
-  --brand-color_pension: rgb(00, 180, 120);
-  --brand-color_voluntary_income: rgb(155, 80, 145);
-  --brand-color_Life: rgb(255, 85, 85);
-  --brand-color_annuity: rgb(240, 160, 0);
-  --brand-color_provisional_invalidity: rgb(140, 95, 70);
-  --brand-color_accident: rgb(190, 45, 85);
-} */
 .GS_footer {
   background-color: rgb(0, 50, 120);
   display: grid;
@@ -18,6 +5,15 @@
   padding-bottom: 1rem;
   margin: 1rem 0.7rem 0;
   gap: 1rem;
+}
+.GS_brand,
+.GS_brand h3,
+.GS_brand a,
+.GS_social_hand,
+.GS_social_link,
+.GS_content,
+.GS_content a {
+  color: #fff;
 }
 
 .GS_container {
@@ -33,7 +29,6 @@
   gap: 2rem;
   place-items: center;
   text-align: center;
-  color: #fff;
 }
 
 .GS_brand h3 {
@@ -55,7 +50,6 @@
   place-items: center;
   gap: 1rem;
   flex-direction: column;
-  color: #fff;
 }
 
 .GS_social_hand h3 {
@@ -75,7 +69,6 @@
 .GS_social_link {
   display: flex;
   gap: 1rem;
-  color: #fff;
   place-items: center;
 }
 
@@ -91,7 +84,6 @@
 
 .GS_content {
   border-top: 1px solid;
-  color: #fff;
   text-align: center;
   width: 90%;
   display: grid;

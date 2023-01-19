@@ -28,6 +28,7 @@ export default class ClbinsBlogLayout extends LightningElement {
   // * get url topic
   URL_TOPICS = {
     'orientación educativa': `${basePath}/conexion-global/orientacion-educativa`,
+    'orientacion educativa': `${basePath}/conexion-global/orientacion-educativa`,
     'desarrollo integral': `${basePath}/conexion-global/desarrollo-integral`,
     'habilidades socioemocionales': `${basePath}/conexion-global/habilidades-socioemocionales`
   }
@@ -56,6 +57,7 @@ export default class ClbinsBlogLayout extends LightningElement {
   })
   wiredContent({ data, error }) {
     if (data) {
+      console.log("🚀 ~ file: clbinsBlogLayout.js:60 ~ ClbinsBlogLayout ~ wiredContent ~ data", data)
       const {
         tematica,
         fechapublicacion,

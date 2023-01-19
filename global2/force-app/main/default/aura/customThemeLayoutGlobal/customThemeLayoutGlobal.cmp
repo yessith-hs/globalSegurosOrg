@@ -7,13 +7,13 @@
     <header class="navbar">
       {!v.sideBar}
     </header>
-    <div>
+    <div class="main">
       {!v.main}
     </div>
     <footer class="footer">
       {!v.footer}
     </footer>
-    <div>
+     <div>
       {!v.body}
     </div>
   </div>
