@@ -1,0 +1,14 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+
+  <aura:attribute name="recordId" type="String" />
+  <aura:handler name="init" value="{!this}" action="{!c.onPageReferenceChange}" />
+  <h1>blogId: {!v.recordId}</h1>
+
+  <aura:if isTrue="{!v.recordId}">
+    <forceChatter:publisher context="GLOBAL" recordId="{!v.recordId}" />
+    <br />
+    <forceChatter:feed type="Record"  subjectId="{!v.recordId}" feedDesign="DEFAULT" />
+  </aura:if>
+
+
+</aura:component>

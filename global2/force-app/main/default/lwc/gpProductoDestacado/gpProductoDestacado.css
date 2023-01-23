@@ -67,6 +67,22 @@
     padding: 0.3rem 0 1.3rem 0;
 }
 
+.link-navegacion-left {
+    position: absolute;
+    top: 11%;
+    left: 20px;
+    background-color: #003278a8;
+    opacity: 0.4;
+}
+
+.link-navegacion-right {
+    position: absolute;
+    top: 11%;
+    right: 25px;
+    background-color: #003278a8;
+    opacity: 0.4;
+}
+
 /* TABLET */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .inicio-featured-img {
@@ -86,7 +102,7 @@
     .white-navigator {
         display: block;
         position: absolute;
-        top: 11.1rem;
+        top: 12.1rem;
         right: -0.1755rem;
         width: 24.8rem;
     }
@@ -98,6 +114,18 @@
     .boton-pagar_en_linea {
         margin-bottom: 2.2rem;
     }
+
+
+    .link-navegacion-left {
+        position: absolute;
+        top: 26%;
+    }
+
+    .link-navegacion-right {
+        position: absolute;
+        top: 26%;
+    }
+
 }
 
 /* DESKTOP */
@@ -129,7 +157,7 @@
     .white-navigator {
         display: block;
         position: absolute;
-        top: 12.2rem;
+        top: 12.8rem;
         right: -0.1755rem;
         width: 24.8rem;
     }
@@ -140,5 +168,14 @@
 
     .boton-pagar_en_linea {
         margin-bottom: 2.2rem;
+    }
+
+
+    .link-navegacion-left {
+        top: 25%;
+    }
+    
+    .link-navegacion-right {
+        top: 25%;
     }
 }

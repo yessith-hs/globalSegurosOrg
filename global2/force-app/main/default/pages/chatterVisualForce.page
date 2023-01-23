@@ -1,0 +1,6 @@
+<apex:page standardStylesheets="true" sidebar="true" showHeader="false">
+        <style type="text/css">
+           .hideButton{display:none;}
+        </style>
+           <chatter:feedWithFollowers entityId="{!$User.Id}"/>
+    </apex:page>

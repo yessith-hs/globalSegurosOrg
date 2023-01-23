@@ -22,6 +22,7 @@ export default class ClbinsBlogLayout extends LightningElement {
   _descripcion
   _body
   _autor
+  _avatar
   _imageUrl
   _imageAltText
 
@@ -57,7 +58,6 @@ export default class ClbinsBlogLayout extends LightningElement {
   })
   wiredContent({ data, error }) {
     if (data) {
-      console.log("🚀 ~ file: clbinsBlogLayout.js:60 ~ ClbinsBlogLayout ~ wiredContent ~ data", data)
       const {
         tematica,
         fechapublicacion,
@@ -65,7 +65,8 @@ export default class ClbinsBlogLayout extends LightningElement {
         Descripcion,
         Publicacion,
         Portada,
-        Autor
+        Autor,
+        avatar
       } = data
       const date = formatDate(fechapublicacion.value)
       const body = this.htmlDecode(Publicacion.value)
@@ -76,6 +77,10 @@ export default class ClbinsBlogLayout extends LightningElement {
       this._descripcion = Descripcion.value
       this._body = body
       this._autor = Autor.value
+      this._avatar = avatar
+        ? basePath + '/sfsites/c' + avatar.unauthenticatedUrl
+        : this.avatarImg
+
       this._imageUrl = basePath + '/sfsites/c' + Portada.unauthenticatedUrl
       this._imageAltText = Portada.altText
       this.error = undefined
@@ -109,6 +114,10 @@ export default class ClbinsBlogLayout extends LightningElement {
 
   get autor() {
     return this._autor
+  }
+
+  get avatar() {
+    return this._avatar
   }
 
   get imageUrl() {

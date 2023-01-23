@@ -51,9 +51,7 @@
     line-height: var(--global-portal-line-spacing-12);
     letter-spacing: var(--global-portal-character-spacing-0);
     color: var(--global-portal-color-2d4a84);
-    padding-bottom: 0.4rem;
-    padding-right: 0.6rem;
-    padding-left: 0.6rem;
+    padding: 2px 0.6rem 0.4rem 0.6rem;
     text-decoration: underline;
 }
 

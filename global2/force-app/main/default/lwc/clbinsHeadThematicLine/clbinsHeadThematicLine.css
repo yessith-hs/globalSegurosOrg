@@ -65,15 +65,14 @@
 }
 
 .entriesLink {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   height: 100%;
   gap: 0.6rem;
   text-decoration: none !important;
 }
 
-.entriesLink figure {
-  width: 200px;
-}
+
 
 .entriesLink figure img {
   height: 100%;
@@ -87,9 +86,10 @@
   color: #464646;
   font-weight: 400;
   font-size: 12px;
-  display: grid;
-  gap: 0.4rem;
+  display: flex;
+  flex-direction: column;
   place-content: center;
+  gap: 0.3rem;
 }
 
 .entriesContent time {

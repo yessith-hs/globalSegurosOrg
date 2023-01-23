@@ -1,23 +1,23 @@
 <template>
     <div class="gp-detalle-container">
-        <!-- <div class="header-container">
-            <div class="titulo">{detailTitulo}</div>
-            <div class="contenido">{detailDescrip}</div>
-            <a href="#" class="pago-en-linea">
-                <img src={pagoEnLineaImage} alt="Botón pagar en linea" class="boton-pagar_en_linea">
-            </a>
-            <c-gp-carousel-navigator color="#003696" width="36px" maxitems="4"></c-gp-carousel-navigator>
-        </div> -->
         <div class="container">
-            <div class="titulo-detalle">{detailTitulo}</div>
+            <div class="titulo-container">
+                <div class="titulo-detalle">{detailTitulo}</div>
+                <div class="top-navigator">
+                    <c-gp-carousel-navigator color="#003696" width="16px" maxitems="7"></c-gp-carousel-navigator>
+                </div>
+            </div>
             <div class="contenido-detalle">{detailDescrip}</div>
             <div class="card-container">
                 <template for:each={items} for:item="item">
-                    <c-gp-producto-destacado-det-card key={item.key} contenido-card={item}></c-gp-producto-destacado-det-card >
+                    <c-gp-producto-destacado-det-card key={item.key}
+                        contenido-card={item}></c-gp-producto-destacado-det-card>
                 </template>
             </div>
-            <c-gp-carousel-navigator color="#003696" width="16px" maxitems="7"></c-gp-carousel-navigator>
+            <div class="bottom-navigator">
+                <c-gp-carousel-navigator color="#003696" width="16px" maxitems="7" >
+                </c-gp-carousel-navigator>
+            </div>
         </div>
     </div>
-
 </template>

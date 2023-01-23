@@ -16,6 +16,11 @@ export default class GpCasosExitoCard extends LightningElement {
     botonAgendaCitaImg = globalSegurosPortal + '/images/' + 'gp-boton-agenda-cita.png';
 
     get getStyleRamoSeguro() {
-        return this.casoExito.colorRamoSeguros;
+        return `color: ${this.casoExito.colorRamoSeguros} !important`;
+    }
+
+
+    get getStyleDotRamoSeguro() {
+        return `color: ${this.casoExito.colorRamoSeguros} !important; background-color: ${this.casoExito.colorRamoSeguros}`;
     }
 }

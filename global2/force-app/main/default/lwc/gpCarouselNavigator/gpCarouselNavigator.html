@@ -2,7 +2,7 @@
     <div class="container">
         <div>
             <template for:each={getItems} for:item="item">
-                <span class="dot" key={item.id} data-id="dotBoton" onselect={handleSelect} style={dotStyle}></span>
+                <span class="dot" key={item.id} data-id={item.id} onclick={handleSelect} style={dotStyle}></span>
             </template>
         </div>
         <p class="texto" style={textoStyle}>

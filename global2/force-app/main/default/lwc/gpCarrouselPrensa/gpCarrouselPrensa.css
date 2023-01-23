@@ -27,20 +27,31 @@
     padding-bottom: 1rem;
 }
 
+.titulo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.top-navigator {
+    display: none;
+}
+
+.bottom-navigator {
+    padding-left: 0.6rem;
+}
+
 /* TABLET */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .ico-container-agenda {
+    .cabecera {
+        display: inline;
+    }
+
+    .bottom-navigator {
         display: none;
     }
 
-    .ico-container-servicio {
-        display: flex;
-        padding: 0.6rem;
-        min-width: 9.562rem;
-        min-height: 9.187rem;
-    }
-
-    .cabecera {
+    .top-navigator {
         display: inline;
     }
 }
@@ -49,5 +60,13 @@
 @media screen and (min-width: 1024px) {
     .gp-prensa-container {
         max-width: 58.012rem;
+    }
+
+    .bottom-navigator {
+        display: none;
+    }
+
+    .top-navigator {
+        display: inline;
     }
 }

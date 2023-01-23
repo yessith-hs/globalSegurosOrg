@@ -36,7 +36,7 @@
 
 .link-navegacion-left {
     position: absolute;
-    top: 20%;
+    top: 28%;
     left: 20px;
     background-color: #003278a8;
     opacity: 0.4;
@@ -44,7 +44,7 @@
 
 .link-navegacion-right {
     position: absolute;
-    top: 20%;
+    top: 28%;
     right: 25px;
     background-color: #003278a8;
     opacity: 0.4;
@@ -64,17 +64,29 @@
 .navigator-container {
     background-color: var(--global-portal-color-ffffff);
     border-radius: 5px;
-    padding: 0.6rem 0.6rem 0.6rem 0.6rem;
+    padding: 0.6rem 0 0.6rem 0.6rem;
     margin-top: -5px;
     box-shadow: 0px 3px 6px #00000029;
+}
+
+.white-navigator {
+    display: none;
+}
+
+.blue-navigator {
+    padding: 0.3rem 0 1.3rem 0;
+}
+
+.cabecera {
+    max-width: 100%;
 }
 
 
 /* TABLET */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .caso-exito-container {
-        /* max-width: 58.012rem; */
-    }
+    /* .caso-exito-container {
+        max-width: 58.012rem;
+    } */
 
     .img-caso-exito {
         min-height: 26.625rem;
@@ -89,8 +101,8 @@
     .white-navigator {
         display: block;
         position: absolute;
-        top: 11.1rem;
-        right: -0.1755rem;
+        top: 31.1rem;
+        right: 5.325rem;
         width: 24.8rem;
     }
     
@@ -100,16 +112,27 @@
 
     .link-navegacion-left {
         position: absolute;
-        top: 35%;
+        top: 45%;
     }
     
     .link-navegacion-right {
         position: absolute;
-        top: 35%;
+        top: 45%;
     }
 
     .navigator-container {
         display: none;
+    }
+
+    .cabecera::after {
+        background-image: linear-gradient(to bottom, rgba(255,255,255, 0), rgba(0,54,150, .9) );
+        content: '';
+        display: block;
+        position: absolute;
+        height: 42%;
+        border-radius: 5px;
+        width: 98%;
+        top: 56.3%
     }
 }
 
@@ -140,8 +163,8 @@
     .white-navigator {
         display: block;
         position: absolute;
-        top: 12.2rem;
-        right: -0.1755rem;
+        top: 30.1rem;
+        right: 5.3rem;
         width: 24.8rem;
     }
     
@@ -151,5 +174,16 @@
 
     .navigator-container {
         display: none;
+    }
+
+    .cabecera::after {
+        background-image: linear-gradient(to bottom, rgba(255,255,255, 0), rgba(0,54,150, .9) );
+        content: '';
+        display: block;
+        position: absolute;
+        height: 42%;
+        border-radius: 5px;
+        width: 98%;
+        top: 56.3%
     }
 }

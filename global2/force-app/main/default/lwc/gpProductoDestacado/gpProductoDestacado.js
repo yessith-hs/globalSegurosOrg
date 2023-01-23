@@ -3,12 +3,9 @@ import { LightningElement, wire } from 'lwc';
 import getContentList from "@salesforce/apex/ManagedContentController.getContentList";
 import basePath from "@salesforce/community/basePath";
 
-// import globalSegurosPortal from '@salesforce/resourceUrl/global_seguros_portal';
+import globalSegurosPortal from '@salesforce/resourceUrl/global_seguros_portal';
 
 export default class ProductoDestacado extends LightningElement {
-
-    // featuredImage = globalSegurosPortal + '/images/' + 'gp-inicio-featured.png';
-    // featuredImage = basePath + '/images/' + 'gp-inicio-featured.png';
 
     items;
 
@@ -19,7 +16,6 @@ export default class ProductoDestacado extends LightningElement {
         filterby: "producto_destacado"
     })
     wiredContent({ data, error }) {
-        console.log('data: ', data)
         if (data) {
             this.items = data.map((entry) => {
                 const { Title, Descripcion, Imagen, Imagen2} = entry.contentNodes;
@@ -40,4 +36,12 @@ export default class ProductoDestacado extends LightningElement {
             console.log("Error: " + JSON.stringify(error));
         }
     }
+
+    handleItemSelected(event) {
+        console.log("item seleccionado: ", event);
+        console.log("item seleccionado: ", event.detail);
+    }
+
+    caretLeftImg = globalSegurosPortal + '/images/navegar-caret-left.png';
+    caretRightImg = globalSegurosPortal + '/images/navegar-caret-right.png';
 }

@@ -1,7 +1,6 @@
 import { LightningElement, wire } from 'lwc';
 
 import globalSegurosPortal from '@salesforce/resourceUrl/global_seguros_portal';
-import { getDataCasosExito } from 'c/gpInicioDataConfig';
 
 import getContentList from "@salesforce/apex/ManagedContentController.getContentList";
 import basePath from "@salesforce/community/basePath";
@@ -11,13 +10,6 @@ export default class CasosExito extends LightningElement {
     active;
     items;
     currentItem = {'imagen': ''};
-    // constructor() {
-    //     super();
-    //     this.active = 1;
-    //     this.navigatorConfig = getDataCasosExito();
-    //     this.items = this.navigatorConfig.items;
-    //     this.currentItem = this.items[0];
-    // }
 
     @wire(getContentList, {
         page: 0,
@@ -50,10 +42,7 @@ export default class CasosExito extends LightningElement {
         }
     }
 
-    // casoExitoImg = globalSegurosPortal + '/images/gp-inicio-caso-exito.png';
     caretLeftImg = globalSegurosPortal + '/images/navegar-caret-left.png';
     caretRightImg = globalSegurosPortal + '/images/navegar-caret-right.png';
     sloganImg = globalSegurosPortal + '/images/gp-inicio-casos-exito__slogan.png';
-
-
 }

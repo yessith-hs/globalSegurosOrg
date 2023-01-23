@@ -17,25 +17,8 @@
     opacity: 0.5;
 }
 
-/*'width: 36px; height: 0px; cursor: pointer;  opacity: 0.5;',*/
-.dot_border_003696 {
-    border: 2px solid var(--global-portal-color-003696);
-}
-
-.dot_border_ffffff {
-    border: 2px solid var(--global-portal-color-ffffff);
-}
-
-.dot_width16 {
-    width: 16px;
-}
-
-.dot_width30 {
-    width: 30px;
-}
-
-.dot_width36 {
-    width: 36px;
+.inactive {
+    opacity: 0.5
 }
 
 .active, .dot:hover {

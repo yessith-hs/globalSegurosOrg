@@ -1,0 +1,13 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}"
+    description="Handler for valueInit event fired when the component has been initialised" />
+  {!v.pageReference}
+
+  <aura:attribute name="recordId" type="String" default="MC5TBNNLXXVVC2LAGCFEFPIEEZ7A" />
+
+  <aura:if isTrue="{!v.recordId}">
+    <forceChatter:publisher context="GLOBAL" recordId="{!v.recordId}" />
+    <br />
+    <forceChatter:feed type="Record" subjectId="{!v.recordId}" />
+  </aura:if>
+</aura:component>

@@ -1,48 +1,90 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 01-23-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
 <template>
-  <div class="container">
-    <header style={backgroundStyle}>
-      <div class="header_button">
-        <figure class="header_button-icon">
-          <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-            <g data-name="Grupo 360" style="opacity: 0.9" fill="none" stroke="#003696" stroke-linecap="round"
-              stroke-linejoin="round" stroke-width="3">
-              <path data-name="Trazado 1186" d="M155.558 281.44s15.738 47.212 94.442 47.212 94.442-47.212 94.442-47.212"
-                stroke-width="49.437360000000005"></path>
-              <path data-name="Trazado 1187" d="M454.621 249.965a204.621 204.621 0 1 1-409.242 0V45.343H454.62Z"
-                stroke-width="49.437360000000005"></path>
-              <path data-name="Trazado 1188" d="M187.05 186.998a31.483 31.483 0 1 0-62.967 0"
-                stroke-width="49.437360000000005"></path>
-              <path data-name="Trazado 1189" d="M375.933 186.998a31.483 31.483 0 1 0-62.966 0"
-                stroke-width="49.437360000000005"></path>
-            </g>
-          </svg>
-        </figure>
-        <div class="header_button-link">
-          <p>Ver más de</p>
-          <a href={topicUrl}>
-            <p>{topic}</p>
-          </a>
-        </div>
-      </div>
-    </header>
-    <main>
-      <div class="main_container">
-        <article class="blog_container">
-          <div class="blog_header">
-            <time class="date" datetime={date} title={date}>{date}</time>
-            <h2 class="title">{title}</h2>
-            <div class="blog_header-featured-text">
-              <div class="line"></div>
-              <p>{descripcion}</p>
+    <div class="container">
+        <header style={backgroundStyle}>
+            <div class="header_button">
+                <figure class="header_button-icon">
+                    <svg
+                        viewBox="0 0 500 500"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <g
+                            data-name="Grupo 360"
+                            style="opacity: 0.9"
+                            fill="none"
+                            stroke="#003696"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="3"
+                        >
+                            <path
+                                data-name="Trazado 1186"
+                                d="M155.558 281.44s15.738 47.212 94.442 47.212 94.442-47.212 94.442-47.212"
+                                stroke-width="49.437360000000005"
+                            ></path>
+                            <path
+                                data-name="Trazado 1187"
+                                d="M454.621 249.965a204.621 204.621 0 1 1-409.242 0V45.343H454.62Z"
+                                stroke-width="49.437360000000005"
+                            ></path>
+                            <path
+                                data-name="Trazado 1188"
+                                d="M187.05 186.998a31.483 31.483 0 1 0-62.967 0"
+                                stroke-width="49.437360000000005"
+                            ></path>
+                            <path
+                                data-name="Trazado 1189"
+                                d="M375.933 186.998a31.483 31.483 0 1 0-62.966 0"
+                                stroke-width="49.437360000000005"
+                            ></path>
+                        </g>
+                    </svg>
+                </figure>
+                <div class="header_button-link">
+                    <p>Ver más de</p>
+                    <a href={topicUrl}>
+                        <p>{topic}</p>
+                    </a>
+                </div>
             </div>
-          </div>
-          <div class="blog_content">
-            <lightning-formatted-rich-text value={body}></lightning-formatted-rich-text>
-          </div>
-          <c-clbins-user-info></c-clbins-user-info>
-        </article>
-      </div>
-    </main>
-  </div>
-  <c-clbins-more-entries itemtopic={itemTopic}></c-clbins-more-entries>
+        </header>
+        <main>
+            <div class="main_container">
+                <article class="blog_container">
+                    <div class="blog_header">
+                        <time class="date" datetime={date} title={date}
+                            >{date}</time
+                        >
+                        <h2 class="title">{title}</h2>
+                        <div class="blog_header-featured-text">
+                            <div class="line"></div>
+                            <p>{descripcion}</p>
+                        </div>
+                    </div>
+                    <div class="blog_content">
+                        <lightning-formatted-rich-text
+                            value={body}
+                        ></lightning-formatted-rich-text>
+                    </div>
+                    <div class="content_creator">
+                        <div class="content_creator-img">
+                            <img src={avatar} alt={autor} />
+                        </div>
+                        <div class="content_creator-info">
+                            <p class="name">{autor}</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <c-clbins-more-entries itemtopic={itemTopic}></c-clbins-more-entries>
+    <c-clbins-custom-chatter blogid={blogId}></c-clbins-custom-chatter>
 </template>

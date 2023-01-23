@@ -3,12 +3,13 @@
         <img src={imagen} alt="imagen respuesta" class="img-respuesta">
         <div class="resp-container">
             <h2 class="pregunta">{pregunta}</h2>
-            <p class="resp-body">{respuesta}</p>
+            <!-- <p class="resp-body">{respuesta}</p> -->
+            <lightning-formatted-rich-text class="resp-body" value={respuesta}></lightning-formatted-rich-text>
         </div>
         <div class="pqrfs-container">
             <p class="resp-body">Para otras cerfificaciones y/o documentos, puede realizar la solicitud por la opción <a
                     href="#" class="link-pqrsf">PQRFS</a></p>
-            <h2 class="pregunta">Esperamos la información haya sido útil</h2>
+            <h2 class="esperamos">Esperamos la información haya sido útil</h2>
             <p class="resp-body">Si tiene alguna duda, puede gestionarla aquí</p>
             <a href="#" class="link-pqrfs">
                 <img src={botonPqrfsImg} alt="Botón pqrfs" class="boton-pqrfs"></a>

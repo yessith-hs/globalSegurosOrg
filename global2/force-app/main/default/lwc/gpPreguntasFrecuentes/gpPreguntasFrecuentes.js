@@ -40,7 +40,7 @@ export default class PreguntasFrecuentes extends LightningElement {
                 return {
                     key: entry.contentKey,
                     pregunta: pregunta.value,
-                    respuesta: unEscape(respuesta.value),
+                    respuesta: this.htmlDecode(respuesta.value),
                     imagenRespuesta: `${BASE_PATH}/sfsites/c${imagen.url}`
                 };
             });
@@ -54,4 +54,9 @@ export default class PreguntasFrecuentes extends LightningElement {
     }
 
     faqIcono = globalSegurosPortal + '/images/gp-faq-icono.svg';
+
+    htmlDecode(input) {
+        const doc = new DOMParser().parseFromString(input, 'text/html')
+        return doc.documentElement.textContent
+    }
 }

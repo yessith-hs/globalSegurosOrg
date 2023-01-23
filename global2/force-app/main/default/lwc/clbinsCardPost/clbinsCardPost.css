@@ -6,11 +6,11 @@
 }
 
 .postWrapper {
-  display: flex;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 2fr auto;
   color: #464646;
   text-decoration: none;
-  flex-direction: column;
-  height: 100%;
 }
 
 .postWrapper figure {
@@ -30,6 +30,7 @@
   color: #003696;
   padding-left: 1rem;
   cursor: pointer;
+  padding-bottom: 0.5rem;
 }
 
 .postContent {
