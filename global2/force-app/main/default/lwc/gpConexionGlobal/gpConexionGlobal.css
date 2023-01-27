@@ -1,8 +1,9 @@
 @import 'c/cssLibrary';
 
 .gp-conexion-global-container {
-    margin: 0;
-    padding: 0 0.6rem;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+    padding: 0;
 }
 
 .gp-inicio-conexion-global {
@@ -16,7 +17,6 @@
     overflow-y: hidden;
     overflow-x: scroll;
     margin-bottom: 1rem;
-    margin-left: 0.6rem;
 }
 
 .titulo-container {
@@ -71,7 +71,7 @@
 /* DESKTOP */
 @media screen and (min-width: 1024px) {
     .gp-conexion-global-container {
-        max-width: 58.012rem;
+        max-width: var(--global-portal-max-width-content);
     }
 
     .bottom-navigator {

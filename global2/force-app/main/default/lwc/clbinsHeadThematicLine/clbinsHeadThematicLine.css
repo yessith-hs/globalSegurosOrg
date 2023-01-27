@@ -22,7 +22,7 @@
   color: #003696;
 }
 
-.thematicTitle figure{
+.thematicTitle figure {
   width: 20px;
 }
 
@@ -59,24 +59,22 @@
 }
 
 .entriesWrapper {
-  height: 120px;
   background-color: #fff;
   border-radius: 5px;
 }
 
 .entriesLink {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  height: 100%;
+  display: flex;
   gap: 0.6rem;
-  text-decoration: none !important;
 }
 
-
+.entriesLink figure {
+  flex: 0 0 120px;
+  height: 150px;
+}
 
 .entriesLink figure img {
   height: 100%;
-  width: 100%;
   object-fit: cover;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -101,7 +99,7 @@
 }
 
 .entriesContent p {
-  font-size:.7rem;
+  font-size: 0.7rem;
 }
 
 .entriesContent span:last-child {
@@ -124,5 +122,9 @@
     gap: 0;
     margin: 0;
     align-content: space-between;
+  }
+
+  .entriesLink figure {
+    height: 120px;
   }
 }

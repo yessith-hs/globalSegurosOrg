@@ -1,13 +1,34 @@
-import { LightningElement } from 'lwc';
-
-import ICONO_EDUCATIVA from "@salesforce/resourceUrl/educativa";
-import URL_IMG3 from '@salesforce/resourceUrl/ejemplo01';
+import { LightningElement, wire } from 'lwc'
+import basePath from '@salesforce/community/basePath'
+import getContentList from '@salesforce/apex/ManagedContentController.getContentList'
+import { htmlDecode } from 'c/clbinsUtils'
+import ICONO_EDUCATIVA from '@salesforce/resourceUrl/educativa'
 
 export default class ClbinsCmsEducational extends LightningElement {
-  title = "Orientación educativa";
-  icon = ICONO_EDUCATIVA;
-  image = URL_IMG3;
-  content =
-    "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.";
+  topic = 'main_seccion_linea_tematica'
+  icon = ICONO_EDUCATIVA
+  title = 'Orientación educativa'
+  image
+  body
 
+  // * Get Content CMS
+  @wire(getContentList, {
+    page: 0,
+    pageSize: 3,
+    language: 'es',
+    filterby: '$topic'
+  })
+  wiredContent({ data, error }) {
+    if (data) {
+      const response = data.find(
+        ({ title }) => title.toLowerCase() === this.title.toLowerCase()
+      )
+      const { body, image } = response.contentNodes
+      this.body = htmlDecode(body.value)
+      this.image = `${basePath}/sfsites/c${image.url}`
+    }
+    if (error) {
+      console.log('Error: ' + JSON.stringify(error))
+    }
+  }
 }

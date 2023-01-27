@@ -38,7 +38,6 @@ export default class ProductoDestacado extends LightningElement {
     }
 
     handleItemSelected(event) {
-        console.log("item seleccionado: ", event);
         console.log("item seleccionado: ", event.detail);
     }
 

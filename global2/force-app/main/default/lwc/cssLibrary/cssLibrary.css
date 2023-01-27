@@ -49,6 +49,8 @@
     --global-portal-line-spacing-40: 40px;
     --global-portal-decoration-underline: underline;
     --global-portal-text-transform-lowercase: lowercase;
+    
+    --global-portal-max-width-content: 73.6rem;
     /*
      *  FIN VARIABLES GLOBAL SEGUROS 
      */

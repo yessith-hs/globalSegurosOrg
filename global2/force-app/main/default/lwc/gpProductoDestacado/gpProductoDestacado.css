@@ -1,8 +1,8 @@
 @import 'c/cssLibrary';
 
 .featured-container {
-    margin: 0;
-    padding: 0 0.6rem;
+    margin: 0 0.7rem;
+    padding: 0;
     position: relative;
 }
 
@@ -131,13 +131,14 @@
 /* DESKTOP */
 @media screen and (min-width: 1024px) {
     .featured-container {
-        max-width: 58.012rem;
+        max-width: var(--global-portal-max-width-content);
     }
 
     .inicio-featured-img {
         max-height: 27.434rem;
         min-height: 26.625rem;
         min-width: 45.5rem;
+        object-fit: cover;
     }
 
     .header-container {

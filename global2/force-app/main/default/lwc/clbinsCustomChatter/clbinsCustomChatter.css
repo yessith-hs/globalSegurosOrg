@@ -20,8 +20,13 @@
   margin: 10.63px 0 15.78px 0;
 }
 
-.comment--title,
-.comment--body {
+.comment__section {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment__section .comment--title,
+.comment__section .comment--body {
   border-radius: 5px;
   background-color: #f2f2f2;
   border-color: transparent;
@@ -29,18 +34,18 @@
   max-width: 100%;
 }
 
-.comment--title {
+.comment__section .comment--title {
   height: 50px;
 }
-.comment--body {
+.comment__section .comment--body {
   min-height: 143px;
 }
-.disclaimer {
+.comment__section .disclaimer {
   margin-bottom: 1rem;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   color: #707070;
 }
-button.addComment {
+.comment__section button.addComment {
   border-radius: 5px;
   border-color: transparent;
   max-width: 100%;
@@ -52,43 +57,45 @@ button.addComment {
   margin-top: 1.5rem;
   padding-bottom: 2rem;
 }
-.post__container {
-  box-shadow: 0 0.5px 0 0 #707070;
-  padding: 1rem 0;
+.allComments .post__container {
+  box-shadow: 0 0.2px 0 0 #707070;
+  padding: 1rem 0 1.5rem 0;
   margin-bottom: 1rem;
 }
-.post--creator {
+.allComments .post--creator {
   color: #231f20;
 }
 
-.post--title {
+.allComments .post--title {
   color: #003696;
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
-.post--creator {
+.allComments .post--creator {
   margin-bottom: 1rem;
+  color: #231f20;
 }
-.post--body {
+.allComments .post--body {
   margin-bottom: 1rem;
+  color: #464646;
 }
 
-.post--link {
-  text-decoration: underline;
+.allComments .post--link {
+  text-decoration: underline !important;
   color: #464646;
   opacity: 0.5;
 }
 
 @media (min-width: 1024px) {
-  .comment--title,
-  .comment--body {
-    max-width: 60%;
-  }
   .comments_container {
     width: 62%;
   }
-  button.addComment {
+  .comment__section .comment--title,
+  .comment__section .comment--body {
+    max-width: 60%;
+  }
+  .comment__section button.addComment {
     max-width: 198px;
   }
 }

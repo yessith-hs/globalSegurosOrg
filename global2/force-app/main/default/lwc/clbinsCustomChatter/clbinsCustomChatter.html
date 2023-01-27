@@ -2,39 +2,48 @@
   @description       : 
   @author            : ChangeMeIn@UserSettingsUnder.SFDoc
   @group             : 
-  @last modified on  : 01-23-2023
+  @last modified on  : 01-25-2023
   @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 -->
 <template>
     <div class="comments_container">
-        <h2 class="title">Deja tu comentario</h2>
-        <input
-            class="comment--title"
-            type="text"
-            name="title"
-            placeholder="Escribe un pequeño título"
-        />
-        <textarea
-            class="comment--body"
-            placeholder="Escribe tu comentario"
-        ></textarea>
-        <p class="disclaimer">
-            Todos los comentarios son moderados antes de ser publicados
-        </p>
-        <button class="addComment" onclick={handleAddComment}>Continuar</button>
+        <div class="comment__section">
+            <h2 class="title">Deja tu comentario</h2>
+            <input
+                class="comment--title"
+                type="text"
+                name="title"
+                placeholder="Escribe un pequeño título"
+            />
+            <textarea
+                class="comment--body"
+                placeholder="Escribe tu comentario"
+            ></textarea>
+            <p class="disclaimer">
+                Todos los comentarios son moderados antes de ser publicados
+            </p>
+            <button class="addComment" onclick={handleAddComment}>
+                Enviar
+            </button>
+        </div>
         <div class="allComments">
             <h2 class="title">Comentarios de otros usuarios</h2>
-            <!-- <div class="post__container">
-                <h3 class="post--title">Titulo de prueba</h3>
-                <p class="post--creator">Maria Andrade en Oct 27, 2022</p>
-                <p class="post--body">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    Donec odio. Quisque volutpat mattis eros. Nullam malesuada
-                    erat ut turpis. Suspendisse urna nibh, viverra non, semper
-                    suscipit, posuere a, pede.
-                </p>
-                <a class="post--link">Reportar como inapropiado</a>
-            </div> -->
+            <template if:true={comments}>
+                <template for:each={comments} for:item="comment">
+                    <div class="post__container" key={comment.Id}>
+                        <h3 class="post--title">{comment.Title__c}</h3>
+                        <p class="post--creator">
+                            {comment.FirstName__c} {comment.LastName__c} en
+                            {comment.CreatedDate}
+                        </p>
+                        <p class="post--body">{comment.Body__c}</p>
+                        <a class="post--link">Reportar como inapropiado</a>
+                    </div>
+                </template>
+            </template>
+            <template if:false={comments}>
+                <p>No hay comentarios publicados</p>
+            </template>
         </div>
     </div>
 </template>

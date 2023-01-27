@@ -13,8 +13,9 @@
 }
 
 .caso-exito-container {
-    margin: 0;
-    padding: 0.6rem;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+    padding: 0.6rem 0;
     position: relative;
 }
 
@@ -131,7 +132,7 @@
         position: absolute;
         height: 42%;
         border-radius: 5px;
-        width: 98%;
+        width: 100%;
         top: 56.3%
     }
 }
@@ -139,12 +140,13 @@
 /* DESKTOP */
 @media screen and (min-width: 1024px) {
     .caso-exito-container {
-        max-width: 58.25rem;
+        max-width:var(--global-portal-max-width-content);;
     }
 
     .img-caso-exito {
         min-height: 26.625rem;
         min-width: 45.5rem;
+        object-fit: cover;
     }
 
     .slogan {
@@ -183,7 +185,7 @@
         position: absolute;
         height: 42%;
         border-radius: 5px;
-        width: 98%;
+        width: 100%;
         top: 56.3%
     }
 }

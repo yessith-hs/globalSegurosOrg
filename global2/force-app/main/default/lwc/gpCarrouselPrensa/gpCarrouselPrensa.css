@@ -1,8 +1,9 @@
 @import 'c/cssLibrary';
 
 .gp-prensa-container {
-    margin: 0;
-    padding: 1.2rem 0.6rem 0.6rem 0.6rem;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+    padding: 1.2rem 0rem 0.6rem 0rem;
 }
 
 .container {
@@ -59,7 +60,8 @@
 /* DESKTOP */
 @media screen and (min-width: 1024px) {
     .gp-prensa-container {
-        max-width: 58.012rem;
+        max-width: var(--global-portal-max-width-content);
+        padding-right: 0;
     }
 
     .bottom-navigator {

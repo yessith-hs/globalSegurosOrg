@@ -83,7 +83,7 @@
     .container {
         display: flex;
         flex-direction: row;
-        max-width: 58.012rem;
+        max-width: var(--global-portal-max-width-content);
         height: 172px;
         justify-content: space-between;
         padding-top: 1.648rem;

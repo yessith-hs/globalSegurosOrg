@@ -43,6 +43,7 @@
     padding-bottom: 1.0rem;
     padding-left: 0.6rem;
     text-decoration: underline; 
+    margin-top: auto;
 }
 
 .prensa-card {
@@ -51,6 +52,7 @@
     min-width: 16.25rem;
     display: flex;
     flex-direction: column;
+    align-self: normal;
 }
 
 .titulo {
@@ -68,6 +70,11 @@
 
 /* TABLET */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .prensa-card {
+        display: flex;
+        align-self: normal;
+    }
+
 }
 
 /* DESKTOP */

@@ -19,6 +19,7 @@
 }
 
 .insuranceDetailHead a {
+  color: #fff;
   height: 50px;
   width: 200px;
   display: flex;
@@ -112,6 +113,10 @@
   font-weight: 700;
   font-size: 1rem;
   word-break: break-word;
+}
+
+button.slds-button.slds-button_brand {
+    color: #fff;
 }
 
 @media only screen and (min-width: 600px) {

@@ -1,7 +1,9 @@
 @import 'c/cssLibrary';
 
 .gp-faq-container {
-    padding: 1.5rem 1rem 0 0.6rem;
+    padding-top: 1.5rem;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
     min-width: 21.875rem;
     display: flex;
     flex-direction: column;
@@ -65,7 +67,7 @@
 /* DESKTOP */
 @media screen and (min-width: 1024px) {
     .gp-faq-container {
-        max-width: 58.012rem;
+        max-width: var(--global-portal-max-width-content);
         flex-direction: row;
     }
 

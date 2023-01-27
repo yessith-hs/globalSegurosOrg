@@ -2,7 +2,7 @@
   @description       : 
   @author            : ChangeMeIn@UserSettingsUnder.SFDoc
   @group             : 
-  @last modified on  : 01-23-2023
+  @last modified on  : 01-24-2023
   @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 -->
 <template>
@@ -83,8 +83,12 @@
                 </article>
             </div>
         </main>
+        <c-clbins-custom-chatter
+            blogid={blogId}
+            blogtitle={title}
+            blogtopic={topic}
+        ></c-clbins-custom-chatter>
     </div>
 
     <c-clbins-more-entries itemtopic={itemTopic}></c-clbins-more-entries>
-    <c-clbins-custom-chatter blogid={blogId}></c-clbins-custom-chatter>
 </template>
