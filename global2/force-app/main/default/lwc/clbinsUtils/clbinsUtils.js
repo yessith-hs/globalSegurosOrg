@@ -1,4 +1,6 @@
 import { LightningElement } from 'lwc'
+import basePath from '@salesforce/community/basePath'
+
 
 export default class ClbinsUtils extends LightningElement {}
 
@@ -36,3 +38,17 @@ export const unEscape = htmlStr => {
   htmlStr = htmlStr.replace(/&#92;/g, '\\')
   return htmlStr
 }
+
+export const TOPICS = {
+  'orientación educativa': 'orientacion_educativa',
+  'orientacion educativa': 'orientacion_educativa',
+  'desarrollo integral': 'desarrollo_integral',
+  'habilidades socioemocionales': 'habilidades_socioemocionales'
+}
+
+export const URL_TOPICS = {
+    'orientación educativa': `${basePath}/conexion-global/orientacion-educativa`,
+    'orientacion educativa': `${basePath}/conexion-global/orientacion-educativa`,
+    'desarrollo integral': `${basePath}/conexion-global/desarrollo-integral`,
+    'habilidades socioemocionales': `${basePath}/conexion-global/habilidades-socioemocionales`
+  }

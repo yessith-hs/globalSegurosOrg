@@ -6,7 +6,17 @@
 
 .menu-avatar figure {
   border-radius: 50%;
-  background-color: rgb(255, 255, 255);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+
+.menu-avatar figure img {
+  height: 30px;
+  border-radius: 50%;
+  object-position: center;
 }
 
 .menu-avatar.mobile {
@@ -19,7 +29,7 @@
 }
 
 .menu-avatar_details h3 {
-  font-size: .95rem;
+  font-size: 0.95rem;
 }
 
 .menu-avatar_details a {
@@ -27,11 +37,11 @@
   display: block;
   text-decoration: underline;
   color: white;
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 .menu-avatar_id {
-  font-size: .75rem;
+  font-size: 0.65rem;
   display: flex;
   gap: 0.3rem;
 }
@@ -40,14 +50,12 @@
   color: #ffd300;
 }
 
-@media only screen and (min-width:600px) {
+@media only screen and (min-width: 600px) {
   .menu-avatar.mobile {
     display: flex;
-    gap: 0.5rem;
-    place-items: center;
   }
 }
-@media only screen and (min-width:1024px) {
+@media only screen and (min-width: 1024px) {
   .menu-avatar.mobile {
     display: none;
   }

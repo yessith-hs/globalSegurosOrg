@@ -3,6 +3,7 @@ import BASE_PATH from "@salesforce/community/basePath";
 // import { CurrentPageReference, NavigationMixin } from 'lightning/navigation';
 
 export default class ClbinsHeaderMenu extends LightningElement {
+  styleflex=true
   gestionSeguros = `${BASE_PATH}/gestiona-tus-seguros`
   home = BASE_PATH
   activeMenu() {

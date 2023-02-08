@@ -1,30 +1,30 @@
-import { LightningElement, api, wire } from "lwc";
-import { NavigationMixin } from "lightning/navigation";
-import getContentList from "@salesforce/apex/ManagedContentController.getContentList";
-import basePath from "@salesforce/community/basePath";
-import { formatDate } from "c/clbinsUtils";
+import { LightningElement, api, wire } from 'lwc'
+import { NavigationMixin } from 'lightning/navigation'
+import getContentList from '@salesforce/apex/ManagedContentController.getContentList'
+import basePath from '@salesforce/community/basePath'
+import { formatDate } from 'c/clbinsUtils'
 
 export default class ClbinsCarouselCms extends NavigationMixin(
   LightningElement
 ) {
-  @api topic;
-  @api title;
-  @api url;
-  @api srcimg;
+  @api topic
+  @api title
+  @api url
+  @api srcimg
 
-  posts;
+  posts
 
   @wire(getContentList, {
     page: 0,
     pageSize: 6,
-    language: "es",
-    filterby: "$topic"
+    language: 'es',
+    filterby: '$topic'
   })
   wiredContent({ data, error }) {
     if (data) {
-      this.posts = data.map((entry) => {
-        const { Title, Descripcion, Imagen } = entry.contentNodes;
-        const date = formatDate(entry.publishedDate);
+      this.posts = data.map(entry => {
+        const { Title, Descripcion, Imagen } = entry.contentNodes
+        const date = formatDate(entry.publishedDate)
 
         return {
           key: entry.contentKey,
@@ -33,12 +33,12 @@ export default class ClbinsCarouselCms extends NavigationMixin(
           descripcion: Descripcion.value,
           imageUrl: `${basePath}/sfsites/c${Imagen.url}`,
           imageAltText: Imagen.value
-        };
-      });
-      this.error = undefined;
+        }
+      })
+      this.error = undefined
     }
     if (error) {
-      console.log("Error: " + JSON.stringify(error));
+      console.log('Error: ' + JSON.stringify(error))
     }
   }
 }

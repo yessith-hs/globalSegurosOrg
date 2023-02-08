@@ -1,14 +1,19 @@
 <template>
-  <section class="hero">
-    <figure><img src={ejemplo03} alt=""></figure>
-    <div class="heroWrapper">
-      <a class="heroLink" href="">
-        <p>ver más de <br><strong>Habilidades socioemocionales</strong></p>
-      </a>
-      <span class="timestamp">02 abril 2022</span>
-      <h2>Proyecta tus beneficios a futuro</h2>
-      <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-      <span>Leer más</span>
-    </div>
-  </section>
+  <template if:false={hasData}>
+    <h1>cargando</h1>
+  </template>
+  <template if:true={hasData}>
+    <section class="hero">
+      <figure><img src={tematicPost.imageUrl} alt={tematicPost.imageAltText} loading="lazy"></figure>
+      <div class="heroWrapper">
+        <a class="heroLink" href={topicUrl}>
+          <p>ver más de <br><strong>{topic}</strong></p>
+        </a>
+        <time datetime={tematicPost.date} title={tematicPost.date}>{tematicPost.date}</time>
+        <h3>{tematicPost.title}</h3>
+        <p>{tematicPost.descripcion}</p>
+        <span onclick={handleClick} data-id={tematicPost.key}>Leer más</span>
+      </div>
+    </section>
+  </template>
 </template>

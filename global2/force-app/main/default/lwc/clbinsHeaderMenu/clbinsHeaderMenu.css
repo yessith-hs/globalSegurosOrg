@@ -39,40 +39,11 @@
   gap: 0.5rem;
 }
 
-.user figure {
-  border-radius: 50%;
-  background-color: rgb(255, 255, 255);
-}
-
-.user.mobile {
-  display: none;
-}
-
-.user_details {
-  color: rgb(255, 255, 255);
-  text-align: center;
-}
-
-.user_details h3 {
-  font-size: .95rem;
-}
-
-.user_details a {
-  padding-top: 0.3rem;
+.user a {
   display: block;
   text-decoration: underline;
   color: white;
-  font-size: .75rem;
-}
-
-.user_id {
-  font-size: .75rem;
-  display: flex;
-  gap: 0.3rem;
-}
-
-.user_id span:first-child {
-  color: #ffd300;
+  font-size: 0.75rem;
 }
 
 /* STYLES  NAV MENU */
@@ -83,7 +54,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .navMenu {
@@ -98,7 +69,7 @@
   padding-top: 1rem;
   gap: 1.5rem;
   background-color: rgb(0, 50, 120);
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .active {
@@ -115,7 +86,7 @@
   gap: 1rem;
 }
 
-.navMenu_header figure:nth-child(2){
+.navMenu_header figure:nth-child(2) {
   cursor: pointer;
 }
 
@@ -140,7 +111,7 @@
   width: 200px;
   border-radius: 0.5rem;
   cursor: pointer;
-  box-shadow: 0 0 0 1px #FFF;
+  box-shadow: 0 0 0 1px #fff;
 }
 
 .navMenu_list li:hover::after {
@@ -149,14 +120,14 @@
   top: 0;
   bottom: 0;
   margin: auto;
-  right: -.7rem;
+  right: -0.7rem;
   width: 3px;
   height: 35px;
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 1rem;
 }
 
-.navMenu_list li>a {
+.navMenu_list li > a {
   width: 100%;
   height: 100%;
   display: flex;
@@ -166,12 +137,13 @@
   border-radius: 0.5rem;
   padding-left: 0.4rem;
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
 }
 
-.navMenu_list a:hover, a:hover svg path {
-  background-color: #FFF;
-  color: rgb(0, 50, 120)!important;
+.navMenu_list a:hover,
+a:hover svg path {
+  background-color: #fff;
+  color: rgb(0, 50, 120) !important;
   stroke: rgb(0, 50, 120);
 }
 
@@ -189,19 +161,19 @@
   color: #fff;
 }
 .accesibilidad h3 {
-  font-size: .92rem;
+  font-size: 0.92rem;
 }
 
 .accesibilidad_icons {
-      display: flex;
-    place-content: center;
-    width: 100%;
-    gap: 1.3rem;
-    height: 100%;
-    place-items: center;
+  display: flex;
+  place-content: center;
+  width: 100%;
+  gap: 1.3rem;
+  height: 100%;
+  place-items: center;
 }
 
-@media only screen and (min-width:600px) {
+@media only screen and (min-width: 600px) {
   .user.mobile {
     display: flex;
     gap: 0.5rem;
@@ -209,8 +181,7 @@
   }
 }
 
-@media only screen and (min-width:1024px) {
-
+@media only screen and (min-width: 1024px) {
   /* STYLES MENU */
   .menu {
     height: auto;

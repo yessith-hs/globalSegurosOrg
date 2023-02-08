@@ -1,6 +1,6 @@
 import { LightningElement, track, wire } from 'lwc'
 import { CurrentPageReference } from 'lightning/navigation'
-import { formatDate } from 'c/clbinsUtils'
+import { formatDate, TOPICS, URL_TOPICS, htmlDecode } from 'c/clbinsUtils'
 import basePath from '@salesforce/community/basePath'
 import getContent from '@salesforce/apex/ManagedContentController.getContent'
 
@@ -25,20 +25,6 @@ export default class ClbinsBlogLayout extends LightningElement {
   _avatar
   _imageUrl
   _imageAltText
-
-  // * get url topic
-  URL_TOPICS = {
-    'orientación educativa': `${basePath}/conexion-global/orientacion-educativa`,
-    'orientacion educativa': `${basePath}/conexion-global/orientacion-educativa`,
-    'desarrollo integral': `${basePath}/conexion-global/desarrollo-integral`,
-    'habilidades socioemocionales': `${basePath}/conexion-global/habilidades-socioemocionales`
-  }
-  TOPICS = {
-    'orientación educativa': 'orientacion_educativa',
-    'orientacion educativa': 'orientacion_educativa',
-    'desarrollo integral': 'desarrollo_integral',
-    'habilidades socioemocionales': 'habilidades_socioemocionales'
-  }
 
   // * get id post
   @wire(CurrentPageReference)
@@ -69,7 +55,7 @@ export default class ClbinsBlogLayout extends LightningElement {
         avatar
       } = data
       const date = formatDate(fechapublicacion.value)
-      const body = this.htmlDecode(Publicacion.value)
+      const body = htmlDecode(Publicacion.value)
 
       this._topic = tematica.value.toLowerCase()
       this._date = date
@@ -83,9 +69,8 @@ export default class ClbinsBlogLayout extends LightningElement {
 
       this._imageUrl = basePath + '/sfsites/c' + Portada.unauthenticatedUrl
       this._imageAltText = Portada.altText
-      this.error = undefined
-      this.topicUrl = this.URL_TOPICS[this._topic] ?? basePath
-      this.itemTopic = this.TOPICS[this._topic] ?? this.defaultTopic
+      this.topicUrl = URL_TOPICS[this._topic] ?? basePath
+      this.itemTopic = TOPICS[this._topic] ?? this.defaultTopic
     }
     if (error) {
       console.log('Error: ' + JSON.stringify(error))
@@ -131,11 +116,5 @@ export default class ClbinsBlogLayout extends LightningElement {
     background-size:cover;
     background-position:center;
     position: relative;`
-  }
-
-  // * Formatted Rich Text
-  htmlDecode(input) {
-    const doc = new DOMParser().parseFromString(input, 'text/html')
-    return doc.documentElement.textContent
   }
 }

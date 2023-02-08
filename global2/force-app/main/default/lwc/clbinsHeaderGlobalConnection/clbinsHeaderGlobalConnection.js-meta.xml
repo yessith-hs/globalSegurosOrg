@@ -9,4 +9,14 @@
     <target>lightningCommunity__Page</target>
     <target>lightningCommunity__Default</target>
   </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property
+                type="String"
+                name="topic"
+                label="Topic"
+                default="orientación educativa"
+            />
+        </targetConfig>
+    </targetConfigs>
 </LightningComponentBundle>
