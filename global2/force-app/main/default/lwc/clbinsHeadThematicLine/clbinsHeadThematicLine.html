@@ -10,23 +10,31 @@
       <div class="thematicContent">
         <figure><img src={image} alt=""></figure>
         <h2>{title}</h2>
-          <lightning-formatted-rich-text value={content}></lightning-formatted-rich-text>
+        <lightning-formatted-rich-text value={content}></lightning-formatted-rich-text>
       </div>
     </article>
     <div class="lastEntries">
       <h2>Últimas Entradas</h2>
-      <template for:each={posts} for:item="post">
-        <article class="entriesWrapper" key={post.key}>
-          <div class="entriesLink">
-            <figure><img src={post.imageUrl} alt={post.imageAltText}></figure>
-            <div class="entriesContent">
-              <time datetime={post.date} title={post.date}>{post.date}</time>
-              <h3>{post.title}</h3>
-              <p>{post.descripcion}</p>
-              <span onclick={handleClick} data-id={post.key}>Leer más</span>
+      <template if:false={hasData}>
+        <template for:each={postsLoader} for:item="post">
+          <c-clbins-skeleton-last-post-card key={post.id}></c-clbins-skeleton-last-post-card>
+        </template>
+      </template>
+
+      <template if:true={hasData}>
+        <template for:each={posts} for:item="post">
+          <article class="entriesWrapper" key={post.key}>
+            <div class="entriesLink">
+              <figure><img src={post.imageUrl} alt={post.imageAltText}></figure>
+              <div class="entriesContent">
+                <time datetime={post.date} title={post.date}>{post.date}</time>
+                <h3>{post.title}</h3>
+                <p>{post.descripcion}</p>
+                <span onclick={handleClick} data-id={post.key}>Leer más</span>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
+        </template>
       </template>
     </div>
   </section>

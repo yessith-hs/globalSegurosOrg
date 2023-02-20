@@ -1,0 +1,67 @@
+.postContainer {
+  background-color: #fff;
+  height: 350px;
+  width: 200px;
+  border-radius: 5px;
+}
+
+.postWrapper {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 2fr auto;
+}
+
+.postImg {
+  height: 180px;
+  width: 100%;
+}
+
+.postContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.postContent span,
+.postLink {
+  width: 30%;
+}
+
+.postContent h3 {
+  width: 50%;
+}
+
+.postContent p {
+  width: 100%;
+}
+
+.postLink{
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.postContent span,
+.postContent h3,
+.postContent p,
+.postLink {
+  height: 10px;
+}
+
+.postImg,
+.postContent span,
+.postContent h3,
+.postContent p,
+.postLink {
+  background: #eee;
+  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+  border-radius: 5px;
+  background-size: 200% 100%;
+  animation: 1.5s shine linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}

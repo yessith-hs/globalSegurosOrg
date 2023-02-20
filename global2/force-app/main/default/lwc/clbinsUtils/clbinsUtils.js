@@ -52,3 +52,17 @@ export const URL_TOPICS = {
     'desarrollo integral': `${basePath}/conexion-global/desarrollo-integral`,
     'habilidades socioemocionales': `${basePath}/conexion-global/habilidades-socioemocionales`
   }
+
+  export const skeletonPosts = [
+    { id: 1 },
+    { id: 2 },
+    { id: 3 },
+    { id: 4 },
+    { id: 5 },
+    { id: 6 }
+  ]
+  export const skeletonLastPosts = [
+    { id: 1 },
+    { id: 2 },
+    { id: 3 }
+  ]

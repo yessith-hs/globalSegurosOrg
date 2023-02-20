@@ -8,7 +8,7 @@ export default class ClbinsListPost extends LightningElement {
   hasEntries
   listEntries
   maxEntries = 10
-  @track maxEntriesShow = 2
+  @track maxEntriesShow = 4
 
 
 
@@ -43,7 +43,7 @@ export default class ClbinsListPost extends LightningElement {
   }
 
   nextEntries() {
-    this.maxEntriesShow += 2
+    this.maxEntriesShow += 4
   }
 
   get entries () {

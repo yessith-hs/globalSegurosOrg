@@ -2,17 +2,17 @@ import { LightningElement, api, wire } from 'lwc'
 import { NavigationMixin } from 'lightning/navigation'
 import getContentList from '@salesforce/apex/ManagedContentController.getContentList'
 import basePath from '@salesforce/community/basePath'
-import { formatDate } from 'c/clbinsUtils'
+import { formatDate, skeletonPosts } from 'c/clbinsUtils'
 
-export default class ClbinsCarouselCms extends NavigationMixin(
-  LightningElement
-) {
+
+export default class ClbinsCarouselCms extends NavigationMixin(LightningElement) {
   @api topic
   @api title
   @api url
   @api srcimg
-
+  hasData = false
   posts
+  postsLoader = skeletonPosts
 
   @wire(getContentList, {
     page: 0,
@@ -22,6 +22,7 @@ export default class ClbinsCarouselCms extends NavigationMixin(
   })
   wiredContent({ data, error }) {
     if (data) {
+      this.hasData = true
       this.posts = data.map(entry => {
         const { Title, Descripcion, Imagen } = entry.contentNodes
         const date = formatDate(entry.publishedDate)

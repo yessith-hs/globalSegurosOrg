@@ -1,0 +1,61 @@
+.entriesWrapper {
+  background-color: #fff;
+  border-radius: 5px;
+      height: 120px;
+}
+
+.entriesLink {
+  display: flex;
+  gap: 0.6rem;
+  height: 100%;
+}
+
+.entriesImg {
+  flex: 0 0 120px;
+  height: 100%;
+}
+
+.entriesContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 100%;
+    justify-content: space-evenly;
+}
+
+.entriesContent time,
+.entriesContent h3,
+.entriesContent p,
+.entriesContent span {
+  height: 10px;
+}
+.entriesContent time,
+.entriesContent span {
+  width: 20%;
+}
+
+.entriesContent h3 {
+  width: 30%;
+}
+
+.entriesContent p {
+  width: 50%;
+}
+
+.entriesImg,
+.entriesContent time,
+.entriesContent h3,
+.entriesContent p,
+.entriesContent span {
+  background: #eee;
+  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+  border-radius: 5px;
+  background-size: 200% 100%;
+  animation: 1.5s shine linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}

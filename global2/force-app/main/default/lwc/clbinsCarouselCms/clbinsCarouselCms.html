@@ -6,8 +6,16 @@
       <button><a href={url}>Ver todo</a></button>
     </div>
     <div class="sliderContent">
-      <template for:each={posts} for:item="post">
-        <c-clbins-card-post key={post.key} post={post}></c-clbins-card-post>
+      <template if:false={hasData}>
+        <template for:each={postsLoader} for:item="post">
+            <c-clbins-skeleton-card-post key={post.id}></c-clbins-skeleton-card-post>
+        </template>
+
+      </template>
+      <template if:true={hasData}>
+        <template for:each={posts} for:item="post">
+          <c-clbins-card-post key={post.key} post={post}></c-clbins-card-post>
+        </template>
       </template>
     </div>
   </div>
