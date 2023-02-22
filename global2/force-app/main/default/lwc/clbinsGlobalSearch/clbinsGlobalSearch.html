@@ -1,11 +1,24 @@
 <template>
-  <form onsubmit={handleSubmit}>
-    <input type="text" name="search"  onchange={handleChange} />
-    <!-- <input type="text" name="search" onchange={selectHandler} /> -->
-    <input type="submit" value="Search"  />
-  </form>
+ <div class="search">
+   <div class="searchHead">
+     <h1>Conexión Global</h1>
+     <span>Entrada destacada</span>
+   </div>
+   <form class="searchForm" onsubmit={handleSubmit}>
+     <div class="searchWrapper">
+       <svg xmlns="http://www.w3.org/2000/svg" width="16.579" height="16.579" viewBox="0 0 16.579 16.579">
+         <g id="Grupo_385" data-name="Grupo 385" transform="translate(1.061 0.75)">
+           <path id="Trazado_1205" data-name="Trazado 1205"
+             d="M6.657,12.815a6.157,6.157,0,1,1,6.157-6.157A6.157,6.157,0,0,1,6.657,12.815Z" transform="translate(1.954 -0.5)"
+             fill="none" stroke="#003696" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+           <path id="Trazado_1206" data-name="Trazado 1206" d="M9.75,14.01l4.26-4.26" transform="translate(-9.75 0.758)"
+             fill="none" stroke="#003696" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+         </g>
+       </svg>
 
-  <!-- <form onkeyup={handleKeyUp}>
-    <lightning-input name="enter-search" label="Search when user hits the 'enter' key" type="search"></lightning-input>
-  </form> -->
+       <input type="text" name="search" placeholder="Buscar" onchange={handleChange} />
+     </div>
+     <!-- <input type="submit" value="Search" /> -->
+   </form>
+ </div>
 </template>

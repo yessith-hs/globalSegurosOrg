@@ -80,7 +80,7 @@ export default class ClbinsCustomChatter extends LightningElement {
     const success = new ShowToastEvent({
       title: 'Comentario Creado',
       message:
-        'Gracias. Tu comentario fue creado exitosamente y enviado para aprobación.',
+        'Gracias. Tu comentario fue creado exitosamente.',
       variant: 'success'
     })
     const fail = new ShowToastEvent({

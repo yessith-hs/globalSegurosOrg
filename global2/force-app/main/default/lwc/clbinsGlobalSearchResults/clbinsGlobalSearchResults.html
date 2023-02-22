@@ -1,0 +1,24 @@
+<template>
+  <template if:true={loading}>
+    <h1>cargando....</h1>
+  </template>
+
+  <template if:false={loading}>
+    <template if:false={haveResults}>
+      <h1>no se encontro resultados de busqueda para {term}</h1>
+    </template>
+
+    <template if:true={haveResults}>
+      <h1>Resultados de Busqueda para <strong>{term}</strong></h1>
+      <div class="resultsWrapper">
+        <template for:each={searchResults} for:item="result">
+         <div key={result.contentKey}>
+          <h2>Titulo:{result.title}</h2>
+          <h3>Tematica:{result.contentType.developerName}</h3>
+          <span>fecha:{result.publishDate}</span>
+         </div>
+        </template>
+      </div>
+    </template>
+  </template>
+</template>

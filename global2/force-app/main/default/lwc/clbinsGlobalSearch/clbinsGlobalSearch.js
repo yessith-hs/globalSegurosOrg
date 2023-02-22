@@ -1,35 +1,12 @@
-import { LightningElement } from 'lwc'
-import { searchContent } from './searchContent'
+import { LightningElement, track } from 'lwc'
+import { NavigationMixin } from 'lightning/navigation'
+import { ShowToastEvent } from 'lightning/platformShowToastEvent'
+import basePath from '@salesforce/community/basePath'
 
-export default class ClbinsGlobalSearch extends LightningElement {
-  myValue = 'initial value'
-  queryTerm = ''
-  data
-
-  // connectedCallback() {
-  //   const API_URL =
-  //     'https://globalseguros--ta.sandbox.my.salesforce.com/services/data/v56.0/connect/cms/delivery/channels/0ap220000004H2EAAU/contents/query'
-
-  //   fetch(API_URL, {
-  //     method: 'GET',
-  //     headers: {
-  //       Accept: 'application/json'
-  //     }
-  //   })
-  //     .then(response => {
-  //       if (response.ok) {
-  //         return response.json()
-  //       }
-  //     })
-  //     .then(responseJason => {
-  //       this.data = responseJason
-  //       console.log(
-  //         '🚀 ~ file: clbinsGlobalSearch.js:28 ~ ClbinsGlobalSearch ~ connectedCallback ~ responseJason',
-  //         responseJason
-  //       )
-  //     })
-  //     .catch(error => console.error(error.mesages))
-  // }
+export default class ClbinsGlobalSearch extends NavigationMixin(
+  LightningElement
+) {
+  @track queryTerm = ''
 
   handleChange(event) {
     this.queryTerm = event.target.value
@@ -37,14 +14,22 @@ export default class ClbinsGlobalSearch extends LightningElement {
 
   handleSubmit(event) {
     event.preventDefault()
-    searchContent()
-      .then(data => {
-        console.log(
-          '🚀 ~ file: clbinsGlobalSearch.js:17 ~ ClbinsGlobalSearch ~ search ~ data',
-          data
-        )
-        return
+
+    if (!this.queryTerm) {
+      const event = new ShowToastEvent({
+        title: 'Campos vacíos',
+        message: 'Por favor ingresa una query.',
+        variant: 'error'
       })
-      .catch(error => console.error(error.mesages))
+      this.dispatchEvent(event)
+      return
+    }
+
+    this[NavigationMixin.Navigate]({
+      type: 'standard__webPage',
+      attributes: {
+        url: `${basePath}/conexion-global/search-results/?term=${this.queryTerm}`
+      }
+    })
   }
 }
