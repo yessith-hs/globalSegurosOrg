@@ -1,24 +1,28 @@
 <template>
   <template if:true={loading}>
-    <h1>cargando....</h1>
+    <c-clbins-skeleton-search-results></c-clbins-skeleton-search-results>
+
   </template>
 
   <template if:false={loading}>
-    <template if:false={haveResults}>
-      <h1>no se encontro resultados de busqueda para {term}</h1>
+    <template if:true={haveResults}>
+      <h1 >Resultados de Busqueda para {term}</h1>
+      <section class="resultWrapper">
+        <template for:each={searchResults} for:item="result">
+          <article key={result.contentKey} class="resultContent" onclick={handleClick} data-id={result.contentKey}>
+            <div class="resultTitle">
+              <h2>{result.topic}</h2>
+              <h3>{result.title}</h3>
+            </div>
+            <time class="resultDate" datetime={result.publishDate}
+              title={result.publishDate}>{result.publishDate}</time>
+          </article>
+        </template>
+      </section>
     </template>
 
-    <template if:true={haveResults}>
-      <h1>Resultados de Busqueda para <strong>{term}</strong></h1>
-      <div class="resultsWrapper">
-        <template for:each={searchResults} for:item="result">
-         <div key={result.contentKey}>
-          <h2>Titulo:{result.title}</h2>
-          <h3>Tematica:{result.contentType.developerName}</h3>
-          <span>fecha:{result.publishDate}</span>
-         </div>
-        </template>
-      </div>
+    <template if:false={haveResults}>
+      <h1 class="resultNotFind">no se encontro resultados de busqueda para {term}</h1>
     </template>
   </template>
 </template>

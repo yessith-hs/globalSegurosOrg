@@ -1,13 +1,16 @@
 import { LightningElement, track, wire } from 'lwc'
 import basePath from '@salesforce/community/basePath'
-import { CurrentPageReference } from 'lightning/navigation'
+import { CurrentPageReference, NavigationMixin } from 'lightning/navigation'
 import getSessionId from '@salesforce/apex/clb_ins_UserSessionHelper.getSessionId'
 import { searchContent } from './searchContent'
+import { formatDate } from 'c/clbinsUtils'
 
-export default class ClbinsGlobalSearchResults extends LightningElement {
+export default class ClbinsGlobalSearchResults extends NavigationMixin(
+  LightningElement
+) {
   @track tokenUser
   @track term
-  loading
+  loading = true
   haveResults
   searchResults
 
@@ -22,8 +25,7 @@ export default class ClbinsGlobalSearchResults extends LightningElement {
   connectedCallback() {
     getSessionId()
       .then(tokenUser =>
-        searchContent(tokenUser, this.term)
-          .then(results => {
+        searchContent(tokenUser, this.term).then(results => {
           if (!results.items.length) {
             this.loading = false
             this.haveResults = false
@@ -31,10 +33,28 @@ export default class ClbinsGlobalSearchResults extends LightningElement {
           }
 
           this.loading = false
-          this.searchResults = results.items
+          this.searchResults = results.items.map(result => {
+            const { publishDate, title, contentType, contentKey } = result
+            return {
+              contentKey,
+              topic: contentType.developerName,
+              publishDate: formatDate(publishDate),
+              title
+            }
+          })
+
           this.haveResults = true
         })
       )
       .catch(error => console.log('error', error))
+  }
+
+  handleClick(event) {
+    this[NavigationMixin.Navigate]({
+      type: 'standard__webPage',
+      attributes: {
+        url: `${basePath}/conexion-global/post?blogId=${event.currentTarget.dataset.id}`
+      }
+    })
   }
 }
