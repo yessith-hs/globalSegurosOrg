@@ -45,6 +45,11 @@ export const TOPICS = {
   'desarrollo integral': 'desarrollo_integral',
   'habilidades socioemocionales': 'habilidades_socioemocionales'
 }
+export const TOPICS_NAME = {
+  'orientacion_educativa': 'Orientacion Educativa',
+  'desarrollo_integral': 'Desarrollo Integral',
+  'habilidades_socioemocionales': 'Habilidades Socioemocionales',
+}
 
 export const URL_TOPICS = {
     'orientación educativa': `${basePath}/conexion-global/orientacion-educativa`,

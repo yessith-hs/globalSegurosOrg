@@ -31,12 +31,18 @@
   place-items: center;
   background-color: transparent;
 }
-.menu_logo a {
+.menu_logo a,
+.navMenu_header a {
   text-decoration: none;
+  color: transparent;
 }
+
 .menu_logo a:hover,
 .menu_logo a:active,
-.menu_logo a:focus {
+.menu_logo a:focus,
+.navMenu_header a:hover,
+.navMenu_header a:active,
+.navMenu_header a:focus {
   text-decoration: none;
   color: transparent;
 }

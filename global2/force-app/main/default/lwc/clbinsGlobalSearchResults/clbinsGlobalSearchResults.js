@@ -3,16 +3,15 @@ import basePath from '@salesforce/community/basePath'
 import { CurrentPageReference, NavigationMixin } from 'lightning/navigation'
 import getSessionId from '@salesforce/apex/clb_ins_UserSessionHelper.getSessionId'
 import { searchContent } from './searchContent'
-import { formatDate } from 'c/clbinsUtils'
+import { formatDate, TOPICS_NAME } from 'c/clbinsUtils'
 
-export default class ClbinsGlobalSearchResults extends NavigationMixin(
-  LightningElement
-) {
+export default class ClbinsGlobalSearchResults extends NavigationMixin(LightningElement) {
   @track tokenUser
   @track term
   loading = true
   haveResults
   searchResults
+  defaultTopic='Sin Tematica'
 
   // * get id post
   @wire(CurrentPageReference)
@@ -37,7 +36,8 @@ export default class ClbinsGlobalSearchResults extends NavigationMixin(
             const { publishDate, title, contentType, contentKey } = result
             return {
               contentKey,
-              topic: contentType.developerName,
+              topic:
+                TOPICS_NAME[contentType.developerName] ?? this.defaultTopic,
               publishDate: formatDate(publishDate),
               title
             }
