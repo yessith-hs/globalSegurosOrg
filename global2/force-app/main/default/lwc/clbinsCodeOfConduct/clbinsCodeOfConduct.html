@@ -1,60 +1,15 @@
 <template>
   <section class="conductWrapper">
     <figure>
-      <img src={imageUrl} alt="Portada codigo de conducta">
+      <img src={image} alt="Portada codigo de conducta">
     </figure>
     <main class="conductMain">
       <section class="conductContent">
         <div class="conductHead">
-          <h1>Conexión Global</h1>
-          <button class="conductBtn"><a href={basePath}>Volver a Conexión Global</a></button>
+          <h1>Soy Global</h1>
+          <button class="conductBtn"><a href={soyGlobal}>Volver a Soy Global</a></button>
         </div>
-        <p>Quisque mi sem, sodales in commodo quis, malesuada non urna. Integer ex leo, hendrerit vel placerat vel,
-          blandit ac
-          urna. Mauris a convallis mauris. Proin metus nunc, mollis et varius sit amet, lobortis eu est. Curabitur
-          tincidunt
-          libero nunc, et scelerisque justo facilisis in. Integer suscipit nisl et dui mattis lacinia. Etiam ut diam id
-          sapien
-          facilisis vehicula. Praesent sollicitudin placerat nisl eget tempor. Nullam ultricies gravida porta. Nulla
-          imperdiet
-          iaculis lacus ut ultrices. Aliquam pretium augue libero. In mollis tincidunt diam sed maximus. Nam erat purus,
-          posuere
-          feugiat libero vitae, mattis sodales ipsum. Fusce lectus enim, efficitur quis est eu, vulputate ultrices
-          lorem. Ut a
-          fringilla dolor. Integer vulputate, sapien at volutpat pharetra, metus sem vehicula dui, sed molestie dui nisl
-          non
-          neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam sit amet
-          bibendum
-          mauris. Donec vitae tortor sollicitudin, condimentum nunc quis, posuere mi. Vestibulum eget porttitor nisi.
-        </p>
-        <div>
-          <h2>Código de conducta</h2>
-          <p>
-            Donec placerat porta ante, sed molestie purus placerat sed. Vivamus auctor, lectus sit amet congue ornare,
-            est lectus
-            pretium lacus, et semper risus augue vel arcu. Proin vel maximus ligula, at scelerisque justo. Aliquam
-            lacinia suscipit
-            tortor ac euismod. Praesent elementum nibh quis erat euismod, in porttitor odio porta. Vestibulum ante ipsum
-            primis in
-            faucibus orci luctus et ultrices posuere cubilia curae; Aenean scelerisque sodales luctus. Morbi volutpat
-            pellentesque
-            neque, sit amet scelerisque diam. Aliquam porttitor mauris ac ornare viverra. Proin id lobortis est, in
-            feugiat sem. In
-            tempor velit ac consequat porttitor. In sed tempor sem. Quisque vestibulum, ipsum sed pellentesque
-            imperdiet, lacus elit
-            porta nibh, a consectetur quam velit id augue. Donec eget nulla ullamcorper, maximus turpis ut, bibendum
-            mauris. Mauris
-            ultricies facilisis nisi. Duis massa urna, consectetur vel feugiat id, imperdiet in metus. Aliquam quis
-            vestibulum
-            purus. Suspendisse facilisis magna at turpis suscipit efficitur. Aliquam id gravida lorem. Sed risus nisl,
-            sollicitudin
-            porttitor consequat eget, placerat ac felis. Cras molestie, neque vitae gravida dictum, sem lorem
-            pellentesque erat, et
-            malesuada ipsum mi blandit nulla. Donec iaculis, lectus quis maximus dictum, mauris urna cursus eros, ac
-            luctus neque
-            est at est.
-          </p>
-        </div>
+        <lightning-formatted-rich-text value={body}></lightning-formatted-rich-text>
       </section>
     </main>
   </section>

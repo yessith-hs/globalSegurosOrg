@@ -1,12 +1,28 @@
-import { LightningElement } from 'lwc';
-import BackgroundImg from "@salesforce/resourceUrl/codeOfConduct";
-import BASE_PATH from "@salesforce/community/basePath";
-
+import { LightningElement, track, wire } from 'lwc'
+import getContentList from '@salesforce/apex/ManagedContentController.getContentList'
+import { htmlDecode } from 'c/clbinsUtils'
+import basePath from '@salesforce/community/basePath'
 export default class ClbinsCodeOfConduct extends LightningElement {
-  imageUrl = BackgroundImg;
-  basePath = `${BASE_PATH}/conexion-global`;
+  topic = 'codigo_de_conducta'
+  image
+  body
+  soyGlobal = `${basePath}/conexion-global`
 
-  // get getBackgroundImage() {
-  //   return `background-image:url(${this.imageUrl})`;
-  // }
+  // * Get Content CMS
+  @wire(getContentList, {
+    page: 0,
+    pageSize: 1,
+    language: 'es',
+    filterby: '$topic'
+  })
+  wiredContent({ data, error }) {
+    if (data) {
+      const { contenido, imagen } = data[0].contentNodes
+      this.body = htmlDecode(contenido.value)
+      this.image = `${basePath}/sfsites/c${imagen.url}`
+    }
+    if (error) {
+      console.log('Error: ' + JSON.stringify(error))
+    }
+  }
 }
