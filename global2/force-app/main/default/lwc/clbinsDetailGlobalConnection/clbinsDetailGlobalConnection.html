@@ -1,13 +1,10 @@
 <template>
   <section class="details">
-    <figure><img src={srcImg} alt=""></figure>
+    <figure><img src={image} alt="hero soy global"></figure>
     <div class="detailWrapper">
       <div class="detailContainer">
-        <h2>Tenemos un espacio de conexión e interacción con las familias Global y expertos.</h2>
-        <p> Para acompañar, compartir y comunicar
-          información especializada sobre temas de interés y utilidad con el propósito de aprender, crecer y afrontar
-          desafíos en
-          diferentes momentos de la vida.</p>
+        <h2>{title}</h2>
+        <lightning-formatted-rich-text value={body}></lightning-formatted-rich-text>
       </div>
       <div class="detailContent">
         <div class="detailCategories">

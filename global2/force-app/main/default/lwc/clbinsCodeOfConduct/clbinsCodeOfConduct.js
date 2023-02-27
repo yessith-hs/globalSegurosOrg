@@ -1,4 +1,4 @@
-import { LightningElement, track, wire } from 'lwc'
+import { LightningElement, wire } from 'lwc'
 import getContentList from '@salesforce/apex/ManagedContentController.getContentList'
 import { htmlDecode } from 'c/clbinsUtils'
 import basePath from '@salesforce/community/basePath'

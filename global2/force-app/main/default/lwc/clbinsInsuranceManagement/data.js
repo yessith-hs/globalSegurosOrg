@@ -29,7 +29,7 @@ export const insurance = [
   {
     id: 4,
     policyNumber: 82478457,
-    insuranceName: 'Renta voluntaria',
+    insuranceName: 'Renta Voluntaria',
     color: '#9B4B91',
     nextPaymentDate: '31/03/2023',
     amount: 250000,
