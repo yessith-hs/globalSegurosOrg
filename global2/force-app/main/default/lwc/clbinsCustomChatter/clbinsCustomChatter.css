@@ -53,6 +53,11 @@
   color: #fff;
   background-color: #003696;
 }
+
+.addCommentBlock {
+  cursor: wait;
+  opacity: 0.5;
+}
 .allComments {
   margin-top: 1.5rem;
   padding-bottom: 2rem;
