@@ -1,7 +1,6 @@
 import { LightningElement } from 'lwc'
 import basePath from '@salesforce/community/basePath'
 
-
 export default class ClbinsUtils extends LightningElement {}
 
 export const filterCmsTopic = (posts = [], topic) => {
@@ -46,28 +45,24 @@ export const TOPICS = {
   'habilidades socioemocionales': 'habilidades_socioemocionales'
 }
 export const TOPICS_NAME = {
-  'orientacion_educativa': 'Orientacion Educativa',
-  'desarrollo_integral': 'Desarrollo Integral',
-  'habilidades_socioemocionales': 'Habilidades Socioemocionales',
+  orientacion_educativa: 'Orientacion Educativa',
+  desarrollo_integral: 'Desarrollo Integral',
+  habilidades_socioemocionales: 'Habilidades Socioemocionales'
 }
 
 export const URL_TOPICS = {
-    'orientación educativa': `${basePath}/conexion-global/orientacion-educativa`,
-    'orientacion educativa': `${basePath}/conexion-global/orientacion-educativa`,
-    'desarrollo integral': `${basePath}/conexion-global/desarrollo-integral`,
-    'habilidades socioemocionales': `${basePath}/conexion-global/habilidades-socioemocionales`
-  }
+  'orientación educativa': `${basePath}/soy-global/orientacion-educativa`,
+  'orientacion educativa': `${basePath}/soy-global/orientacion-educativa`,
+  'desarrollo integral': `${basePath}/soy-global/desarrollo-integral`,
+  'habilidades socioemocionales': `${basePath}/soy-global/habilidades-socioemocionales`
+}
 
-  export const skeletonPosts = [
-    { id: 1 },
-    { id: 2 },
-    { id: 3 },
-    { id: 4 },
-    { id: 5 },
-    { id: 6 }
-  ]
-  export const skeletonLastPosts = [
-    { id: 1 },
-    { id: 2 },
-    { id: 3 }
-  ]
+export const skeletonPosts = [
+  { id: 1 },
+  { id: 2 },
+  { id: 3 },
+  { id: 4 },
+  { id: 5 },
+  { id: 6 }
+]
+export const skeletonLastPosts = [{ id: 1 }, { id: 2 }, { id: 3 }]

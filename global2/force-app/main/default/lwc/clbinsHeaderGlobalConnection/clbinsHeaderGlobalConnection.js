@@ -4,7 +4,9 @@ import getContentList from '@salesforce/apex/ManagedContentController.getContent
 import basePath from '@salesforce/community/basePath'
 import { formatDate, TOPICS, URL_TOPICS } from 'c/clbinsUtils'
 
-export default class ClbinsHeaderGlobalConnection extends NavigationMixin(LightningElement) {
+export default class ClbinsHeaderGlobalConnection extends NavigationMixin(
+  LightningElement
+) {
   @api topic
   itemTopic
   topicUrl
@@ -48,7 +50,7 @@ export default class ClbinsHeaderGlobalConnection extends NavigationMixin(Lightn
     this[NavigationMixin.Navigate]({
       type: 'standard__webPage',
       attributes: {
-        url: `${basePath}/conexion-global/post?blogId=${event.currentTarget.dataset.id}`
+        url: `${basePath}/soy-global/post?blogId=${event.currentTarget.dataset.id}`
       }
     })
   }

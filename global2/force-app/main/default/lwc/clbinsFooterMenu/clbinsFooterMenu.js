@@ -3,5 +3,6 @@ import BASE_PATH from "@salesforce/community/basePath";
 
 export default class ClbinsFooterMenu extends LightningElement {
   gestionSeguros = `${BASE_PATH}/gestiona-tus-seguros`
-  home = BASE_PATH
+  home = `${BASE_PATH}/soy-global`
+  // home = BASE_PATH
 }

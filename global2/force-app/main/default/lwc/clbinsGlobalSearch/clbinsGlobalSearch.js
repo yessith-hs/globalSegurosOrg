@@ -28,7 +28,7 @@ export default class ClbinsGlobalSearch extends NavigationMixin(
     this[NavigationMixin.Navigate]({
       type: 'standard__webPage',
       attributes: {
-        url: `${basePath}/conexion-global/search-results/?term=${this.queryTerm}`
+        url: `${basePath}/soy-global/search-results/?term=${this.queryTerm}`
       }
     })
   }

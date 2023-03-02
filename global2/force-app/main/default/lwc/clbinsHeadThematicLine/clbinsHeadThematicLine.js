@@ -1,10 +1,12 @@
-import { LightningElement, api, wire } from "lwc";
-import { NavigationMixin } from "lightning/navigation";
-import getContentList from "@salesforce/apex/ManagedContentController.getContentList";
-import basePath from "@salesforce/community/basePath";
+import { LightningElement, api, wire } from 'lwc'
+import { NavigationMixin } from 'lightning/navigation'
+import getContentList from '@salesforce/apex/ManagedContentController.getContentList'
+import basePath from '@salesforce/community/basePath'
 import { formatDate, skeletonLastPosts } from 'c/clbinsUtils'
 
-export default class ClbinsHeadThematicLine extends NavigationMixin(LightningElement) {
+export default class ClbinsHeadThematicLine extends NavigationMixin(
+  LightningElement
+) {
   @api topic
   @api icon
   @api title
@@ -48,7 +50,7 @@ export default class ClbinsHeadThematicLine extends NavigationMixin(LightningEle
     this[NavigationMixin.Navigate]({
       type: 'standard__webPage',
       attributes: {
-        url: `${basePath}/conexion-global/post?blogId=${event.currentTarget.dataset.id}`
+        url: `${basePath}/soy-global/post?blogId=${event.currentTarget.dataset.id}`
       }
     })
   }

@@ -106,7 +106,7 @@ export default class ClbinsCustomChatter extends LightningElement {
       blogTopic: topic
     })
       .then(result => {
-        console.log('SUCCESS', result)
+        console.log('data', result)
 
         this.template.querySelector('.comment--title').value = ''
         this.template.querySelector('.comment--body').value = ''

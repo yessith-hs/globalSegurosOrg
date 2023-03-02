@@ -8,7 +8,7 @@ import { formatDate, unEscape } from "c/clbinsUtils";
 import getContentList from "@salesforce/apex/ManagedContentController.getContentList";
 
 export default class ConexionGlobal extends LightningElement {
-  urlConexionGlobal = `${BASE_PATH}/conexion-global`;
+  urlSoyGlobal = `${BASE_PATH}/soy-global`;
   navigatorConfig;
   active;
   items=[{'imagen': ''}];

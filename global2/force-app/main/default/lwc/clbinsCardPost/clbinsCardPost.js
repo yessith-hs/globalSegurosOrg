@@ -1,19 +1,17 @@
-import { LightningElement, api } from "lwc";
-import { NavigationMixin } from "lightning/navigation";
+import { LightningElement, api } from 'lwc'
+import { NavigationMixin } from 'lightning/navigation'
 
-import basePath from "@salesforce/community/basePath";
+import basePath from '@salesforce/community/basePath'
 
-export default class ClbinsCardPost extends NavigationMixin(
-  LightningElement
-)  {
-  @api post;
+export default class ClbinsCardPost extends NavigationMixin(LightningElement) {
+  @api post
 
   handleClick(event) {
     this[NavigationMixin.Navigate]({
-      type: "standard__webPage",
+      type: 'standard__webPage',
       attributes: {
-        url: `${basePath}/conexion-global/post?blogId=${event.currentTarget.dataset.id}`
+        url: `${basePath}/soy-global/post?blogId=${event.currentTarget.dataset.id}`
       }
-    });
+    })
   }
 }

@@ -5,13 +5,15 @@ import getSessionId from '@salesforce/apex/clb_ins_UserSessionHelper.getSessionI
 import { searchContent } from './searchContent'
 import { formatDate, TOPICS_NAME } from 'c/clbinsUtils'
 
-export default class ClbinsGlobalSearchResults extends NavigationMixin(LightningElement) {
+export default class ClbinsGlobalSearchResults extends NavigationMixin(
+  LightningElement
+) {
   @track tokenUser
   @track term
   loading = true
   haveResults
   searchResults
-  defaultTopic='Sin Tematica'
+  defaultTopic = 'Sin Tematica'
 
   // * get id post
   @wire(CurrentPageReference)
@@ -53,7 +55,7 @@ export default class ClbinsGlobalSearchResults extends NavigationMixin(Lightning
     this[NavigationMixin.Navigate]({
       type: 'standard__webPage',
       attributes: {
-        url: `${basePath}/conexion-global/post?blogId=${event.currentTarget.dataset.id}`
+        url: `${basePath}/soy-global/post?blogId=${event.currentTarget.dataset.id}`
       }
     })
   }

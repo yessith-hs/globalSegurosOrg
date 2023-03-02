@@ -8,9 +8,9 @@ export default class ClbinsDetailGlobalConnection extends LightningElement {
   title
   image
   body
-  educationalUrl = `${baseUrl}/conexion-global/orientacion-educativa`
-  integralDevelopmentlUrl = `${baseUrl}/conexion-global/desarrollo-integral`
-  socioEmotionallUrl = `${baseUrl}/conexion-global/habilidades-socioemocionales`
+  educationalUrl = `${baseUrl}/soy-global/orientacion-educativa`
+  integralDevelopmentlUrl = `${baseUrl}/soy-global/desarrollo-integral`
+  socioEmotionallUrl = `${baseUrl}/soy-global/habilidades-socioemocionales`
   codeOfConduct = `${baseUrl}/codigo-de-conducta`
 
   @wire(getContentList, {
