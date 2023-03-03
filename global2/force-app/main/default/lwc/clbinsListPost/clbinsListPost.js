@@ -1,5 +1,5 @@
 import { LightningElement, api, wire, track } from 'lwc'
-import getContentList from '@salesforce/apex/ManagedContentController.getContentList'
+import getContentList from '@salesforce/apex/clb_ins_ContentManagerCms.getContentList'
 import basePath from '@salesforce/community/basePath'
 import { formatDate } from 'c/clbinsUtils'
 
@@ -9,8 +9,6 @@ export default class ClbinsListPost extends LightningElement {
   listEntries
   maxEntries = 10
   @track maxEntriesShow = 4
-
-
 
   // * Get Content List CMS
   @wire(getContentList, {
@@ -46,7 +44,7 @@ export default class ClbinsListPost extends LightningElement {
     this.maxEntriesShow += 4
   }
 
-  get entries () {
+  get entries() {
     if (this.listEntries) {
       const totalEntries = this.listEntries.length
       this.hasEntries = this.maxEntriesShow >= totalEntries ? false : true

@@ -1,11 +1,12 @@
 import { LightningElement, api, wire } from 'lwc'
 import { NavigationMixin } from 'lightning/navigation'
-import getContentList from '@salesforce/apex/ManagedContentController.getContentList'
+import getContentList from '@salesforce/apex/clb_ins_ContentManagerCms.getContentList'
 import basePath from '@salesforce/community/basePath'
 import { formatDate, skeletonPosts } from 'c/clbinsUtils'
 
-
-export default class ClbinsCarouselCms extends NavigationMixin(LightningElement) {
+export default class ClbinsCarouselCms extends NavigationMixin(
+  LightningElement
+) {
   @api topic
   @api title
   @api url

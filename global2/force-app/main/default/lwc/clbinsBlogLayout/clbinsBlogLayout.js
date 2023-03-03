@@ -2,7 +2,7 @@ import { LightningElement, track, wire } from 'lwc'
 import { CurrentPageReference } from 'lightning/navigation'
 import { formatDate, TOPICS, URL_TOPICS, htmlDecode } from 'c/clbinsUtils'
 import basePath from '@salesforce/community/basePath'
-import getContent from '@salesforce/apex/ManagedContentController.getContent'
+import getContent from '@salesforce/apex/clb_ins_ContentManagerCms.getContent'
 
 // * Assets
 import URL_HEADER from '@salesforce/resourceUrl/header'

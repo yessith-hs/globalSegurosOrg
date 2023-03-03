@@ -1,5 +1,5 @@
 import { LightningElement, wire } from 'lwc'
-import getContentList from '@salesforce/apex/ManagedContentController.getContentList'
+import getContentList from '@salesforce/apex/clb_ins_ContentManagerCms.getContentList'
 import { htmlDecode } from 'c/clbinsUtils'
 import basePath from '@salesforce/community/basePath'
 export default class ClbinsCodeOfConduct extends LightningElement {

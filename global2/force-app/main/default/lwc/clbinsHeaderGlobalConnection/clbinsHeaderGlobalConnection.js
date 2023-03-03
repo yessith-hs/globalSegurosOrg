@@ -1,6 +1,6 @@
 import { LightningElement, api, wire } from 'lwc'
 import { NavigationMixin } from 'lightning/navigation'
-import getContentList from '@salesforce/apex/ManagedContentController.getContentList'
+import getContentList from '@salesforce/apex/clb_ins_ContentManagerCms.getContentList'
 import basePath from '@salesforce/community/basePath'
 import { formatDate, TOPICS, URL_TOPICS } from 'c/clbinsUtils'
 

@@ -1,5 +1,5 @@
 import { LightningElement, api, wire } from 'lwc'
-import getContentList from '@salesforce/apex/ManagedContentController.getContentList'
+import getContentList from '@salesforce/apex/clb_ins_ContentManagerCms.getContentList'
 import basePath from '@salesforce/community/basePath'
 import { formatDate, skeletonPosts } from 'c/clbinsUtils'
 

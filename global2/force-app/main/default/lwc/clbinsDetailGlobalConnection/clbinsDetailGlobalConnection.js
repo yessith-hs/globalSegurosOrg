@@ -1,6 +1,6 @@
 import { LightningElement, wire } from 'lwc'
 import baseUrl from '@salesforce/community/basePath'
-import getContentList from '@salesforce/apex/ManagedContentController.getContentList'
+import getContentList from '@salesforce/apex/clb_ins_ContentManagerCms.getContentList'
 import { htmlDecode } from 'c/clbinsUtils'
 
 export default class ClbinsDetailGlobalConnection extends LightningElement {
