@@ -1,0 +1,69 @@
+{
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "componentName" : "c:customThemeLayoutGlobal",
+  "dataProviders" : [ ],
+  "id" : "134b39ef-ef0d-4260-97bf-41b10bd1e88c",
+  "label" : "Detalle del seguro",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsHeaderMenu",
+      "id" : "ccc789f0-fb45-4fa3-a3c1-6d8a472c3486",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "78f348f8-e961-4dad-b978-b588e92e4ddd",
+    "regionName" : "sideBar",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsInsuranceDetails",
+      "id" : "bec8e29c-c337-4543-9cbd-11f8318a4ecf",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooter",
+      "id" : "bb5189e3-34df-46d9-ba5a-3647ca1acbe8",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "74994106-1f14-4445-8f98-71ee114dc351",
+    "regionName" : "main",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooterMenu",
+      "id" : "16dc327a-9951-40f0-9f4a-82f1e4942bfb",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "f3430e4d-65cf-46d3-9aba-0d47b9b64222",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Detalle del seguro"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "249d75aa-906a-4c6b-8dde-5ef919eea480",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "dc701aa0-26d7-40fb-b162-335382cae994",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-detalle-del-seguro"
+}

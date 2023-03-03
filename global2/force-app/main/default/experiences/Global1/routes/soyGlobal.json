@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "5c42ad12-3027-40c8-a42f-92a6b65e4b1e",
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "configurationTags" : [ ],
+  "id" : "790838f4-4219-4fb2-9947-6514ef17fb00",
+  "label" : "Soy global",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-conexion-global",
+  "type" : "route",
+  "urlPrefix" : "soy-global"
+}

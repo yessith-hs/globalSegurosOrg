@@ -1,0 +1,69 @@
+{
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "componentName" : "c:customThemeLayoutGlobal",
+  "dataProviders" : [ ],
+  "id" : "56b82d84-e017-49e0-9204-d9ff263da259",
+  "label" : "post",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsHeaderMenu",
+      "id" : "25ce62e7-7634-4203-92c5-7426826f82e4",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "7618e904-1d59-4bde-8c42-0c56be884e8c",
+    "regionName" : "sideBar",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsBlogLayout",
+      "id" : "5d29a302-6a71-4bde-835e-2c3219bdc529",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooter",
+      "id" : "bfe78760-01d6-4d6d-a28e-929643ac9f6d",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "6bea203b-4b4b-49cc-9c71-38948a8860f1",
+    "regionName" : "main",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooterMenu",
+      "id" : "50cb7ee7-b735-47db-bada-d98d1ec14454",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "8cd8bfd7-f2a6-44f4-b58f-6646bc06de98",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "post"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "dc7f42fa-25df-4896-a69b-0575203d6b44",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "a659b4c6-9daa-41ae-bebd-3ad7e96a78a7",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-post"
+}

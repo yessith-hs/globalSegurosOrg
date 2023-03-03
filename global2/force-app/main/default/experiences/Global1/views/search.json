@@ -1,0 +1,86 @@
+{
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "componentName" : "c:customThemeLayoutGlobal",
+  "dataProviders" : [ ],
+  "id" : "211da007-e206-4ecd-92d9-4ba0147bc80f",
+  "label" : "Search",
+  "regions" : [ {
+    "id" : "69a9f4e5-2adb-4a97-b9bd-e803d2bde360",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "scopes" : [ {
+          "isPublic" : true,
+          "name" : "ManagedContentVersion"
+        } ],
+        "searchResultFiltering" : true,
+        "searchTerm" : "{!term}",
+        "showTopResults" : true
+      },
+      "componentName" : "forceCommunity:search",
+      "id" : "11db02f7-807a-4384-879b-d15d32868137",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "f33979b9-8ac0-4b3e-a529-2d702a5b610d",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooterMenu",
+      "id" : "087bd65c-f8d2-4f67-b9a6-46447c62abc1",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "7c2e64a8-6c70-4a05-b953-b388a8e35425",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsHeaderMenu",
+      "id" : "b1b7e945-81be-48a0-ade1-4ee69b190f00",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "0b704b11-2b5c-4e75-87ba-ed0e4179c566",
+    "regionName" : "sideBar",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "scopes" : [ {
+          "isPublic" : true,
+          "name" : "ManagedContentVersion"
+        } ],
+        "searchResultFiltering" : true,
+        "searchTerm" : "renta",
+        "showTopResults" : true
+      },
+      "componentName" : "forceCommunity:search",
+      "id" : "dbc8e4fc-cb19-40fd-8207-8085e5a19547",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooter",
+      "id" : "49a986ef-14e0-42c6-a17c-0c50b0d5baa3",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "ad65c53f-3d50-4b70-bd02-2719f0de66ce",
+    "regionName" : "main",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "global-search"
+}

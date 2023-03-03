@@ -1,0 +1,30 @@
+{
+  "forgotPasswordRouteId" : "a0656b61-7d89-4f17-bb82-16735162fe50",
+  "isAvailableToGuests" : true,
+  "isFilteredComponentsView" : true,
+  "isProgressiveRenderingEnabled" : true,
+  "loginAppPageId" : "147be6e6-9c70-4754-aed4-7d3286e97955",
+  "mainAppPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "preferredDomain" : "none",
+  "selfRegistrationRouteId" : "64fa86fe-faf4-4968-bd96-dae2e1c048ce",
+  "trustedSitesForScript" : [ {
+    "id" : "43962489-c2a3-428f-9489-d7f1b145a780",
+    "isActive" : true,
+    "trustedSiteName" : "www.google-analytics.com",
+    "trustedSiteUrl" : "https://www.google-analytics.com",
+    "type" : "trustedSitesForScripts"
+  }, {
+    "id" : "de4c9b12-e0e5-4292-9775-3eeae793d57a",
+    "isActive" : true,
+    "trustedSiteName" : "stats.g.doubleclick.net",
+    "trustedSiteUrl" : "https://stats.g.doubleclick.net",
+    "type" : "trustedSitesForScripts"
+  }, {
+    "id" : "16d74b78-5915-481d-a772-d5966200245e",
+    "isActive" : true,
+    "trustedSiteName" : "www.googletagmanager.com",
+    "trustedSiteUrl" : "https://www.googletagmanager.com/gtag/js",
+    "type" : "trustedSitesForScripts"
+  } ],
+  "type" : "site"
+}

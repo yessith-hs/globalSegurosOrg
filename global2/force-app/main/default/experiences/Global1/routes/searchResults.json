@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "3f11918e-a03c-4594-9bad-ad280964ad22",
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "configurationTags" : [ ],
+  "id" : "b048ea43-8563-4f8c-9d7f-472af0840568",
+  "label" : "Search results",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-search-results",
+  "type" : "route",
+  "urlPrefix" : "soy-global/search-results"
+}

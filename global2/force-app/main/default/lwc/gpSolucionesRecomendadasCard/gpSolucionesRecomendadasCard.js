@@ -9,19 +9,19 @@ export default class GpSolucionesRecomendadasCard extends LightningElement {
         ramoSeguros: 'Seguro Educativo',
         colorRamoSeguros: '#ff0000',
         contenido: 'Ver a los hijos felices y graduados como profesionales, es un logro que muchos padres por eventualidades financieras no pueden alcanzar.',
-        link: 'seguro-educativo', 
+        linkDetalle: 'seguro-educativo', 
         imagen: 'gp-soluciones-seguro-educativo.jpg'
     };
 
     urlSolucionesRecomendadas = `${BASE_PATH}/soluciones-recomendadas`;
     botonConocerMasImg = globalSegurosPortal + "/images/gp-boton-conoce-mas.svg";
 
-    get getSolucionImagen() {
-        return globalSegurosPortal + '/images/' + this.contenido.imagen;
-    }
+    // get getSolucionImagen() {
+    //     return globalSegurosPortal + '/images/' + this.contenido.imagen;
+    // }
 
     get getSolucionLink() {
-        return `${BASE_PATH}/soluciones-pensadas-para-ti/${this.contenido.link}`;
+        return `${BASE_PATH}/soluciones-pensadas-para-ti/${this.contenido.linkDetalle}`;
     }
 
     get getStyleRamoSeguro() {

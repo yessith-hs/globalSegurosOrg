@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "8637fdac-4a71-4dc4-a448-ba733c36e8b1",
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "configurationTags" : [ ],
+  "id" : "79a805cc-1887-4738-9230-68c6442371a8",
+  "label" : "codigo de conducta",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-codigo-de-conducta",
+  "type" : "route",
+  "urlPrefix" : "codigo-de-conducta"
+}

@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "536ec0a2-66f2-4aed-a64c-4d2ee000fc9b",
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "configurationTags" : [ ],
+  "id" : "e0aa5397-26e7-4160-9e06-72e88d6f9bd0",
+  "label" : "Seguro Educativo",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-seguro-educativo",
+  "type" : "route",
+  "urlPrefix" : "soluciones-pensadas-para-ti/seguro-educativo"
+}

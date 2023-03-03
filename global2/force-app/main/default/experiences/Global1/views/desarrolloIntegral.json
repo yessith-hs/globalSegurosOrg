@@ -1,0 +1,78 @@
+{
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "componentName" : "c:customThemeLayoutGlobal",
+  "dataProviders" : [ ],
+  "id" : "129a6279-dced-4c42-8ae1-ec89334f8c68",
+  "label" : "desarrollo-integral",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsHeaderMenu",
+      "id" : "64aed7e3-8cdd-4c8c-a3de-4b2bd7a77a04",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "78033009-c111-4cb8-aaa2-704b20ca64c5",
+    "regionName" : "sideBar",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsCmsIntegral",
+      "id" : "54ca851e-834a-4d41-9402-024630c36676",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "topic" : "desarrollo_integral"
+      },
+      "componentName" : "c:clbinsListPost",
+      "id" : "df8017d7-1184-4703-811d-e10cc4852588",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooter",
+      "id" : "baaf2d79-64d0-4dd6-8d6a-c56a4e91a467",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "648dd145-1f4b-49b0-a7a6-6584ae3dfea6",
+    "regionName" : "main",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooterMenu",
+      "id" : "f55e1674-9e3a-4f02-8fa8-3c4865f0ad90",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c726a1bd-ed66-491c-bdbd-5852d3b1d623",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "desarrollo-integral"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "f342af4d-a991-4391-89f1-3038dca2fab6",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "a62a1890-14d9-4312-abb1-c2e89f52e3d8",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-desarrollo-integral"
+}

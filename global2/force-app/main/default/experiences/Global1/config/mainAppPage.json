@@ -1,0 +1,11 @@
+{
+  "cmsSettings" : { },
+  "currentThemeId" : "ebb666e1-5777-4a70-8bb7-b5fae93eb57b",
+  "headMarkup" : "<link rel=\"stylesheet\" href=\"/sfsites/c/resource/stylesGlobal\" />\n<!-- Google tag (gtag.js) -->\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-TZB427NHZ9\"></script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-TZB427NHZ9');\n</script>",
+  "id" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "isLockerServiceEnabled" : true,
+  "isRelaxedCSPLevel" : true,
+  "label" : "main",
+  "templateName" : "Starter Template",
+  "type" : "appPage"
+}

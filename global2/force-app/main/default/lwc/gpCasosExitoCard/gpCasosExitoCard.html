@@ -1,12 +1,14 @@
 <template>
     <div class="caso-exito-card">
         <div class="tipo-seguro" style={getStyleRamoSeguro}>
-            <p class="category-title">{casoExito.ramoSeguros}</p>
+            <p class="category-title" style={getStyleRamoSeguro}>{casoExito.ramoSeguros}</p>
             <span class="category-dot" style={getStyleDotRamoSeguro}></span>
         </div>
         <h2 class="titulo">{casoExito.titulo}</h2>
-        <p class="category-description">{casoExito.subTitulo}</p>
-        <p class="testimonio">{casoExito.contenido}</p>
+        <lightning-formatted-rich-text class="category-description" value={casoExito.subTitulo}></lightning-formatted-rich-text>
+        <br>
+        <lightning-formatted-rich-text class="testimonio" value={casoExito.contenido}></lightning-formatted-rich-text>
+        <br>
         <img src={botonAgendaCitaImg} alt="Botón agenda tu cita" class="boton-agenda-cita">
     </div>
 </template>

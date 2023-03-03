@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "134b39ef-ef0d-4260-97bf-41b10bd1e88c",
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "configurationTags" : [ ],
+  "id" : "d81148d4-665e-4c02-a55e-6734d724c326",
+  "label" : "Detalle del seguro",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-detalle-del-seguro",
+  "type" : "route",
+  "urlPrefix" : "gestiona-tus-seguros/detalle-del-seguro"
+}

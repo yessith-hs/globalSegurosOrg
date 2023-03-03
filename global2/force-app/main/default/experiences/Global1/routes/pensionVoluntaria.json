@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "41ee4ff4-a88d-467d-ba60-da7cd5a673fd",
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "configurationTags" : [ ],
+  "id" : "6b36b461-fba1-40ed-b715-7394f1275b70",
+  "label" : "pension-voluntaria",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-pension-voluntaria",
+  "type" : "route",
+  "urlPrefix" : "soluciones-pensadas-para-ti/pension-voluntaria"
+}

@@ -1,0 +1,69 @@
+{
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "componentName" : "c:customThemeLayoutGlobal",
+  "dataProviders" : [ ],
+  "id" : "8637fdac-4a71-4dc4-a448-ba733c36e8b1",
+  "label" : "Codigo de conducta",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsHeaderMenu",
+      "id" : "0eabc26d-8589-4c97-8478-e6f8d4095950",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "61cec0d1-394c-44a6-9478-d0f453325c2d",
+    "regionName" : "sideBar",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsCodeOfConduct",
+      "id" : "ee523c8d-9738-48c4-8678-2f4369d51a81",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooter",
+      "id" : "1047b153-a93c-431a-9f11-e55ec962173d",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "ec334c3d-72d0-4104-99c2-727e2a62b9f7",
+    "regionName" : "main",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooterMenu",
+      "id" : "264c4dd4-a7c7-450d-9dee-faf1414cf0db",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "500048c6-8aa8-4acd-9b36-75a79f8bc313",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Codigo de conducta"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "231e0e34-6fda-471d-bca2-3a6f0e4e7b65",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "2c5c17ef-2e73-4586-a23b-9d78f68f0dd7",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-codigo-de-conducta"
+}

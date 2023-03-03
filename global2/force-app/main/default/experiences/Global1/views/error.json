@@ -1,0 +1,80 @@
+{
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "componentName" : "c:customThemeLayoutGlobal",
+  "dataProviders" : [ ],
+  "id" : "d33e15dc-0550-4d0e-a00c-639b8598f00f",
+  "label" : "Error",
+  "regions" : [ {
+    "id" : "a3473128-3ec4-4591-a0e2-3f2c79b7fc33",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<div style='text-align: center;'>Invalid Page</div>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "2c02f977-09b4-408b-b6ce-3b6f654706e3",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "9bfef0e8-e497-45a4-9f92-07a4ff0e62c1",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooterMenu",
+      "id" : "c4a50284-47c6-4944-9521-f68121a35cd0",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "4fe27477-c800-48c5-87b6-8f6ca6dee092",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Error"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "2a52db3a-84e6-49cd-96c6-9f343c5b8234",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "aae33f10-f48b-435d-90d3-aff7ae1148c6",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsHeaderMenu",
+      "id" : "940f949f-2829-4cb2-bc59-5243665e50d9",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "8156a922-073c-4ff0-b017-9c7ef4c57dd3",
+    "regionName" : "sideBar",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooter",
+      "id" : "14a54315-3894-4388-a74f-10a0c730ff88",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "9684cb56-27f0-4ea1-ab9c-07e1a8685440",
+    "regionName" : "main",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "error"
+}

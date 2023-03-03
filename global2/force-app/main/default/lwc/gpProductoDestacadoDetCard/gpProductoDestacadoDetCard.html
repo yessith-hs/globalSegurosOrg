@@ -1,19 +1,20 @@
 <template>
     <div class="global-card">
         <div class="img-container">
-<!--             <video width=260 class="imagen" controls>
+<!--             <video width=260 class="imagen" data-id={contenido.videoId} >
                 <source src={contenidoCard.urlVideo} type="video/mp4">
                 Your browser does not support the video tag.
             </video> -->
 
-            <iframe width="260" class="imagen" src={contenidoCard.urlVideo} title="YouTube video player"></iframe>
+            <iframe width="260" class="imagen" src={contenidoCard.urlVideo}
+                data-id={contenidoCard.videoId} title="YouTube video player" frameborder="0"></iframe>
         </div>
         <div class="card-content">
             <p class="subtitulo">{contenidoCard.titulo} </p>
             <p class="contenido">{contenidoCard.descripcion}</p>
             <div class="ver-video">
                 <img src={verVideoIco} alt="" class="video-icono">
-                <a class="enlace" href="#">Ver video</a>
+                <a class="enlace" href="#" data-id={contenidoCard.linkId} onclick={verVideo}>Ver video</a>
             </div>
         </div>
     </div>

@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+.soluciones-recomendadas-card {
+    width: 100%;
+}
+
 .titulo {
     font-family: var(--global-portal-font-family-asap);
     font-style: var(--global-portal-font-style-normal);
@@ -22,4 +26,18 @@
     flex-wrap: wrap;
     gap: 1rem;
     padding: 0.6rem;
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .soluciones-recomendadas-card {
+        width: 15.25rem;
+    }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+    .soluciones-recomendadas-card {
+        width: 15.25rem;
+    }
 }

@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "759c83a1-5191-4490-8c44-cab4f5d0fbaf",
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "configurationTags" : [ ],
+  "id" : "9444c726-6f74-41c9-9524-087618a3273e",
+  "label" : "Gestiona tus seguros",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-gestiona-tus-seguros",
+  "type" : "route",
+  "urlPrefix" : "gestiona-tus-seguros"
+}

@@ -1,0 +1,69 @@
+{
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "componentName" : "c:customThemeLayoutGlobal",
+  "dataProviders" : [ ],
+  "id" : "759c83a1-5191-4490-8c44-cab4f5d0fbaf",
+  "label" : "Gestiona tus seguros",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsHeaderMenu",
+      "id" : "3b0db873-cbdb-429a-af9d-b548cdaa63c7",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "8ad6bf12-2fdc-4ee4-a441-168a8bda7ab3",
+    "regionName" : "sideBar",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsInsuranceManagement",
+      "id" : "5f2e9f55-008c-40b0-b258-8f7babecd396",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooter",
+      "id" : "83b46436-b2a4-4455-a1a6-8318f56b69eb",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "ad37307f-beba-4264-a3b3-9b08b5a4e643",
+    "regionName" : "main",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooterMenu",
+      "id" : "ed4a13c7-19d1-4345-bb46-06c41682a0f8",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c8ce8a31-be88-40b5-be8b-3d9728c6c5b6",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Gestiona tus seguros"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "27f44875-caff-49b7-b2b5-0c44545859f2",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "66c9970c-ba44-45af-8d58-1c63e716abd2",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-gestiona-tus-seguros"
+}

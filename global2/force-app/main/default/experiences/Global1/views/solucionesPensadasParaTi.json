@@ -1,0 +1,69 @@
+{
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "componentName" : "c:customThemeLayoutGlobal",
+  "dataProviders" : [ ],
+  "id" : "99027297-235d-4c25-860f-740ecfacd0c5",
+  "label" : "Soluciones pensadas para ti",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsHeaderMenu",
+      "id" : "d585874d-ac39-43ae-aea5-1e9f2ebf2264",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "dfee4399-a33d-47b3-8b34-f5d8ce07320f",
+    "regionName" : "sideBar",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:gpSolucionesRecomendadas",
+      "id" : "41969bc3-6207-4769-8c62-c0d52766a49c",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooter",
+      "id" : "00280178-15af-47e7-9261-1b6eba81525d",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "6a1fd1d9-d0f0-42e5-abd5-53abff15ff51",
+    "regionName" : "main",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooterMenu",
+      "id" : "01faad32-5972-4199-b1c3-dde25ba35cf9",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "7e9d70ac-bd88-4690-830a-62f3d1b4a361",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Soluciones pensadas para ti"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "2f44f625-df6e-4912-9f05-fefe0242406b",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "2034e39b-dd86-414e-b585-8c206f607046",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-soluciones-pensadas-para-ti"
+}

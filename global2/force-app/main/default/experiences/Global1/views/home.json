@@ -1,0 +1,147 @@
+{
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "componentName" : "c:customThemeLayoutGlobal",
+  "dataProviders" : [ ],
+  "id" : "d89a8a60-2222-4365-a960-fa1a38391327",
+  "label" : "Home",
+  "regions" : [ {
+    "id" : "c20f0457-fc71-4381-acd2-e19140a6f493",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsGlobalSearch",
+      "id" : "0e2c2364-10fc-4291-a03f-088c887d46e9",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "topic" : "orientación educativa"
+      },
+      "componentName" : "c:clbinsHeaderGlobalConnection",
+      "id" : "ebae6417-2332-4f4b-9638-dc246cc8aba3",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsDetailGlobalConnection",
+      "id" : "8f6a9611-9969-4158-9255-88015414172a",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsSliderThematicLine",
+      "id" : "c4e91d78-24a0-4e57-a4bc-542d8713f44f",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "20fc4bc6-8f6c-4f7f-a296-6708283d84dc",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooterMenu",
+      "id" : "ac970898-a6ef-41b6-94bb-f7d3b620a34a",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "02f30352-5367-4613-be38-1251018cc0a8",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Soy Global"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "c3a63f13-c89a-4fbc-860b-a00d8bde5c61",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "be9a36f1-9fcf-42ce-88f1-b63b1a920966",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  }, {
+    "id" : "682fecf0-c526-43c1-93b2-31039874582d",
+    "regionName" : "navBar",
+    "type" : "region"
+  }, {
+    "id" : "95fa151b-abb9-43a0-bdb4-11e55efde689",
+    "regionName" : "summaryCards",
+    "type" : "region"
+  }, {
+    "id" : "feecb8ab-468a-4406-8d2a-cb95769e3731",
+    "regionName" : "mainContent",
+    "type" : "region"
+  }, {
+    "id" : "6aeabc9d-6e25-4fce-a9c5-e87ad709d4c8",
+    "regionName" : "additionalLinks",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsHeaderMenu",
+      "id" : "b95bbbe1-e202-4989-9a5f-f229b895fbab",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b48bee36-dd41-46e6-840c-63d806b8298b",
+    "regionName" : "sideBar",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsGlobalSearch",
+      "id" : "db1229e2-0281-429c-ac2d-0d2a694964e3",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "topic" : "orientación educativa"
+      },
+      "componentName" : "c:clbinsHeaderGlobalConnection",
+      "id" : "8c944b38-bab2-4295-9284-159c1d5f7b83",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsDetailGlobalConnection",
+      "id" : "6750bae2-35b2-48ac-8f95-3e0e5deb9ecc",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsSliderThematicLine",
+      "id" : "2d19d390-0558-43f1-81b0-0c2895e846bc",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooter",
+      "id" : "f3bfe3bb-b2dc-43ed-93a8-62036fb2f0a0",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "ff82a590-f9eb-4ed4-af6b-fdc0d3a14527",
+    "regionName" : "main",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "home"
+}

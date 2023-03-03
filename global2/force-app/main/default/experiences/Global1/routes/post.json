@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "56b82d84-e017-49e0-9204-d9ff263da259",
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "configurationTags" : [ ],
+  "id" : "cefab9eb-0823-4b70-a77e-a7ae49d22a1d",
+  "label" : "post",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-post",
+  "type" : "route",
+  "urlPrefix" : "soy-global/post"
+}

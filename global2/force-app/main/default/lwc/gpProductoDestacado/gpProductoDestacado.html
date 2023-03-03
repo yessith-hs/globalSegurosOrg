@@ -1,24 +1,35 @@
 <template>
     <div class="featured-container">
         <template for:each={items} for:item="item">
-            <img class="inicio-featured-img" src={item.imagen} alt={item.imagenAltText} key={item.imagen.key} />
-            <div class="header-container" key={item.key}>
-                <div class="titulo">{item.detailTitulo}</div>
-                <div class="contenido">{item.detailDescripcion}</div>
-                <a href="#" class="pago-en-linea">
-                    <img src={item.botonImagen} alt={item.botonAltText} class="boton-pagar_en_linea">
+            <div class="producto-destacado-item inactive" key={item.key} data-id={item.id}>
+                <img class="inicio-featured-img" src={item.imagen}
+                        alt={item.imagenAltText}/>
+                <div class="header-container">
+                    <div class="titulo">{item.detailTitulo}</div>
+                    <div class="contenido">{item.detailDescripcion}</div>
+                    <a href="https://minerva2/RedirectGS.ashx" class="pago-en-linea">
+                        <img src={item.botonImagen} alt={item.botonAltText} class="boton-pagar_en_linea">
+                    </a>
+                    <c-gp-carousel-navigator color="#003696" width="36px"
+                        maxitems={maxProductItems} active={activeProduct}
+                        class="blue-navigator" margin-right="9px" texto-evento="proddest"
+                        onproddest={handleItemSelected}></c-gp-carousel-navigator>
+                    <c-gp-carousel-navigator color="#FFFFFF" width="36px"
+                        maxitems={maxProductItems} active={activeProduct}
+                        class="white-navigator" margin-right="9px" texto-evento="proddest"
+                        onproddest={handleItemSelected}></c-gp-carousel-navigator>
+                </div>
+                <a href="#" class="link-navegacion-left" data-id="left-caret-a"
+                        onclick={navigateToProducto}>
+                    <img src={caretLeftImg} alt="left" class="boton-navegar-left"
+                        data-id="left-caret">
                 </a>
-                <c-gp-carousel-navigator color="#003696" width="36px" maxitems="4"
-                    class="blue-navigator" margin-right="9px" texto-evento="proddest"
-                    onproddest={handleItemSelected}></c-gp-carousel-navigator>
-                <c-gp-carousel-navigator color="#FFFFFF" width="36px" maxitems="4"
-                    class="white-navigator" margin-right="9px" texto-evento="proddest"
-                    onproddest={handleItemSelected}></c-gp-carousel-navigator>
+                <a href="#" class="link-navegacion-right" data-id="right-caret-a"
+                        onclick={navigateToProducto}>
+                    <img src={caretRightImg} alt="rigth" class="boton-navegar-right"
+                        data-id="right-caret">
+                </a>
             </div>
-            <a href="" class="link-navegacion-left"  key={item.key}>
-                <img src={caretLeftImg} alt="left" class="boton-navegar-left"></a>
-            <a href="" class="link-navegacion-right"  key={item.key}>
-                <img src={caretRightImg} alt="rigth" class="boton-navegar-right"></a>
         </template>
         <c-gp-producto-destacado-detalle></c-gp-producto-destacado-detalle>
     </div>

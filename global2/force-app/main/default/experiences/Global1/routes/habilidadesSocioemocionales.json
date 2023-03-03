@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "205e7a3f-0e27-47c5-8e92-9bee08d72edd",
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "configurationTags" : [ ],
+  "id" : "d199a6ff-bcc8-4159-9c95-ef33d7af087b",
+  "label" : "habilidades-socioemocionales",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-habilidades-socioemocionales",
+  "type" : "route",
+  "urlPrefix" : "soy-global/habilidades-socioemocionales"
+}

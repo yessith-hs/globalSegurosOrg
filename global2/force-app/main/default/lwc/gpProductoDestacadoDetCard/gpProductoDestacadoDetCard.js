@@ -12,7 +12,12 @@ export default class GpProductoDestacadoDetCard extends LightningElement {
 
     verVideoIco = globalSegurosPortal + '/images/' + 'gp-ver-video-ico.svg';
 
-    // get getVideo() {
-    //     return globalSegurosPortal + '/images/' + this.contenidoCard.recurso;
-    // }
+    verVideo(event) {
+        event.preventDefault();
+        let video = event.target.dataset.id;
+        video = video.replace('link', 'video');
+        this.template.querySelector(`[data-id="${video}"]`).src += '?autoplay=1';
+
+
+    }
 }

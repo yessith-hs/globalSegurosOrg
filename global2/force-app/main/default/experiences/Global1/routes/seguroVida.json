@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "f70eea38-6f82-4e10-8958-035c973441cc",
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "configurationTags" : [ ],
+  "id" : "5b3232f3-3804-42f4-864d-0450c1353b8a",
+  "label" : "Seguro Vida",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-seguro-vida",
+  "type" : "route",
+  "urlPrefix" : "soluciones-pensadas-para-ti/seguro-vida"
+}

@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "129a6279-dced-4c42-8ae1-ec89334f8c68",
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "configurationTags" : [ ],
+  "id" : "12f8d97e-0a60-4d16-b90f-286e4c2f35d7",
+  "label" : "desarrollo-integral",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-desarrollo-integral",
+  "type" : "route",
+  "urlPrefix" : "soy-global/desarrollo-integral"
+}

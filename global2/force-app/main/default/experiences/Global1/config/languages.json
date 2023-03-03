@@ -1,0 +1,15 @@
+{
+  "defaultCode" : "es_CO",
+  "defaultLabel" : "Spanish (Colombia) (CO)",
+  "id" : "4989a93e-86b8-4ece-8cb6-9e46bc23fede",
+  "languages" : [ {
+    "countryCode" : "",
+    "fallbackLanguageId" : null,
+    "id" : "e13bfd73-7c6e-4ee7-80b0-14568840dc6a",
+    "isActive" : true,
+    "label" : "Spanish",
+    "languageCode" : "es",
+    "type" : "language"
+  } ],
+  "type" : "languageContainer"
+}

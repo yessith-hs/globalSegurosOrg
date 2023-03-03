@@ -1,0 +1,54 @@
+{
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "componentName" : "c:customThemeLayoutGlobal",
+  "dataProviders" : [ ],
+  "id" : "f70eea38-6f82-4e10-8958-035c973441cc",
+  "label" : "Seguro Vida",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsHeaderMenu",
+      "id" : "d9193c20-799c-4044-ad65-059be685c422",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c4c40d05-e6a8-4dea-ae22-f5f8b483050c",
+    "regionName" : "sideBar",
+    "type" : "region"
+  }, {
+    "id" : "5e8e7253-6ab6-405e-be6a-fef512b78d6e",
+    "regionName" : "main",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooter",
+      "id" : "44061593-0781-40f0-b3dd-3746c8b5301a",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "4ac6b354-8032-418a-8c77-529c1fdf059c",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Seguro Vida"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "764663e7-da02-4bf7-b458-ebe4d399db97",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "db749e3d-5390-41e8-ae8e-4e87ef4f68f9",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-seguro-vida"
+}

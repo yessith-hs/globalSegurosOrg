@@ -1,0 +1,78 @@
+{
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "componentName" : "c:customThemeLayoutGlobal",
+  "dataProviders" : [ ],
+  "id" : "3a6f8530-a393-44a9-8d71-af76882d4758",
+  "label" : "orientacion educativa",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsHeaderMenu",
+      "id" : "2e8bc4b1-0397-4e49-b881-d3db968b51e5",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "6a6a64d4-9abc-41f1-8b56-4f00c0ae55bd",
+    "regionName" : "sideBar",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsCmsEducational",
+      "id" : "aac53e48-e5c2-4801-b1db-354495bb5899",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "topic" : "orientacion_educativa"
+      },
+      "componentName" : "c:clbinsListPost",
+      "id" : "19efc9da-f408-4b72-a576-f537450d0d84",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooter",
+      "id" : "f7d21971-c88e-4cb3-97aa-9fa2c60044e9",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "d1661cc0-e909-402b-bfd5-fa29e74f4c71",
+    "regionName" : "main",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooterMenu",
+      "id" : "ffbb60fa-56b5-4def-a3f7-add557776eb8",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "0b5c0016-b3d4-4023-89fb-3efcd33ba540",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "orientacion educativa"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "fd0d6cd4-b5a9-4b53-9211-58e9a45c054c",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "4e47aca7-87fc-41c1-88d4-47069e8a05dc",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-orientacion-educativa"
+}

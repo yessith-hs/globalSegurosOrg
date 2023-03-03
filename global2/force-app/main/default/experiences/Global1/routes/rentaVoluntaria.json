@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "94460aa7-b933-4b94-baaa-3547793e4b52",
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "configurationTags" : [ ],
+  "id" : "8088673a-591b-4591-aa7a-059795be9cb4",
+  "label" : "renta-voluntaria",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-renta-voluntaria",
+  "type" : "route",
+  "urlPrefix" : "soluciones-pensadas-para-ti/renta-voluntaria"
+}

@@ -1,0 +1,69 @@
+{
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "componentName" : "c:customThemeLayoutGlobal",
+  "dataProviders" : [ ],
+  "id" : "3f11918e-a03c-4594-9bad-ad280964ad22",
+  "label" : "Search results",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsHeaderMenu",
+      "id" : "bfd10739-f630-41b5-b12c-2f391ac64e5a",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "db57c00e-dd90-4ac4-804e-a5caed85e2a7",
+    "regionName" : "sideBar",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsGlobalSearchResults",
+      "id" : "528d84bf-e71f-456f-a7ba-cfa6fb3b1bc1",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooter",
+      "id" : "da5cbf73-887c-4bd9-8723-77735eb19338",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "60ced07e-7ea7-4dcb-a32b-275f34074ba3",
+    "regionName" : "main",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooterMenu",
+      "id" : "0e459c87-5811-42d6-aa15-b2c55bc7f6ea",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "6944bd63-6dbe-48a5-bd1a-05b759c4c9cf",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Search results"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "7f898efa-5cd6-4df1-875b-a3bc1c57d41c",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e40ce292-f8cb-4dba-8b4b-a5078fc9132e",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-search-results"
+}

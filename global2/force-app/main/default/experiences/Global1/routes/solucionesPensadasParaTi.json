@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "99027297-235d-4c25-860f-740ecfacd0c5",
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "configurationTags" : [ ],
+  "id" : "ccf2e9b6-2453-4059-b054-8a5eddb4c003",
+  "label" : "Soluciones pensadas para ti",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-soluciones-pensadas-para-ti",
+  "type" : "route",
+  "urlPrefix" : "soluciones-pensadas-para-ti"
+}

@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "3a6f8530-a393-44a9-8d71-af76882d4758",
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "configurationTags" : [ ],
+  "id" : "896bee1c-8f90-4338-ba61-67e70436a26b",
+  "label" : "orientacion educativa",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-orientacion-educativa",
+  "type" : "route",
+  "urlPrefix" : "soy-global/orientacion-educativa"
+}

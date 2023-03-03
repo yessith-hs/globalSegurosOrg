@@ -1,0 +1,69 @@
+{
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "componentName" : "c:customThemeLayoutGlobal",
+  "dataProviders" : [ ],
+  "id" : "536ec0a2-66f2-4aed-a64c-4d2ee000fc9b",
+  "label" : "Seguro Educativo",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsHeaderMenu",
+      "id" : "9eef998b-5d0b-41f9-bc0e-5697831b0cb9",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c97b6c45-8054-4516-b1cf-3bbc33244ebb",
+    "regionName" : "sideBar",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:gpSolucionSeguroEducativo",
+      "id" : "b7bdeabd-ffe8-4d7e-b146-9c5eea3c7789",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooter",
+      "id" : "3066b0c6-28c6-4337-8275-bb06ac5977a7",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "158a91c7-82eb-4399-9829-631495d7ce15",
+    "regionName" : "main",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooterMenu",
+      "id" : "ca128f70-f7fd-4666-9e60-870bca6e3afb",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c529d322-dac5-411d-872e-45570f4eeeb4",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Seguro Educativo"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "e3273090-8bec-4fa1-8dd8-c33173401678",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "aac95aad-902d-45bb-883d-e1818fcff4da",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-seguro-educativo"
+}

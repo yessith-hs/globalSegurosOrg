@@ -1,0 +1,54 @@
+{
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "componentName" : "c:customThemeLayoutGlobal",
+  "dataProviders" : [ ],
+  "id" : "122fa494-9e64-4eb3-88a4-ab372727b77f",
+  "label" : "accidentes-personales",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsHeaderMenu",
+      "id" : "ddf95cac-7b22-4dbe-a2ac-d04b3bcd8455",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "a63f93ee-b408-4fc3-9435-a5ba1ab6ebe0",
+    "regionName" : "sideBar",
+    "type" : "region"
+  }, {
+    "id" : "94a52682-9d61-4477-8d06-86e4e2f26ab6",
+    "regionName" : "main",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooter",
+      "id" : "6ac47ac5-fd91-4d13-8680-387277038d59",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "74b97cf0-3c53-4bd1-86c2-1ec2d6053654",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "accidentes-personales"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "0724dbf3-ae39-432e-a478-9170a8c21146",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b83d1b02-6e22-4bb7-a535-c5911173ed1e",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-accidentes-personales"
+}

@@ -1,0 +1,54 @@
+{
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "componentName" : "c:customThemeLayoutGlobal",
+  "dataProviders" : [ ],
+  "id" : "94460aa7-b933-4b94-baaa-3547793e4b52",
+  "label" : "renta-voluntaria",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsHeaderMenu",
+      "id" : "7d18963f-2750-4a1a-8da6-546f8773fc0c",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "91d0ef7c-815d-4f35-915b-360613bda2ac",
+    "regionName" : "sideBar",
+    "type" : "region"
+  }, {
+    "id" : "b727e80d-2009-41dd-ac4f-82be58e37783",
+    "regionName" : "main",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooter",
+      "id" : "90b76f70-d141-449e-95b1-1da8e51174a9",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "52172f2a-6f7e-42fc-a235-c5d665bf4223",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "renta-voluntaria"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "eea1dca5-bd4b-4bcb-bf87-d5208f08e3a1",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "df34f612-2588-47da-93e8-9c9d98807d2e",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-renta-voluntaria"
+}

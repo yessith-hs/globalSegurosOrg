@@ -82,6 +82,13 @@
     max-width: 100%;
 }
 
+.inactive {
+    display: none;
+}
+
+.active {
+    display: block;
+}
 
 /* TABLET */
 @media screen and (min-width: 768px) and (max-width: 1023px) {

@@ -1,21 +1,33 @@
 <template>
     <h2 class="titulo">Casos de éxito</h2>
     <div class="caso-exito-container">
-        <div class="cabecera">
-            <img src={currentItem.casoExitoImagen} alt="Gestiona tus seguros" class="img-caso-exito">
-            <div class="slogan"><img src={sloganImg} alt="Logo casos de exito"></div>
-            <a href="" class="link-navegacion-left"><img src={caretLeftImg} alt="left"
-                    class="boton-navegar-left"></a>
-            <a href="" class="link-navegacion-right"><img src={caretRightImg} alt="rigth"
-                    class="boton-navegar-right"></a>
-        </div>
-        <div class="card-container">
-            <c-gp-casos-exito-card caso-exito={currentItem}></c-gp-casos-exito-card>
-            <c-gp-carousel-navigator color="#FFFFFF" width="36px" maxitems="4" class="white-navigator"></c-gp-carousel-navigator>
-        </div>
-        <div class="navigator-container">
-            <c-gp-carousel-navigator color="#003696" width="36px" maxitems="4" class="blue-navigator"></c-gp-carousel-navigator>
-        </div>
+        <template for:each={items} for:item="item">
+            <div class="producto-destacado-item inactive" key={item.key} data-id={item.id}>
+                <div class="cabecera">
+                    <img src={item.casoExitoImagen} alt="Gestiona tus seguros" class="img-caso-exito">
+                    <div class="slogan"><img src={sloganImg} alt="Logo casos de exito"></div>
+                    <a href="#" class="link-navegacion-left" data-id="left-caret-a" onclick={navigateToProducto}>
+                        <img src={caretLeftImg} alt="left" class="boton-navegar-left" data-id="left-caret">
+                    </a>
+                    <a href="#" class="link-navegacion-right" data-id="right-caret-a" onclick={navigateToProducto}>
+                        <img src={caretRightImg} alt="rigth" class="boton-navegar-right" data-id="right-caret">
+                    </a>
+                </div>
+                <div class="card-container">
+                    <c-gp-casos-exito-card caso-exito={item}></c-gp-casos-exito-card>
+                    <c-gp-carousel-navigator color="#FFFFFF" width="36px"
+                        maxitems={maxItems} active={activeItem}
+                        class="white-navigator" margin-right="9px" texto-evento="casoexito"
+                        oncasoexito={handleItemSelected}></c-gp-carousel-navigator>
+                </div>
+                <div class="navigator-container">
+                    <c-gp-carousel-navigator color="#003696" width="36px"
+                        maxitems={maxItems} active={activeItem}
+                        class="blue-navigator" margin-right="9px" texto-evento="casoexito"
+                        oncasoexito={handleItemSelected}></c-gp-carousel-navigator>
+                </div>
+            </div>
+        </template>
     </div>
 
 </template>

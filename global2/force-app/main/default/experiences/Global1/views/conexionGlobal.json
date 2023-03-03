@@ -1,0 +1,92 @@
+{
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "componentName" : "c:customThemeLayoutGlobal",
+  "dataProviders" : [ ],
+  "id" : "5c42ad12-3027-40c8-a42f-92a6b65e4b1e",
+  "label" : "conexion global",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsHeaderMenu",
+      "id" : "bbfbf8da-a69a-43c1-8cbe-7821d0fbd820",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c0074661-ad76-4c09-8fa5-e17f577abe37",
+    "regionName" : "sideBar",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsGlobalSearch",
+      "id" : "d52ff79b-5aa2-41f7-83d6-0302ae2fe7e5",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "topic" : "habilidades socioemocionales"
+      },
+      "componentName" : "c:clbinsHeaderGlobalConnection",
+      "id" : "fa86a514-4003-403e-9314-4b1fffe192b6",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsDetailGlobalConnection",
+      "id" : "09e70021-8bcb-4be5-b4be-7287f3591e84",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsSliderThematicLine",
+      "id" : "9222df48-2ce4-40e4-b101-a85ceea993c0",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooter",
+      "id" : "6153ee80-9c4c-4526-a520-5aac7f54103e",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "4472ad36-0002-43aa-97f3-8e2e03d5d65c",
+    "regionName" : "main",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooterMenu",
+      "id" : "6a011db1-ea2a-4a07-b3a0-e62a4d7035ac",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "7e404ee6-ad1f-4862-957a-69a414b80041",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Soy Global"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "f4953dee-4013-419f-91a4-bc8fccf5bf7c",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e1e15f7d-083d-4810-8348-5bb8eed631b5",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-conexion-global"
+}

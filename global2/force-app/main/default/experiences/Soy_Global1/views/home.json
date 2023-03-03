@@ -1,0 +1,84 @@
+{
+  "appPageId" : "4837e870-18ab-4280-a637-75bfc5021a94",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "47bcc130-c69c-43a2-b049-f752ce39924d",
+  "label" : "Home",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:gpProductoDestacado",
+      "id" : "3711d01d-5f1d-4420-82ae-52b748554212",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "c:gpProductoDestacado",
+      "id" : "64c76d72-07f5-4757-b06d-e1ed29574890",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "aa7bc436-d292-432d-80b7-27d2fb800f4e",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:gpProductoDestacado",
+      "id" : "0365905b-7105-480a-9606-945ca2dc0c74",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "richTextValue" : "<div>     <p><span style='font-size: 48px;'>Let's get started!</span></p>     <ol>         <li><span style='font-size: 18px;'>Unfamiliar with Build Your Own? Click Take a Tour in the Help menu.</span></li>         <li><span style='font-size: 18px;'>Want to add more pages? Take a look at the Pages menu.</span></li>         <li><span style='font-size: 18px;'>Want more components on your page? Drag and drop components from the Components panel.</span></li>         <li><span style='font-size: 18px;'>Want your users to see your company logo? Head on over to the Theme panel.</span></li>         <li><span style='font-size: 18px;'>Refine the look of your site with a custom theme layout. See the Experience Cloud Developer Guide.</span></li>     </ol> </div>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "3ddc5929-78a9-4adb-bf30-e365bc080ee4",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "c:gpProductoDestacado",
+      "id" : "b72051ef-0064-427c-a531-22d8b168065d",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "c:gpProductoDestacado",
+      "id" : "f6aefa90-81b9-4f17-a1f6-af1c7e5148fc",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b445c401-5b23-42de-9768-08284cf17fe8",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "7f8a57e0-99cb-4ac7-a1be-3259ed1a130c",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Home"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "0dd5ded8-dba9-4c7f-bb7d-068afd150118",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "9a1bb3b0-f838-4cb1-a4b3-1f32c20d7a87",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "home"
+}

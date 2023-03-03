@@ -1,0 +1,54 @@
+{
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "componentName" : "c:customThemeLayoutGlobal",
+  "dataProviders" : [ ],
+  "id" : "41ee4ff4-a88d-467d-ba60-da7cd5a673fd",
+  "label" : "pension-voluntaria",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsHeaderMenu",
+      "id" : "e28296ef-2bd9-4698-8d35-0b477a2326a2",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "f5fb0bbf-7b98-4326-b4b7-d64e300fdc57",
+    "regionName" : "sideBar",
+    "type" : "region"
+  }, {
+    "id" : "a48c058b-cf82-462f-a2b6-000edb8907bf",
+    "regionName" : "main",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooter",
+      "id" : "e2e32a7c-f61d-4862-9594-aea217832632",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "074e9a00-3289-4502-a1c3-f68949566fe6",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "pension-voluntaria"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "93b05f38-3a72-4f75-8dad-5dc2ec44209e",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "8e5a59cf-d622-4fec-bcfc-9aec7cb6b8e2",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-pension-voluntaria"
+}

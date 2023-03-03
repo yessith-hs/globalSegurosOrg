@@ -1,0 +1,78 @@
+{
+  "appPageId" : "ac4cad77-bcbb-4133-ac24-e5315dbdc251",
+  "componentName" : "c:customThemeLayoutGlobal",
+  "dataProviders" : [ ],
+  "id" : "205e7a3f-0e27-47c5-8e92-9bee08d72edd",
+  "label" : "habilidades-socioemocionales",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsHeaderMenu",
+      "id" : "dd0e35e8-e069-4821-92ec-00c1057b20c3",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "847264d3-503f-44f5-9aef-472a0a3b275f",
+    "regionName" : "sideBar",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsCmsSocioEmotional",
+      "id" : "2b7cccd5-e866-4684-b8a3-ef9dbabcdb57",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "topic" : "habilidades_socioemocionales"
+      },
+      "componentName" : "c:clbinsListPost",
+      "id" : "4227fc93-7809-454a-9fbd-0e80b3398302",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooter",
+      "id" : "2c34450d-47df-4a3c-852d-f58a24e757d0",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "77e0372f-3bd8-4b40-971a-69d76085af25",
+    "regionName" : "main",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:clbinsFooterMenu",
+      "id" : "e8d80418-1054-4cb8-b468-f906ab256469",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "15431a6a-3a43-4a96-9c5a-dd5f8817e627",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "habilidades-socioemocionales"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "b2b25eab-e0f5-4da9-a86b-8d7ed8e8acbc",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "027594bb-215d-4029-a191-d2df3320628a",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-habilidades-socioemocionales"
+}
