@@ -93,6 +93,11 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .GS_footer {
+    padding: 0;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: repeat(2, 100px);
+  }
   .GS_container {
     width: 100%;
     grid-auto-flow: column;
@@ -118,11 +123,16 @@
     justify-self: start;
   }
 
-  .GS_content a {
+  /* .GS_content a {
     justify-self: end;
-  }
+  } */
 
   .GS_content a:nth-child(2) {
     margin-left: 6rem;
+  }
+
+  .footerVigilado{
+        grid-row: 1 /span 2;
+    transform: rotate(270deg);
   }
 }
