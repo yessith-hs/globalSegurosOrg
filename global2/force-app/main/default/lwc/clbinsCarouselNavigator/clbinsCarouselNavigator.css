@@ -1,0 +1,37 @@
+@import 'c/cssLibrary';
+
+/* The dots/bullets/indicators */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dot {
+    cursor: pointer;
+    height: 0rem;
+    margin: 0px 9px 0px 0px;
+    background-color: #bbb;
+    border-radius: 3px;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    opacity: 0.5;
+}
+
+.inactive {
+    opacity: 0.5
+}
+
+.active, .dot:hover {
+    opacity: 1;
+}
+
+.texto {
+    font-family: var(--global-portal-font-family-asap);
+    font-style: var(--global-portal-font-style-normal);
+    font-weight: var(--global-portal-font-weight-normal);
+    font-size: var(--global-portal-font-size-12);
+    line-height: var(--global-portal-line-spacing-12);
+    letter-spacing: var(--global-portal-character-spacing-0);
+    color: var(--global-portal-color-003696);
+    padding-right: 0.6rem;
+}

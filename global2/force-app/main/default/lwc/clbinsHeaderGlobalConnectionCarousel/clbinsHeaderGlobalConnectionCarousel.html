@@ -1,0 +1,29 @@
+<template>
+  <div class="featured-container">
+    <template for:each={items} for:item="item">
+      <div class="producto-destacado-item inactive" key={item.key} data-id={item.id}>
+        <img class="inicio-featured-img" src={item.imageUrl} alt={item.imageAltText} />
+        <div class="header-container">
+          <div class="heroWrapper">
+            <a class="heroLink" href={topicUrl}>
+              <p>ver más de <br><strong>{topic}</strong></p>
+            </a>
+            <time datetime={item.date} title={item.date}>{item.date}</time>
+            <h3>{item.title}</h3>
+            <p>{item.descripcion}</p>
+            <span onclick={handleClick} data-id={item.key}>Leer más</span>
+          </div>
+
+          <div class="headerNavigation">
+            <c-gp-carousel-navigator color="#003696" width="36px" maxitems={maxProductItems} active={activeProduct}
+              class="blue-navigator" margin-right="9px" texto-evento="proddest"
+              onproddest={handleItemSelected}></c-gp-carousel-navigator>
+            <c-gp-carousel-navigator color="#FFFFFF" width="36px" maxitems={maxProductItems} active={activeProduct}
+              class="white-navigator" margin-right="9px" texto-evento="proddest"
+              onproddest={handleItemSelected}></c-gp-carousel-navigator>
+          </div>
+        </div>
+      </div>
+    </template>
+  </div>
+</template>

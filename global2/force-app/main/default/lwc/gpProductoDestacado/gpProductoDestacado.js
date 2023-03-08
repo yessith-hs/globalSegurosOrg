@@ -35,7 +35,7 @@ export default class ProductoDestacado extends LightningElement {
                     detailDescripcion: Descripcion.value,
                     botonImagen: `${basePath}/sfsites/c${Imagen2.url}`,
                     botonAltText: Imagen2.altText,
-                    imagen: `${basePath}/sfsites/c${Imagen.url}`, 
+                    imagen: `${basePath}/sfsites/c${Imagen.url}`,
                     imagenAltText: Imagen.altText
                 };
             });
@@ -65,15 +65,15 @@ export default class ProductoDestacado extends LightningElement {
             } else {
                 this.active = this.active + 1;
             }
-        } 
-        
+        }
+
         if (event.target.dataset.id === "left-caret") {
             if (this.active - 1 < 1 ) {
                 this.active = this.items.length;
             } else {
                 this.active = this.active - 1;
             }
-        } 
+        }
 
         this.template.querySelector(`[data-id="pdi-${activeAnterior}"]`).classList.add('inactive');
         this.template.querySelector(`[data-id="pdi-${this.active}"]`).classList.remove('inactive');

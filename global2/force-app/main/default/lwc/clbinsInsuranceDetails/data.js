@@ -27,6 +27,6 @@ export const listDocuments = [
   },
   {
     documentId: 4,
-    documentType:'Claudulados'
+    documentType:'Clausulados'
   }
 ]

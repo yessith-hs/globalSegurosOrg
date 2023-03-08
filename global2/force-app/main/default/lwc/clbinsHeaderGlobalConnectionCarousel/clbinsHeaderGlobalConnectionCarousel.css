@@ -1,0 +1,244 @@
+@import 'c/cssLibrary';
+
+.featured-container {
+  margin: 0 0.7rem 4rem;
+  padding: 0;
+  position: relative;
+}
+
+.producto-destacado-item {
+  height: 100%;
+}
+
+/* .header-container {
+   background-color: var(--global-portal-color-ffffff);
+  padding: 0 0.6rem 0 0.87rem;
+  margin-bottom: 1rem;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+
+} */
+
+.contenido {
+  font-family: var(--global-portal-font-family-asap);
+  font-style: var(--global-portal-font-style-normal);
+  font-weight: var(--global-portal-font-weight-normal);
+  font-size: var(--global-portal-font-size-12);
+  line-height: var(--global-portal-line-spacing-12);
+  letter-spacing: var(--global-portal-character-spacing-0);
+  color: var(--global-portal-color-464646);
+  padding: 0 0 0.6rem 0;
+  margin: 0;
+  max-width: 80%;
+}
+
+.boton-pagar_en_linea {
+  height: 2.87rem;
+  width: 11.18rem;
+  margin-bottom: 0.6rem;
+}
+
+.titulo {
+  font-family: var(--global-portal-font-family-asap);
+  font-style: var(--global-portal-font-style-normal);
+  font-weight: var(--global-portal-font-weight-bold);
+  font-size: var(--global-portal-font-size-13);
+  line-height: var(--global-portal-line-spacing-12);
+  letter-spacing: var(--global-portal-character-spacing-0);
+  color: var(--global-portal-color-003696);
+  padding: 0.8rem 0 0.8rem 0;
+  margin: 0;
+}
+
+.inicio-featured-img {
+  display: flex;
+  width: 100%;
+  /* min-height: 11rem;
+  min-width: 21.88rem; */
+  margin-top: 1rem;
+  box-shadow: 0px 3px 6px #00369633;
+  border-radius: 5px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.white-navigator {
+  display: none;
+}
+
+.blue-navigator {
+  padding: 0.3rem 0 1.3rem 0;
+}
+
+.link-navegacion-left {
+  position: absolute;
+  top: 11%;
+  left: 20px;
+  background-color: #003278a8;
+  opacity: 0.4;
+}
+
+.link-navegacion-right {
+  position: absolute;
+  top: 11%;
+  right: 25px;
+  background-color: #003278a8;
+  opacity: 0.4;
+}
+
+.inactive {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* .inicio-featured-img {
+    min-height: 26.625rem;
+    min-width: 45.5rem;
+  } */
+
+  .header-container {
+    position: absolute;
+    right: 10px;
+    bottom: 35px;
+  }
+
+  .white-navigator {
+    display: block;
+    position: absolute;
+    top: 13.8rem;
+    right: -0.1755rem;
+    width: 24.8rem;
+  }
+
+  .blue-navigator {
+    display: none;
+  }
+
+  .boton-pagar_en_linea {
+    margin-bottom: 2.2rem;
+  }
+
+  .link-navegacion-left {
+    position: absolute;
+    top: 26%;
+  }
+
+  .link-navegacion-right {
+    position: absolute;
+    top: 26%;
+  }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+  .featured-container {
+    max-width: var(--global-portal-max-width-content);
+  }
+
+  .inicio-featured-img {
+    max-height: 27.434rem;
+    min-height: 26.625rem;
+    min-width: 45.5rem;
+    object-fit: cover;
+  }
+
+  .header-container {
+    max-width: 24.813rem;
+    max-height: 12.438rem;
+    position: absolute;
+    top: 10.688rem;
+    right: 5.125rem;
+    padding: 0 0.6rem 0 2.19rem;
+  }
+
+  .titulo {
+    font-size: var(--global-portal-font-size-25);
+    line-height: var(--global-portal-line-spacing-25);
+  }
+
+  .white-navigator {
+    display: block;
+    position: absolute;
+    top: 13.8rem;
+    right: -0.1755rem;
+    width: 24.8rem;
+  }
+
+  .blue-navigator {
+    display: none;
+  }
+
+  .boton-pagar_en_linea {
+    margin-bottom: 2.2rem;
+  }
+
+  .link-navegacion-left {
+    top: 25%;
+  }
+
+  .link-navegacion-right {
+    top: 25%;
+  }
+}
+
+/* bloque de contenido cms */
+
+.heroWrapper a {
+  width: 180px;
+  height: 37px;
+  color: #fff;
+  text-decoration: none;
+  background-color: #003696;
+  font-size: 0.66rem;
+  border-radius: 5px;
+  display: flex;
+  place-items: center;
+  padding-left: 0.5rem;
+}
+
+.heroLink strong {
+  text-decoration: underline;
+}
+
+.heroWrapper {
+  padding: 1rem;
+  font-weight: 400;
+  display: grid;
+  gap: 0.5rem;
+  background-color: #fff;
+}
+
+.timestamp {
+  font-size: 0.625rem;
+}
+
+.heroWrapper h2 {
+  font-weight: 700;
+}
+
+.heroWrapper span:last-child {
+  text-decoration: underline;
+  color: #2d4a84;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .featured-container {
+    height: 450px;
+  }
+  .heroWrapper {
+    position: relative;
+    background-color: #fff;
+    width: 320px;
+    /* bottom: 40px;
+    right: 0; */
+    border-radius: 5px;
+  }
+}
