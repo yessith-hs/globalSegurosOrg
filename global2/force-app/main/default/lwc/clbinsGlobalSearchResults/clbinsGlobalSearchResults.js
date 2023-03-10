@@ -1,7 +1,8 @@
 import { LightningElement, track, wire } from 'lwc'
 import basePath from '@salesforce/community/basePath'
-import { CurrentPageReference, NavigationMixin } from 'lightning/navigation'
 import getSessionId from '@salesforce/apex/clb_ins_UserSessionHelper.getSessionId'
+import getOrgDomainUrl from '@salesforce/apex/clb_ins_UserSessionHelper.getOrgDomainUrl'
+import { CurrentPageReference, NavigationMixin } from 'lightning/navigation'
 import { searchContent } from './searchContent'
 import { formatDate, TOPICS_NAME } from 'c/clbinsUtils'
 
@@ -10,6 +11,7 @@ export default class ClbinsGlobalSearchResults extends NavigationMixin(
 ) {
   @track tokenUser
   @track term
+  @track orgDomainUrl
   loading = true
   haveResults
   searchResults
@@ -24,9 +26,15 @@ export default class ClbinsGlobalSearchResults extends NavigationMixin(
   }
 
   connectedCallback() {
+    let instanceName = ''
+
+    getOrgDomainUrl()
+      .then(orgDomainUrl => (instanceName = orgDomainUrl))
+      .catch(error => console.log('error', error))
+
     getSessionId()
       .then(tokenUser =>
-        searchContent(tokenUser, this.term).then(results => {
+        searchContent(tokenUser, this.term, instanceName).then(results => {
           if (!results.items.length) {
             this.loading = false
             this.haveResults = false
