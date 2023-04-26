@@ -72,7 +72,6 @@ export default class ClbinsHeaderGlobalConnectionCarousel extends NavigationMixi
 
   handleItemSelected(event) {
     let activeAnterior = this.active
-    // console.log(`handleItemSelected: ${even.detail} - ${activeAnterior}`)
     if (this.active !== event.detail) {
       this.active = event.detail
       this.template

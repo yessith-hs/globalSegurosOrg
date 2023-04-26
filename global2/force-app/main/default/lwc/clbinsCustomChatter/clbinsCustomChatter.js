@@ -43,7 +43,6 @@ export default class ClbinsCustomChatter extends LightningElement {
           return { ...comment, CreatedDate: formatDate(comment.CreatedDate) }
         })
         this.comments = updatedData
-        console.log('bool', data.length)
       } else {
         this.comments = false
       }
@@ -106,7 +105,6 @@ export default class ClbinsCustomChatter extends LightningElement {
       blogTopic: topic
     })
       .then(result => {
-        console.log('data', result)
 
         this.template.querySelector('.comment--title').value = ''
         this.template.querySelector('.comment--body').value = ''

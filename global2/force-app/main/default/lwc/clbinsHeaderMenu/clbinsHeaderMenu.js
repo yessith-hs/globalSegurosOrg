@@ -7,8 +7,7 @@ export default class ClbinsHeaderMenu extends LightningElement {
   gestionSeguros = `${BASE_PATH}/gestiona-tus-seguros`
   urlSoyGlobal = `${BASE_PATH}/soy-global`
 
-  home = `${BASE_PATH}/soy-global`
-  // home = BASE_PATH
+  home = BASE_PATH
   activeMenu() {
     this.template.querySelector('nav').classList.add('active')
     this.template.querySelector('.navmenu_background').classList.add('show')

@@ -110,6 +110,7 @@
   .insuranceDetailPayment {
     flex-direction: column;
     justify-content: initial;
+    place-items: center;
   }
 
   .insuranceDetailCoupon {

@@ -25,7 +25,6 @@ export default class GpCarrouselPrensa extends LightningElement {
     filterby: 'prensa'
   })
   wiredContent({ data, error }) {
-    console.log('data: ', data)
     if (data) {
       this.items = data.map(entry => {
         const { titulo, descripcion, logoPrensa, imagen, urlPrensa } =
@@ -42,7 +41,6 @@ export default class GpCarrouselPrensa extends LightningElement {
       })
       this.currentItem = this.items[0]
       this.error = undefined
-      console.log('currentItem: ', this.currentItem)
     }
     if (error) {
       console.log('Error: ' + JSON.stringify(error))
