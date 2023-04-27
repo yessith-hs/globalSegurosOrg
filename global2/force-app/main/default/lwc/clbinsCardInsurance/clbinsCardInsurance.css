@@ -3,8 +3,9 @@
   font-weight: 400;
   border-radius: 0.3rem;
   display: grid;
-}
 
+  height: 250px;
+}
 
 .insuranceHead h2 {
   font-weight: 700;
@@ -34,6 +35,8 @@
 .insuranceMain {
   display: grid;
   padding: 0 0.5rem 1rem;
+
+  place-items: center;
 }
 
 .insuranceBody span {

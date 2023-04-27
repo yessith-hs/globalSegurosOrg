@@ -9,7 +9,7 @@
       <h2>{insurance.insuranceName}</h2>
     </header>
     <main class="insuranceMain">
-      <div class="insuranceBody">
+      <!-- <div class="insuranceBody">
         <h3>Próximo pago</h3>
         <template if:true={insurance.isExpired}>
           <span>Vencido</span>
@@ -18,8 +18,8 @@
           <time datetime={insurance.nextPaymentDate}
             title={insurance.nextPaymentDate}>{insurance.nextPaymentDate}</time>
         </template>
-      </div>
-      <span class="insuranceAmount">${insurance.amount}</span>
+      </div> -->
+      <!-- <span class="insuranceAmount">${insurance.amount}</span> -->
       <span class="insuranceBtn" data-id={insurance.id} onclick={handleClick}>Ver más detalles </span>
     </main>
   </article>
