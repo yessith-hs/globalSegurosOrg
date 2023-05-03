@@ -1,0 +1,56 @@
+.insuranceDetaiContent_right {
+  padding: 0.5rem;
+  background-color: #f2f2f2;
+  border-radius: 0.3rem;
+  max-width: 420px;
+  justify-self: center;
+  display: grid;
+}
+
+.insuranceDetaiContent_right h3 {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.insuranceDetaiContent_date {
+  display: flex;
+  place-content: center;
+  box-shadow: 0 2px 0 0 #70707080;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.insuranceDetaiContent_date div:first-child {
+  box-shadow: 2px 0 0 0 #70707080;
+  padding-right: 0.5rem;
+}
+.insuranceDetaiContent_date div:nth-child(2) {
+  padding-left: 0.5rem;
+}
+
+.insuranceDetaiContent_date h4,
+.insuranceDetaiContent_year h4 {
+  color: #003696;
+}
+
+.insuranceDetaiContent_date h4 {
+  max-width: 150px;
+}
+
+.insuranceDetaiContent_date,
+.insuranceDetaiContent_right h3 {
+  text-align: center;
+}
+
+.insuranceDetaiContent_date span,
+.insuranceDetaiContent_year span {
+  color: #707070;
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 600px) {
+  .insuranceDetaiContent_right {
+    align-self: baseline;
+  }
+}

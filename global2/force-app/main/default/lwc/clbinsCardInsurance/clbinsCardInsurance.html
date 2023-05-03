@@ -6,7 +6,7 @@
         <span>{insurance.policyNumber}</span>
       </div>
       <span style={getStyleRamoSeguro}></span>
-      <h2>{insurance.insuranceName}</h2>
+      <h2>{insurance.insuranceType}</h2>
     </header>
     <main class="insuranceMain">
       <!-- <div class="insuranceBody">
@@ -20,7 +20,7 @@
         </template>
       </div> -->
       <!-- <span class="insuranceAmount">${insurance.amount}</span> -->
-      <span class="insuranceBtn" data-id={insurance.id} onclick={handleClick}>Ver más detalles </span>
+      <span class="insuranceBtn" data-id={insurance.endorsementId} onclick={handleShowDetails}>Ver más detalles </span>
     </main>
   </article>
 </template>

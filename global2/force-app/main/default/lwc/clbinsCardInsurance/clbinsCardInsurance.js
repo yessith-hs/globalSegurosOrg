@@ -2,12 +2,10 @@ import { LightningElement, api } from 'lwc'
 import { NavigationMixin } from 'lightning/navigation'
 
 import basePath from '@salesforce/community/basePath'
-export default class ClbinsCardInsurance extends NavigationMixin(
-  LightningElement
-) {
+export default class ClbinsCardInsurance extends NavigationMixin(LightningElement) {
   @api insurance
 
-  handleClick (event) {
+  handleShowDetails(event) {
     this[NavigationMixin.Navigate]({
       type: 'standard__webPage',
       attributes: {
@@ -21,7 +19,8 @@ export default class ClbinsCardInsurance extends NavigationMixin(
     height: 12px;
     width: 12px;
     border-radius: 50%;
-    background-color: ${this.insurance.color};
+    // background-color: ${this.insurance.color};
+    background-color: #053697;
     display: block;
     position: absolute;
     top: 19px;
@@ -31,7 +30,7 @@ export default class ClbinsCardInsurance extends NavigationMixin(
 
   get getStyleRamoSeguroBorder() {
     return `
-    box-shadow:  0 2px 0 0 ${this.insurance.color};
+    box-shadow:  0 2px 0 0 #053697;
     margin-bottom: 0.7rem;
     padding: 1rem 1rem 0;
     `

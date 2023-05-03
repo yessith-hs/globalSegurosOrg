@@ -2,7 +2,7 @@
   <h1 class="insuranceTitle">Gestiona tus seguros</h1>
   <section class="insuranceWrapper">
     <template for:each={insurances} for:item="insurance">
-      <c-clbins-card-insurance key={insurance.id} insurance={insurance}></c-clbins-card-insurance>
+      <c-clbins-card-insurance key={insurance.endorsementId} insurance={insurance}></c-clbins-card-insurance>
     </template>
     <div class="cardNewInsurance">
       <h2>Deseas obtener un nuevo seguro</h2>

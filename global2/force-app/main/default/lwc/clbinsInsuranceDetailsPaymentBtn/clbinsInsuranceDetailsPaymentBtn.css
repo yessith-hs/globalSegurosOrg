@@ -1,0 +1,19 @@
+.insuranceDetailPaymentBtn {
+  height: 50px;
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+  color: #003696;
+  background-color: #ffd300;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  border-radius: 0.3rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .insuranceDetailPaymentBtn {
+    margin: initial;
+    width: 250px;
+  }
+}

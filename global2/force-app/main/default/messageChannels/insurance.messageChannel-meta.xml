@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+   <masterLabel>insurance</masterLabel>
+   <isExposed>true</isExposed>
+   <description>This Lightning Message Channel sends insurance list to others lightning web components</description>
+
+   <lightningMessageFields>
+       <fieldName>data</fieldName>
+       <description>This is the insurance list to share with others lightning web components</description>
+   </lightningMessageFields>
+
+</LightningMessageChannel>
