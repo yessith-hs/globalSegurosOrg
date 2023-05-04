@@ -1,0 +1,1 @@
+clb_ins_InsuranceListByUser.getInsurance();

@@ -1,64 +1,76 @@
 import { LightningElement, track, wire } from 'lwc'
+import getInsurance from '@salesforce/apex/clb_ins_InsuranceListByUser.getInsurance'
 import BASE_PATH from '@salesforce/community/basePath'
 import { response } from './response'
-import { getDataInsurance } from './getInsurance'
-
-// import getAccessToken from '@salesforce/apex/clb_ins_InsuranceListByUser.getAccessToken'
-import { APPLICATION_SCOPE, MessageContext, subscribe, unsubscribe } from 'lightning/messageService'
-import INSURANCE_LIST_CHANNEL from '@salesforce/messageChannel/insurance__c'
+// import { APIGeeConnection } from './getInsurance'
+// import { fetchData } from './getInsurance2'
 
 export default class ClbinsInsuranceManagement extends LightningElement {
   urlSolucionesRecomendadas = `${BASE_PATH}/soluciones-pensadas-para-ti`
   insurances = response['responseData'].responseData.policys
 
-  subscription = null
-  @track receivedInsurance = []
+  // * Get Content List CMS
+  @wire(getInsurance)
+  token({ data, error }) {
+    if (data) {
+      console.log('response data token:', data)
+      console.log('response data parse:', JSON.parse(data))
+    }
+    if (error) {
+      console.log('response data Error: ' + JSON.parse(error))
+    }
+  }
+
+  connectedCallback () {
+    // fetchData()
+    //   .then(data => console.log('APIGeeConnection', data))
+    //   .catch(error => console.log('error', error))
+
+    const body = JSON.stringify({
+      personId: 215013,
+      email: null,
+      documentNumber: null
+    })
 
 
-  // @wire(getAccessToken)
-  // accessToken({ data, error }) {
-  //   if (data) {
-  //     console.log('token:', data)
-  //   }
-  //   if (error) {
-  //     console.log('Error: ' + JSON.stringify(error))
+    fetch('https://apigee.globalseguros.co/develop/gsv/pst/policy/core/users/data', {
+      Method: 'POST',
+      Headers: {
+        'Access-Control-Request-Method': 'POST',
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        Authorization: 'Bearer kAEAfCnKEBtb7NC7vQ6qebDm9iNB'
+      },
+      Body: body,
+      Cache: 'default'
+    }).then(data =>
+      console.log('🚀 ~ file: ClbinsInsuranceManagement.js:46 ~ getDataInsurance ~ data:', data)
+    )
+  }
+
+  // * APIGeeConnection
+  // async fetchData() {
+  //   try {
+  //     const credentials = {
+  //       url: 'https://apigee.globalseguros.co/gt/security/access_token?grant_type=client_credentials',
+  //       clientId: 'vyNC901JQJdpoqpvUjE3ABnNbQAl07kD0B5npJiwXUubXgh1',
+  //       clientSecret: 't0HCONxCU7CgH1Nb3xcztogfHrg0x3CXF0Vr13eRXKYYuMBhLSM1eMme4ZQu4qiA'
+  //     }
+  //     const apigeeConnection = new APIGeeConnection(credentials, true)
+  //     const response = await apigeeConnection.fetch(
+  //       'POST',
+  //       'https://apigee.globalseguros.co/develop/gsv/pst/policy/core/users/data',
+  //       {
+  //         personId: 215013,
+  //         email: null,
+  //         documentNumber: null
+  //       }
+  //     )
+
+  //     // Respuesta de la consulta al APIGee
+  //     console.log(response)
+  //   } catch (error) {
+  //     console.error(error)
   //   }
   // }
-
-  @wire(MessageContext)
-  context
-
-  // * Encapsulate logic for Lightning message service subscribe and unsubsubscribe
-  subscribeToMessageChannel() {
-    if (this.subscription) return
-
-    this.subscription = subscribe(this.context, INSURANCE_LIST_CHANNEL, message => {
-      this.handleMessage(message), { scope: APPLICATION_SCOPE }
-    })
-  }
-
-  unsubscribeToMessageChannel() {
-    unsubscribe(this.subscription)
-    this.subscription = null
-  }
-
-  // * Handler for message received by component
-  handleMessage(message) {
-    console.log(
-      '🚀 ~ file: clbinsInsuranceManagement.js:33 ~ ClbinsInsuranceManagement ~ handleMessage ~ message:',
-      message
-    )
-    this.receivedInsurance = message.data
-  }
-
-  // * Standard lifecycle hooks used to subscribe and unsubsubscribe to the message channel
-  connectedCallback() {
-    getDataInsurance()
-
-    this.subscribeToMessageChannel()
-  }
-
-  disconnectedCallback() {
-    this.unsubscribeToMessageChannel()
-  }
 }
