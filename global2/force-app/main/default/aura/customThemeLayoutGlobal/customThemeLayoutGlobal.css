@@ -11,6 +11,7 @@
 }
 
 .THIS .main {
+  height: 100%;
   overflow: hidden;
 }
 
@@ -28,5 +29,15 @@
   }
   .THIS.footer {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .THIS .main > div {
+    display: flex;
+    height: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
