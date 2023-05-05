@@ -1,0 +1,71 @@
+.insuranceCard {
+  background-color: #fff;
+  border-radius: 0.3rem;
+  display: grid;
+  height: 250px;
+}
+
+.insuranceHead {
+  box-shadow: 0 3px 0 0 #eee;
+}
+
+.insuranceHead,
+.insuranceHead_title {
+  position: relative;
+}
+
+.insuranceHead_title {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.insuranceMain {
+  display: flex;
+  place-items: center;
+  place-content: center;
+}
+
+.insuranceBtn {
+  display: block;
+  height: 50px;
+  width: 250px;
+  border-radius: 0.3rem;
+}
+
+.insuranceHead_title h3 {
+  width: 50%;
+}
+
+.insuranceHead_title span {
+  width: 30%;
+}
+
+.insuranceHead h2 {
+  width: 60%;
+}
+
+.insuranceHead_title h3,
+.insuranceHead_title span,
+.insuranceHead h2 {
+  height: 10px;
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.insuranceHead_title h3,
+.insuranceHead_title span,
+.insuranceHead h2,
+.insuranceBtn {
+  background: #eee;
+  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+  border-radius: 5px;
+  background-size: 200% 100%;
+  animation: 1.5s shine linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}
