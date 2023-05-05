@@ -1,5 +1,10 @@
 <template>
   <h1 class="insuranceTitle">Gestiona tus seguros</h1>
+
+  <template if:true={loading}>
+    <h1>Cargando lista de seguros...</h1>
+  </template>
+
   <section class="insuranceWrapper">
     <template for:each={insurances} for:item="insurance">
       <c-clbins-card-insurance key={insurance.endorsementId} insurance={insurance}></c-clbins-card-insurance>
@@ -44,5 +49,4 @@
       </div>
     </div>
   </section>
-  <!-- <c-test-fetch-global></c-test-fetch-global> -->
 </template>

@@ -4,6 +4,7 @@ import { getRecord, getFieldValue } from 'lightning/uiRecordApi'
 import DEFAULT_AVATAR from '@salesforce/resourceUrl/avatar'
 import FIRST_NAME from '@salesforce/schema/User.FirstName'
 import LAST_NAME from '@salesforce/schema/User.LastName'
+import EMAIL from '@salesforce/schema/User.Email'
 import USER_AVATAR from '@salesforce/schema/User.FullPhotoUrl'
 import USER_ID from '@salesforce/user/Id'
 
@@ -13,15 +14,17 @@ export default class ClbinsAvatar extends LightningElement {
   @track firstName
   @track lastName
   @track userAvatar
+  @track email
 
   @wire(getRecord, {
     recordId: '$userId',
-    fields: [FIRST_NAME, LAST_NAME, USER_AVATAR]
+    fields: [FIRST_NAME, LAST_NAME, USER_AVATAR, EMAIL]
   })
   user({ data, error }) {
     if (data) {
       this.firstName = getFieldValue(data, FIRST_NAME)
       this.lastName = getFieldValue(data, LAST_NAME)
+      this.email = getFieldValue(data, EMAIL)
       this.userAvatar = getFieldValue(data, USER_AVATAR) || DEFAULT_AVATAR
     }
 
@@ -39,6 +42,4 @@ export default class ClbinsAvatar extends LightningElement {
       this.template.querySelector('.menu-avatar').classList.add('mobile')
     }
   }
-
-
 }
