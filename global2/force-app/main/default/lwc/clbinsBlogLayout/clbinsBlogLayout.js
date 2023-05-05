@@ -12,8 +12,9 @@ export default class ClbinsBlogLayout extends LightningElement {
   headerImg = URL_HEADER
   avatarImg = URL_AVATAR
   defaultTopic = 'orientacion_educativa'
-
-  @track blogId
+  haveResults
+  @track
+  blogId
   itemTopic
   topicUrl
   _topic
@@ -44,6 +45,10 @@ export default class ClbinsBlogLayout extends LightningElement {
   })
   wiredContent({ data, error }) {
     if (data) {
+      this.haveResults = Object.keys(data).length === 0
+
+      if (this.haveResults) return
+
       const {
         tematica,
         fechapublicacion,
@@ -63,9 +68,7 @@ export default class ClbinsBlogLayout extends LightningElement {
       this._descripcion = Descripcion.value
       this._body = body
       this._autor = Autor.value
-      this._avatar = avatar
-        ? basePath + '/sfsites/c' + avatar.unauthenticatedUrl
-        : this.avatarImg
+      this._avatar = avatar ? basePath + '/sfsites/c' + avatar.unauthenticatedUrl : this.avatarImg
 
       this._imageUrl = basePath + '/sfsites/c' + Portada.unauthenticatedUrl
       this._imageAltText = Portada.altText

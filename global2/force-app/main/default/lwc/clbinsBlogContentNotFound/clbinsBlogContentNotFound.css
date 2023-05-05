@@ -1,0 +1,62 @@
+.notFountHead,
+.notFountMain {
+  margin: 1rem 0.7rem 0;
+}
+.notFountHead {
+  margin-bottom: 2rem;
+}
+
+.notFountHead h1 {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+  color: #003696;
+}
+
+.notFountMain {
+  display: flex;
+  place-items: center;
+  place-content: center;
+  background-color: #fff;
+  padding: 1rem;
+}
+
+.notFountContent {
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  display: grid;
+  gap: 3rem;
+  place-content: center;
+  place-items: center;
+  text-align: center;
+}
+
+.notFountContent p {
+  font-size: 1rem;
+}
+
+.notFountBtn {
+  height: 50px;
+  width: 250px;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  background-color: #003696;
+  outline: none;
+  border: none;
+}
+
+.notFountBtn,
+.notFountBtn a {
+  display: flex;
+  place-items: center;
+  place-content: center;
+}
+
+.notFountBtn a {
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
