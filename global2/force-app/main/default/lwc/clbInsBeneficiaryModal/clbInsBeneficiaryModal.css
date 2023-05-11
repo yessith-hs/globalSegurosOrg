@@ -1,0 +1,102 @@
+:host .custom-input {
+  --sds-c-input-radius-border: 0.5rem;
+}
+
+.custom-input {
+  --sds-c-input-radius-border: 8px;
+}
+
+
+.custom-input .slds-form-element__label {
+  font-weight: 400;
+  color: #333;
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+  padding-bottom: 0.3125rem;
+  line-height: 1;
+  display: contents;
+}
+
+.modal {
+  font-family: Poppins, sans-serif;
+  background: rgba(32, 35, 41, 0.8);
+  position: fixed;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  color: white;
+  z-index: 2;
+}
+
+.modalForm {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  height: 400px;
+  padding: 1rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.modalForm h2 {
+  color: #01827d;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.modalWrapper {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #333;
+  line-height: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.modalContent {
+  display: grid;
+  gap: 1rem;
+}
+
+.modalContent input{
+  border-radius: 0.5rem;
+}
+
+.modalActions {
+  display: flex;
+  gap: 1rem;
+  align-self: end;
+}
+
+.modalCloseBtn,
+.modalAddBtn {
+  border: 0;
+  outline: 0;
+  width: 150px;
+  height: 40px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  border-radius: 0.25rem;
+  line-height: 1.875rem;
+  white-space: normal;
+  user-select: none;
+}
+
+.modalAddBtn {
+  background-color: #6fbf31;
+}
+
+.modalCloseBtn {
+  background-color: transparent;
+  border: 1px solid #6fbf31;
+  color: #333;
+}

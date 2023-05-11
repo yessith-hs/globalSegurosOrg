@@ -1,25 +1,39 @@
 <template>
   <article class="insuranceCard">
-    <header style={getStyleRamoSeguroBorder} class="insuranceHead">
+    <header style={styleRamoSeguroBorder} class="insuranceHead">
       <div class="insuranceHead_title">
         <h3>Número de Póliza</h3>
         <span>{insurance.policyNumber}</span>
       </div>
-      <span style={getStyleRamoSeguro}></span>
-      <h2>{insurance.insuranceType}</h2>
+      <span style={styleRamoSeguro}></span>
+      <h2>{insurance.insuranceLineDescription}</h2>
     </header>
     <main class="insuranceMain">
-      <!-- <div class="insuranceBody">
-        <h3>Próximo pago</h3>
-        <template if:true={insurance.isExpired}>
-          <span>Vencido</span>
-        </template>
-        <template if:false={insurance.isExpired}>
-          <time datetime={insurance.nextPaymentDate}
-            title={insurance.nextPaymentDate}>{insurance.nextPaymentDate}</time>
-        </template>
-      </div> -->
-      <!-- <span class="insuranceAmount">${insurance.amount}</span> -->
+      <section class="insuranceBody">
+        <!-- * vigencia -->
+        <div class="insuranceText">
+          <template if:true={insurance.lifePolicy}>
+            <span>Vigencia seguro de vida</span>
+          </template>
+        </div>
+        <!-- * Fecha -->
+        <div style={styleDate} class="insuranceDate">
+          <span>Vence:</span> <lightning-formatted-date-time value="2009-10-27T00:00:00" time-zone="UTC" year="numeric"
+            month="numeric" day="numeric">
+          </lightning-formatted-date-time>
+        </div>
+        <!-- * Progress Bar -->
+        <div class="insuranceProgressBar" style={progressBarTitle}>
+          <h3 style={progressBarTitle}>Tiempo restante</h3>
+          <span>75%</span>
+        </div>
+        <div class="slds-progress-bar slds-progress-bar_circular slds-progress-bar_large" aria-valuemin="0" aria-valuemax="100"
+          aria-valuenow="75" role="progressbar">
+          <span class="slds-progress-bar__value" style={progressBar}>
+          </span>
+        </div>
+
+      </section>
       <span class="insuranceBtn" data-id={insurance.endorsementId} onclick={handleShowDetails}>Ver más detalles </span>
     </main>
   </article>

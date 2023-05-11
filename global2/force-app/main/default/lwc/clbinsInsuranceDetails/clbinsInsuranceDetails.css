@@ -155,7 +155,7 @@ button.slds-button.slds-button_brand {
     gap: 2rem;
     grid-template-columns: 2fr 1fr;
   }
-  c-clbins-insurance-details-payment {
+  /* c-clbins-insurance-details-payment {
     grid-area: 1/2/2/3;
-  }
+  } */
 }

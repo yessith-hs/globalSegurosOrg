@@ -1,10 +1,9 @@
 .insuranceCard {
-  background-color: #fff;
+  background-color: #ffffff;
   font-weight: 400;
   border-radius: 0.3rem;
   display: grid;
-
-  height: 250px;
+  /* height: 270px; */
 }
 
 .insuranceHead h2 {
@@ -36,25 +35,34 @@
 .insuranceMain {
   display: grid;
   padding: 0 0.5rem 1rem;
-
-  place-items: center;
-}
-
-.insuranceBody span {
-  color: #da031b;
 }
 
 .insuranceBody {
+  margin: 1rem 0;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
+  gap: 0.2rem;
+}
+
+.insuranceText {
+  color: #848181;
+}
+
+.insuranceDate span {
+  margin-right: 0.2rem;
 }
 
 .insuranceAmount {
   color: #0264c6;
   font-size: 1.4rem;
   text-align: end;
+}
+
+.insuranceProgressBar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .insuranceBtn {

@@ -1,0 +1,46 @@
+<template>
+  <main class="beneficiary">
+    <h1>Beneficiarios</h1>
+    <section class="beneficiary_wrapper">
+      <!-- * Header -->
+      <div class="beneficiary_header">
+        <h3>Nombre (S)</h3>
+        <h3>Apellido Paterno</h3>
+        <h3>Parentesco</h3>
+        <h3>Porcentaje %</h3>
+        <h3>Acciones</h3>
+      </div>
+      <!-- * Body -->
+      <div class="beneficiary_body">
+        <template if:true={beneficiaries}>
+          <ul class="beneficiary_body_list">
+            <template for:each={beneficiaries} for:item="beneficiary">
+              <li key={beneficiary.OldBeneficiaryId} class="beneficiary_body_item">
+                <p>{beneficiary.BeneficiaryFirstName}</p>
+                <p>{beneficiary.BeneficiaryLastName}</p>
+                <p>{beneficiary.BeneficiaryRelationship}</p>
+                <p>{beneficiary.BeneficiaryPercentage}</p>
+                <div class="beneficiary_body_actions">
+                  <span
+                    onclick={showEditModal}
+                    data-id={beneficiary.OldBeneficiaryId}>✍🏼</span>
+                  <span
+                    onclick={deletBeneficiary}
+                    data-id={beneficiary.OldBeneficiaryId}>🗑️</span>
+                </div>
+              </li>
+            </template>
+          </ul>
+        </template>
+      </div>
+    </section>
+    <button class="beneficiary_add" onclick={showModal}>＋ Nuevo</button>
+  </main>
+
+  <template if:true={isActive}>
+    <c-clb-ins-beneficiary-modal
+      onclosemodal={closeModal}
+      oncreatenewbeneficiary={createNewBeneficiary}
+      beneficiary={beneficiaryEdit}></c-clb-ins-beneficiary-modal>
+  </template>
+</template>

@@ -44,6 +44,7 @@ export const TOPICS = {
   'desarrollo integral': 'desarrollo_integral',
   'habilidades socioemocionales': 'habilidades_socioemocionales'
 }
+
 export const TOPICS_NAME = {
   orientacion_educativa: 'Orientacion Educativa',
   desarrollo_integral: 'Desarrollo Integral',
@@ -55,6 +56,17 @@ export const URL_TOPICS = {
   'orientacion educativa': `${basePath}/soy-global/orientacion-educativa`,
   'desarrollo integral': `${basePath}/soy-global/desarrollo-integral`,
   'habilidades socioemocionales': `${basePath}/soy-global/habilidades-socioemocionales`
+}
+
+export const INSURANCE_COLORS = {
+  'seguro educativo': 'rgb(0, 135, 220)',
+  'seguro vida': 'rgb(255, 90, 90)',
+  'seguro pensión': 'rgb(0, 180, 120)',
+  'accidentes personales': 'rgb(190, 45, 85)',
+  'renta voluntaria': 'rgb(155, 80, 145)',
+  'global life': 'rgb(255, 90, 90)',
+  'vida grupo deudor': 'rgb(0, 135, 220)',
+  'vida grupo voluntario': 'rgb(0, 135, 220)'
 }
 
 export const skeletonPosts = [

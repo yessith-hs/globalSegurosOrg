@@ -1,9 +1,20 @@
 import { LightningElement, api } from 'lwc'
 import { NavigationMixin } from 'lightning/navigation'
+import { INSURANCE_COLORS } from 'c/clbinsUtils'
 
 import basePath from '@salesforce/community/basePath'
 export default class ClbinsCardInsurance extends NavigationMixin(LightningElement) {
   @api insurance
+  defaultColor = 'rgb(80, 80, 80)'
+  insuranceColor
+
+  connectedCallback() {
+    if (this.insurance) {
+      const color = this.insurance.insuranceLineDescription.toLowerCase()
+
+      this.insuranceColor = INSURANCE_COLORS[color] ?? this.defaultColor
+    }
+  }
 
   handleShowDetails(event) {
     this[NavigationMixin.Navigate]({
@@ -14,13 +25,12 @@ export default class ClbinsCardInsurance extends NavigationMixin(LightningElemen
     })
   }
 
-  get getStyleRamoSeguro() {
+  get styleRamoSeguro() {
     return `
     height: 12px;
     width: 12px;
     border-radius: 50%;
-    // background-color: ${this.insurance.color};
-    background-color: #053697;
+    background-color: ${this.insuranceColor};
     display: block;
     position: absolute;
     top: 19px;
@@ -28,11 +38,31 @@ export default class ClbinsCardInsurance extends NavigationMixin(LightningElemen
     `
   }
 
-  get getStyleRamoSeguroBorder() {
+  get styleRamoSeguroBorder() {
     return `
-    box-shadow:  0 2px 0 0 #053697;
+    box-shadow:  0 2px 0 0 ${this.insuranceColor};
     margin-bottom: 0.7rem;
     padding: 1rem 1rem 0;
+    `
+  }
+
+  get styleDate() {
+    return `
+    color:  ${this.insuranceColor};
+    font-weight: 700;
+    `
+  }
+
+  get progressBar() {
+    return `
+    background-color:  ${this.insuranceColor};
+    width: 75%;
+    `
+  }
+
+  get progressBarTitle() {
+    return `
+    color:  ${this.insuranceColor};
     `
   }
 }

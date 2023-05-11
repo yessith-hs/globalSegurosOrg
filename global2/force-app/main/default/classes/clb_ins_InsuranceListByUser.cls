@@ -36,7 +36,7 @@ public class clb_ins_InsuranceListByUser {
 
     String URL_API = 'https://apigee.globalseguros.co/develop/gsv/pst/policy/core/users/data';
 
-    String personId = '215013';
+    String personId = '31052';
     String email = null;
     String documentNumber = null;
     String requestBody = '{"personId": ' + personId + ', "email": ' + email + ', "documentNumber": ' + documentNumber + '}';

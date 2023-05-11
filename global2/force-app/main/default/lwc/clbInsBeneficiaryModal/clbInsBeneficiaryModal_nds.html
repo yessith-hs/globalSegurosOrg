@@ -1,0 +1,80 @@
+<template lwc:render-mode="light">
+ <div class="modal">
+   <form class="modalForm">
+     <h2>Beneficiarios</h2>
+     <section class="modalWrapper">
+       <div class="modalContent">
+        <lightning-input
+          data-id="name"
+          class="custom-input"
+          onchange={getBeneficiaryFirstName}
+          required
+          type="text"
+          value={BeneficiaryFirstNameValue}
+          name="BeneficiaryFirstName"
+          label="Nombre (S)">
+        </lightning-input>
+        <lightning-input
+          data-id="form"
+          class="custom-input"
+          onchange={getBeneficiaryMotherName}
+          type="text"
+          value={BeneficiaryMotherNameValue}
+          name="BeneficiaryMotherName"
+          label="Apellido materno">
+        </lightning-input>
+        <lightning-combobox
+          data-id="form"
+          class="custom-input"
+          onchange={getBeneficiaryRelationship}
+          options={pickListvalues}
+          value={BeneficiaryRelationshipValue}
+          name="BeneficiaryRelationship"
+          label="Parentesco"
+          message-when-value-missing={errorMessage}
+          required>
+        </lightning-combobox>
+       </div>
+       <div class="modalContent">
+         <lightning-input
+          data-id="form"
+          class="custom-input"
+          onchange={getBeneficiaryLastName}
+          required
+          type="text"
+          value={BeneficiaryLastNameValue}
+          name="BeneficiaryLastName"
+          label="Apellido paterno">
+        </lightning-input>
+        <lightning-input
+          data-id="form"
+          class="custom-input"
+          onchange={getBeneficiaryMarriedName}
+          type="text"
+          value={BeneficiaryMarriedNameValue}
+          name="BeneficiaryMarriedName"
+          label="Apellido de casada">
+        </lightning-input>
+        <lightning-input
+          data-id="form"
+          class="custom-input"
+          onchange={getBeneficiaryPercentage}
+          required
+          type="number"
+          value={BeneficiaryPercentageValue}
+          name="BeneficiaryPercentage"
+          label="Porcentaje %"
+          max="100"
+          field-level-help={helptext}>
+        </lightning-input>
+       </div>
+     </section>
+     <div class="modalActions">
+       <button  class="modalCloseBtn" onclick={hadleCloseModal}>Cancelar</button>
+       <button class="modalAddBtn" onclick={handleCreateNewBeneficiary} type="submit">Guardar</button>
+        <lightning-button variant="brand" class="slds-m-left_x-small" label="Next"  onclick={hadleCloseModal}>
+        </lightning-button>
+      </div>
+    </form>
+  </div>
+</template>
