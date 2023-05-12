@@ -1,0 +1,48 @@
+.cardNewInsurance {
+  height: 100%;
+  background-color: #003696;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cardNewInsurance h2 {
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: inset 0 -2px 0 0 rgb(255, 255, 255);
+}
+
+.btnWrapper {
+  display: grid;
+  gap: 1rem;
+  place-items: center;
+  place-content: center;
+}
+
+.btnLink {
+  display: flex;
+  place-items: center;
+  place-content: center;
+  gap: 0.5rem;
+  height: 46px;
+  width: 250px;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  background-color: #ffd300;
+  color: #003696;
+}
+
+.btnLink img{
+  width: 1.3rem;
+}
+
+.btnSecondLink{
+  background-color: #7e99cb;
+  color: #fff;
+}
+
+

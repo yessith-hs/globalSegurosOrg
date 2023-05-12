@@ -1,6 +1,10 @@
 import { LightningElement } from 'lwc'
 import basePath from '@salesforce/community/basePath'
 
+import SOLUCIONES_ICON from '@salesforce/resourceUrl/insuranceSoluciones'
+import CITA_ICON from '@salesforce/resourceUrl/insuranceCita'
+import DEBITO_ICON from '@salesforce/resourceUrl/insuranceDebito'
+
 export default class ClbinsUtils extends LightningElement {}
 
 export const filterCmsTopic = (posts = [], topic) => {
@@ -69,12 +73,37 @@ export const INSURANCE_COLORS = {
   'vida grupo voluntario': 'rgb(0, 135, 220)'
 }
 
-export const skeletonPosts = [
-  { id: 1 },
-  { id: 2 },
-  { id: 3 },
-  { id: 4 },
-  { id: 5 },
-  { id: 6 }
-]
+export const skeletonPosts = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 }]
 export const skeletonLastPosts = [{ id: 1 }, { id: 2 }, { id: 3 }]
+
+// * ClbInsAdditionalCardInsurance
+export const firstAdditionalCard = {
+  title: 'Desea obtener un nuevo seguro',
+  links: [
+    {
+      id: 1,
+      title: 'Soluciones recomendadas para ti',
+      icon: SOLUCIONES_ICON,
+      url: `${basePath}/soluciones-pensadas-para-ti`,
+      secondBtn: true
+    },
+    {
+      id: 2,
+      title: 'Agenda tu cita',
+      url: basePath,
+      icon: CITA_ICON
+    }
+  ]
+}
+
+export const secondAdditionalCard = {
+  title: 'Gestiona modificaciones al registro de débito automático',
+  links: [
+    {
+      id: 1,
+      title: 'Débito automático',
+      url: basePath,
+      icon: DEBITO_ICON
+    }
+  ]
+}

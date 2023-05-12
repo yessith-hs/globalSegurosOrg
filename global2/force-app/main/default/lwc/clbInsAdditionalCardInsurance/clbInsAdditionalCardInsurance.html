@@ -1,0 +1,25 @@
+<template>
+  <div class="cardNewInsurance">
+    <h2>{additionaldata.title}</h2>
+    <div class="btnWrapper">
+      <template for:each={additionaldata.links} for:item="link">
+        <template if:true={link.secondBtn}>
+          <a href={link.url} key={link.id} class="btnLink btnSecondLink">
+            <figure>
+              <img src={link.icon} alt={link.title}>
+            </figure>
+            <h3>{link.title}</h3>
+          </a>
+        </template>
+        <template if:false={link.secondBtn}>
+          <a href={link.url} key={link.id} class="btnLink">
+            <figure>
+              <img src={link.icon} alt={link.title}>
+            </figure>
+            <h3>{link.title}</h3>
+          </a>
+        </template>
+      </template>
+    </div>
+  </div>
+</template>
