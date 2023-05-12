@@ -4,7 +4,6 @@ import INSURANCE_LIST_CHANNEL from '@salesforce/messageChannel/insurance__c'
 import getInsurance from '@salesforce/apex/clb_ins_InsuranceListByUser.getInsurance'
 
 export default class ClbInsLmsPublisherWebComponent extends LightningElement {
-  @track insurances
   publishEvent
 
   // * Publish LMS
@@ -17,12 +16,12 @@ export default class ClbInsLmsPublisherWebComponent extends LightningElement {
     if (data) {
       this.loading = false
       const response = JSON.parse(data)
-      this.insurances = response['responseData'].responseData.policys
+      const insurance = response['responseData'].responseData.policys
 
       // * Publish LMS
       this.publishEvent = setTimeout(() => {
         const payload = {
-          data: this.insurances
+          data: insurance
         }
 
         publish(this.messageContext, INSURANCE_LIST_CHANNEL, payload)

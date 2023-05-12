@@ -2,8 +2,7 @@
   padding: 0.5rem;
   background-color: #f2f2f2;
   border-radius: 0.3rem;
-  max-width: 420px;
-  justify-self: center;
+  max-width: 600px;
   display: grid;
 }
 
@@ -49,8 +48,3 @@
   font-weight: 700;
 }
 
-@media only screen and (min-width: 600px) {
-  .insuranceDetaiContent_right {
-    align-self: baseline;
-  }
-}

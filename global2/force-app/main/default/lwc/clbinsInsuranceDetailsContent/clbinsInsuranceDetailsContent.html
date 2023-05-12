@@ -1,39 +1,85 @@
 <template>
   <h2 class="insuranceDetaiContent_left--title ">Información del producto</h2>
-  <article class="insuranceDetaiContent">
+  <section class="insuranceDetaiContent">
     <!-- * información del producto -->
     <div class="insuranceDetaiContent_left">
-      <div class="insuranceDetaiContent_text">
-        <h3>Tomador</h3>
-        <p>Andrés Camilo Hurtado Rojas</p>
+      <div class="insuranceDetaiContent_left--box">
+        <template if:true={insurance.holderName}>
+          <div class="insuranceDetaiContent_text">
+            <h3>Tomador</h3>
+            <p>{insurance.holderName}</p>
+          </div>
+        </template>
+        <template if:true={insurance.semesterCount}>
+          <div class="insuranceDetaiContent_text">
+            <h3>Semestres adquiridos</h3>
+            <p>{insurance.semesterCount} semestres</p>
+          </div>
+        </template>
+        <template if:true={insurance.validThru}>
+          <div class="insuranceDetaiContent_text">
+            <h3>Año de ingreso a la universidad</h3>
+            <lightning-formatted-date-time value={insurance.validThru} time-zone="UTC" year="numeric">
+            </lightning-formatted-date-time>
+          </div>
+        </template>
+        <template if:true={insurance.targetSalary}>
+          <div class="insuranceDetaiContent_text">
+            <h3>Salarios proyectados</h3>
+            <p>{insurance.targetSalary} SMMLV</p>
+          </div>
+        </template>
+        <template if:true={insurance.pactedRent}>
+          <div class="insuranceDetaiContent_text">
+            <h3>Valor de renta contratada</h3>
+            <p>${insurance.pactedRent} </p>
+          </div>
+        </template>
+        <template if:true={insurance.targetAge}>
+          <div class="insuranceDetaiContent_text">
+            <h3>Edad objetivo</h3>
+            <p>{insurance.targetAge} Años</p>
+          </div>
+        </template>
       </div>
-      <div class="insuranceDetaiContent_text">
-        <h3>Asegurado</h3>
-        <p>Andrés Camilo Hurtado Rojas</p>
-      </div>
-      <div class="insuranceDetaiContent_text">
-        <h3>Acudiente</h3>
-        <p>Fabian Hurtado Rojas</p>
-      </div>
-      <div class="insuranceDetaiContent_text">
-        <h3>Beneficiario/os</h3>
-        <p>Manuela Andrea Hurtado Bonilla</p>
-      </div>
-      <div class="insuranceDetaiContent_text">
-        <h3>Semestres adquiridos</h3>
-        <p>5 semestres</p>
-      </div>
-      <div class="insuranceDetaiContent_text">
-        <h3>Otra información</h3>
-        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking
-          at its layout.</p>
-      </div>
-      <div class="insuranceDetaiContent_text">
-        <h3>Estado</h3>
-        <p>Vigente/Cancelada/En Pago de Beneficios</p>
+      <div class="insuranceDetaiContent_left--box">
+        <template if:true={insurance.insuredName}>
+          <div class="insuranceDetaiContent_text">
+            <h3>Asegurado</h3>
+            <p>{insurance.insuredName}</p>
+          </div>
+        </template>
+        <template if:true={insurance.guardian}>
+          <div class="insuranceDetaiContent_text">
+            <h3>Acudiente</h3>
+            <p>{insurance.guardian.guardianName}</p>
+          </div>
+        </template>
+        <template if:true={insurance.beneficiaries}>
+          <div class="insuranceDetaiContent_text">
+            <h3>Beneficiario/os</h3>
+            <template for:each={insurance.beneficiaries} for:item="beneficiary">
+              <p key={beneficiary.beneficiaryId}> {beneficiary.beneficiaryName}</p>
+            </template>
+          </div>
+        </template>
+        <template if:true={insurance.startYear}>
+          <div class="insuranceDetaiContent_text">
+            <h3>Año de inicio de pensión</h3>
+            <lightning-formatted-date-time value={insurance.startYear} time-zone="UTC" year="numeric">
+            </lightning-formatted-date-time>
+          </div>
+        </template>
+        <template if:true={insurance.startYear}>
+          <div class="insuranceDetaiContent_text">
+            <h3>Año de inicio de renta</h3>
+            <lightning-formatted-date-time value={insurance.startYear} time-zone="UTC" year="numeric">
+            </lightning-formatted-date-time>
+          </div>
+        </template>
       </div>
     </div>
     <!-- * card del detalle del prducto -->
-   <c-clbins-insurance-details-content-card></c-clbins-insurance-details-content-card>
-  </article>
+    <c-clbins-insurance-details-content-card></c-clbins-insurance-details-content-card>
+  </section>
 </template>
