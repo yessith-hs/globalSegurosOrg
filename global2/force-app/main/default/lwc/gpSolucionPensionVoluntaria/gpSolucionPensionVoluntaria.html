@@ -1,0 +1,36 @@
+<template>
+    <div class="titulo-contenedor">
+        <h2 class="titulo">Soluciones recomendadas para ti</h2>
+        <a href={urlSolucionesRecomendadas} class="ver-todo">
+            <img src={botonVolverAtrasImg} alt="" class="boton-volver-atras"></a>
+    </div>
+    <div class="container">
+        <div class="titulo-container">
+            <p class="subtitulo">Pensión Voluntaria </p>
+            <span class="category-dot" style={getStyleRamoSeguro}></span>
+        </div>
+        <div class="solucion-detalle">
+            <div class="solucion-card">
+                <p class="titulo">Información del Producto</p>
+                <div class="img-container">
+                    <img src={getSolucionImagen} alt="imagen nota" class="imagen-solucion">
+                </div>
+                <p class="contenido">Protege el futuro de tu familia y todo lo que has construido, proyectando una pensión adicional que te garantice la libertad financiera que deseas.</p>
+                <p class="contenido">Invirtiendo hoy una pequeña parte de tus ingresos puedes acumular un capital que te asegure en el futuro un ingreso adicional que complemente el faltante que tendrás en tu pensión.</p>
+                <p class="contenido1">Asegúrate con nuestros beneficios:</p>
+                <ul class="lista">
+                    <li>Puedes acumular capital en la medida que desees, un aporte único, aportes periódicos o aportes adicionales (primas)</li>
+                    <li>Recibirás tu capital acumulado por medio de una pensión cierta expresada en salarios mínimos a partir de la edad que desees y por el tiempo que programes.</li>
+                    <li>Tienes un amparo de vida que te permitirá completar el capital necesario para el pago de la pensión programada para ti en caso de una incapacidad total y permanente o a tus beneficiarios en caso que llegues a morir.</li>
+                    <li>Tienes la opción de designar en vida a tus beneficiarios un capital (transferencia de patrimonio) que también les permita construir una pensión cierta.</li>
+                    <li>El capital que acumulas con tus aportes son considerados no constitutivos de renta, es decir que te representan un beneficio por estar libres de impuesto tributario.</li>
+                </ul>
+            </div>
+            <div class="contactanos-card">
+                <img src={getContactanosImagen} alt="imagen nota" class="contactanos-imagen">
+                <p class="contactanos">Puedes contactarte con tu asesor de confianza o nuevo.</p>
+                <img src={botonAgendaCitaImg} alt="agenda cita" class="boton-agenda-cita">
+            </div>
+        </div>
+    </div>
+</template>

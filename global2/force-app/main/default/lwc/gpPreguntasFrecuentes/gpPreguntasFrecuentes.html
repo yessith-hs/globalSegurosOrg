@@ -7,13 +7,19 @@
                     <h2 class="faq-titulo">Preguntas Frecuentes</h2>
                 </div>
                 <div class="top-navigator">
-                    <c-gp-carousel-navigator color="#ffffff" width="30.18px" maxitems="5"></c-gp-carousel-navigator>
+                    <c-gp-carousel-navigator color="#ffffff" width="30.18px"
+                        maxitems={numItems} active={activeItem}
+                        margin-right="9px" texto-evento="faqchange"
+                        onfaqchange={handleItemSelected}></c-gp-carousel-navigator>
                 </div> 
             </div>
-            <c-gp-preguntas-frecuentes-carrusel items={items}></c-gp-preguntas-frecuentes-carrusel>
+            <c-gp-preguntas-frecuentes-carrusel items={preguntas} active={activeItem} maxitems={numItems}
+                onchangepregunta={handleChangePregunta}
+                onvertodas={verTodas}>
+            </c-gp-preguntas-frecuentes-carrusel>
         </div>
-        <c-gp-preguntas-frecuentes-respuesta pregunta={currentItem.pregunta}
-            respuesta={currentItem.respuesta} imagen={currentItem.imagenRespuesta}>
+        <c-gp-preguntas-frecuentes-respuesta pregunta={currentPregunta.pregunta}
+            respuesta={currentPregunta.respuesta} imagen={currentPregunta.imagenRespuesta}>
         </c-gp-preguntas-frecuentes-respuesta>
     </div>
 </template>

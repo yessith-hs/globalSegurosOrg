@@ -1,17 +1,25 @@
 <template>
     <div class="container">
-        <div class="faq-carrousel">
+        <div class="faq-carrousel" data-id="carrousel-preguntas">
             <template for:each={items} for:item="item">
-                <div key={item.key} class="pregunta-container">
-                    <p class="gp-faq-pregunta">{item.pregunta} </p>
-                    <p class="texto-pregunta"><a href="" class="link-mas"><img src={botonMasInactivo} alt="Boton ampliar pregunta" class="boton-mas"></a></p>
+                <div key={item.key} class="pregunta-container" data-id={item.idFaq}>
+                    <p class="gp-faq-pregunta" data-id={item.idFaqTxt}>{item.pregunta}</p>
+                    <p class="texto-pregunta">
+                        <a href="#" class="link-mas">
+                        <img src={botonMasInactivo} alt="Boton ampliar pregunta"
+                            data-id={item.idFaqBtnMas} onclick={activatePregunta}
+                            class="boton-mas"></a></p>
                 </div>
             </template>
         </div>
         <div class="faq-navigator">
-            <a href="#" class="boton-todas"><img src={botonVerTodas} alt="Boton ver todas" class="boton-ver_todas"></a>
+            <a href="#" class="boton-todas"><img src={botonVerTodas} alt="Boton ver todas"
+                class="boton-ver_todas" onclick={verTodas}></a>
             <div class="bottom-navigator">
-                <c-gp-carousel-navigator color="#ffffff" width="30.18px" maxitems="5"></c-gp-carousel-navigator>
+                <c-gp-carousel-navigator color="#ffffff" width="30.18px"
+                    maxitems={maxitems} active={active}
+                    class="blue-navigator" margin-right="9px" texto-evento="faqchange"
+                    onfaqchange={handleItemSelected}></c-gp-carousel-navigator>
             </div>
         </div>
     </div>

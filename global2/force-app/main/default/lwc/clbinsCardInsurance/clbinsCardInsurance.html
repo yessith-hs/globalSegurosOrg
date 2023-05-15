@@ -6,7 +6,7 @@
         <span>{insurance.policyNumber}</span>
       </div>
       <span style={styleRamoSeguro}></span>
-      <h2>{insurance.insuranceLineDescription}</h2>
+      <h2>{insurance.insuranceType}</h2>
     </header>
     <main class="insuranceMain">
       <section class="insuranceBody">
@@ -18,7 +18,7 @@
         </div>
         <!-- * Fecha -->
         <div style={styleDate} class="insuranceDate">
-          <span>Vence:</span> <lightning-formatted-date-time value={insurance.dueDate} time-zone="UTC" year="numeric"
+          <span>Vence:</span> <lightning-formatted-date-time value={insurance.validThru} time-zone="UTC" year="numeric"
             month="numeric" day="numeric">
           </lightning-formatted-date-time>
         </div>
@@ -27,8 +27,12 @@
           <h3 style={progressBarTitle}>Tiempo restante</h3>
           <span>75%</span>
         </div>
-        <div class="slds-progress-bar slds-progress-bar_circular slds-progress-bar_large" aria-valuemin="0" aria-valuemax="100"
-          aria-valuenow="75" role="progressbar">
+        <div
+          class="slds-progress-bar slds-progress-bar_circular slds-progress-bar_large"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow="75"
+          role="progressbar">
           <span class="slds-progress-bar__value" style={progressBar}>
           </span>
         </div>

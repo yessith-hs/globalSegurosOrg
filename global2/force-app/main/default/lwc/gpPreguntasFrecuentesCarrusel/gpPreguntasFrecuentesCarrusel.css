@@ -10,7 +10,7 @@
 
 .faq-carrousel {
     display: flex;
-    overflow-x: auto;
+    overflow-x: hidden;
     overflow-y: hidden;
     padding: 0 0.6rem 0.6rem 0;
 }
@@ -30,6 +30,10 @@
     min-width: 13.5rem;
     padding: 0 13px 0 13px;
     margin: 0;
+}
+
+.active-pregunta {
+    color: #ffd300;
 }
 
 .boton-mas {

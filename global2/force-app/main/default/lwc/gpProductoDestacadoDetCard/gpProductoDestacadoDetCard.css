@@ -38,6 +38,10 @@
     margin: 0;
 }
 
+.active {
+    color: var(--global-portal-color-2d4a84);
+}
+
 .video-icono {
     height: 1.rem;
     width: 1.1rem;

@@ -1,0 +1,180 @@
+@import 'c/cssLibrary';
+
+.container {
+    margin: 0.6rem;
+    padding: 0.6rem;
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1.6rem;
+    border-bottom: 2px solid #0087dc;
+    margin-bottom: 1rem;
+}
+
+.titulo-contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 0.6rem 1.6rem 0.6rem;
+}
+
+.boton-volver-atras {
+    height: 2.875rem;
+    width: 11.375rem;
+    border-radius: 5px;
+}
+
+.titulo {
+    font-family: var(--global-portal-font-family-asap);
+    font-style: var(--global-portal-font-style-normal);
+    font-weight: var(--global-portal-font-weight-bold);
+    font-size: var(--global-portal-font-size-20);
+    line-height: var(--global-portal-line-spacing-23);
+    letter-spacing: var(--global-portal-character-spacing-0);
+    color: var(--global-portal-color-003696);
+    padding-bottom: 0rem;
+    margin: 0;
+}
+
+.subtitulo {
+    font-family: var(--global-portal-font-family-asap);
+    font-style: var(--global-portal-font-style-normal);
+    font-weight: var(--global-portal-font-weight-bold);
+    font-size: var(--global-portal-font-size-15);
+    line-height: var(--global-portal-line-spacing-17);
+    letter-spacing: var(--global-portal-character-spacing-0);
+    color: var(--global-portal-color-464646);
+    margin: 0;
+}
+
+.category-dot {
+    height: 12px;
+    width: 12px;
+    border: 1px solid;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.contenido {
+    font-family: var(--global-portal-font-family-asap);
+    font-style: var(--global-portal-font-style-normal);
+    font-weight: var(--global-portal-font-weight-regular);
+    font-size: var(--global-portal-font-size-13);
+    line-height: var(--global-portal-line-spacing-14);
+    letter-spacing: var(--global-portal-character-spacing-0);
+    color: var(--global-portal-color-464646);
+    margin: 0;
+    padding-bottom: 0.6rem;
+}
+
+.imagen-solucion {
+    padding: 1rem 0 1rem 0;
+    border-radius: 5px;
+}
+
+.contenido1 {
+    font-family: var(--global-portal-font-family-asap);
+    font-style: var(--global-portal-font-style-bold);
+    font-weight: var(--global-portal-font-weight-regular);
+    font-size: var(--global-portal-font-size-15);
+    line-height: var(--global-portal-line-spacing-17);
+    letter-spacing: var(--global-portal-character-spacing-0);
+    color: var(--global-portal-color-464646);
+    margin: 0;
+    padding-bottom: 0.6rem;
+}
+
+.solucion-card {
+    padding: 0.6rem;
+}
+
+.lista {
+    font-family: var(--global-portal-font-family-asap);
+    font-style: var(--global-portal-font-style-normal);
+    font-weight: var(--global-portal-font-weight-regular);
+    font-size: var(--global-portal-font-size-13);
+    line-height: var(--global-portal-line-spacing-14);
+    letter-spacing: var(--global-portal-character-spacing-0);
+    color: var(--global-portal-color-003696);
+    margin-left: 0.6rem;
+    padding-bottom: 0.6rem;
+    list-style: disc;
+    list-style-position: outside;
+}
+
+.contactanos-imagen {
+    border-radius: 5px;
+}
+
+.contactanos-card {
+    position: relative;
+    width: 16rem;
+}
+.contactanos {
+    font-family: var(--global-portal-font-family-asap);
+    font-style: var(--global-portal-font-style-normal);
+    font-weight: var(--global-portal-font-weight-regular);
+    font-size: var(--global-portal-font-size-20);
+    line-height: var(--global-portal-line-spacing-17);
+    letter-spacing: var(--global-portal-character-spacing-0);
+    color: var(--global-portal-color-ffffff);
+    margin: 0;
+    position: absolute;
+    top: 1.6rem;
+    left: 1rem;
+    border-radius: 5px;
+    width: 83%
+}
+
+.boton-agenda-cita {
+    position: absolute;
+    top: 10rem;
+    left: 1rem;
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        display: flex;
+    }
+
+    .solucion-detalle {
+        display: flex;
+        gap: 2rem
+    }
+
+    .solucion-card {
+        max-width: 29rem;
+    }
+
+    .boton-agenda-cita {
+        position: absolute;
+        top: 8.5rem;
+        left: 1rem;
+    }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+    .container {
+        display: flex;
+    }
+
+    .solucion-detalle {
+        display: flex;
+        gap: 4rem
+    }
+
+    .solucion-card {
+        max-width: 29rem;
+    }
+}

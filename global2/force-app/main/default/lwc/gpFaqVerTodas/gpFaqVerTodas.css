@@ -1,0 +1,15 @@
+@import 'c/cssLibrary';
+
+.titulo-contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 0.6rem 1.6rem 0.6rem;
+}
+
+.boton-volver-atras {
+    height: 2.875rem;
+    width: 11.375rem;
+    border-radius: 5px;
+}

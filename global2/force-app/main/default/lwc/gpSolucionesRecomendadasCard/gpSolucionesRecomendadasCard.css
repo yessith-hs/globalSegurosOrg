@@ -71,7 +71,7 @@
 /* TABLET */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .solucion-card {
-        width: 15.25rem;
+        width: 20.25rem;
     }
 }
 

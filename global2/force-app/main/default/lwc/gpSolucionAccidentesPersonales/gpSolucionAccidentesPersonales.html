@@ -1,0 +1,35 @@
+<template>
+    <div class="titulo-contenedor">
+        <h2 class="titulo">Soluciones recomendadas para ti</h2>
+        <a href={urlSolucionesRecomendadas} class="ver-todo">
+            <img src={botonVolverAtrasImg} alt="" class="boton-volver-atras"></a>
+    </div>
+    <div class="container">
+        <div class="titulo-container">
+            <p class="subtitulo">Accidentes Personales </p>
+            <span class="category-dot" style={getStyleRamoSeguro}></span>
+        </div>
+        <div class="solucion-detalle">
+            <div class="solucion-card">
+                <p class="titulo">Información del Producto</p>
+                <div class="img-container">
+                    <img src={getSolucionImagen} alt="imagen nota" class="imagen-solucion">
+                </div>
+                <p class="contenido">Los accidentes suceden en cualquier situación, desde pasear a tu perro, hasta en el camino al trabajo.</p>
+                <p class="contenido">Protege la estabilidad financiera de tu familia ante eventos accidentales que puedan causar la muerte o imprevisto en el que tú vida cambie totalmente. </p>
+                <p class="contenido">Adquiere tu seguro con cobertura opcional por homicidio.</p>
+                <p class="contenido1">Arma tu seguro ideal:</p>
+                <ul class="lista">
+                    <li>Ten un valor asegurado de máximo $500 millones.</li>
+                    <li>Primas mensuales a bajo costo.</li>
+                    <li>Contrata tu seguro con rentas por hospitalización e incapacidad temporal por accidente.</li>
+                </ul>
+            </div>
+            <div class="contactanos-card">
+                <img src={getContactanosImagen} alt="imagen nota" class="contactanos-imagen">
+                <p class="contactanos">Puedes contactarte con tu asesor de confianza o nuevo.</p>
+                <img src={botonAgendaCitaImg} alt="agenda cita" class="boton-agenda-cita">
+            </div>
+        </div>
+    </div>
+</template>

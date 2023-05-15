@@ -4,18 +4,24 @@
             <div class="titulo-container">
                 <div class="titulo-detalle">{detailTitulo}</div>
                 <div class="top-navigator">
-                    <c-gp-carousel-navigator color="#003696" width="16px" maxitems="7"></c-gp-carousel-navigator>
+                    <c-gp-carousel-navigator color="#003696" width="16px"
+                        maxitems={maxItems} active={active}
+                        margin-right="9px" texto-evento="detchange"
+                        ondetchange={handleItemSelected}></c-gp-carousel-navigator>
                 </div>
             </div>
             <div class="contenido-detalle">{detailDescrip}</div>
             <div class="card-container">
                 <template for:each={items} for:item="item">
-                    <c-gp-producto-destacado-det-card key={item.key}
-                        contenido-card={item}></c-gp-producto-destacado-det-card>
+                    <c-gp-producto-destacado-det-card key={item.key} data-id={item.videoId}
+                        contenido-card={item} active={active}></c-gp-producto-destacado-det-card>
                 </template>
             </div>
             <div class="bottom-navigator">
-                <c-gp-carousel-navigator color="#003696" width="16px" maxitems="7" >
+                <c-gp-carousel-navigator color="#003696" width="16px"
+                    maxitems={maxItems} active={active}
+                    margin-right="9px" texto-evento="detchange"
+                    ondetchange={handleItemSelected}>
                 </c-gp-carousel-navigator>
             </div>
         </div>

@@ -1,0 +1,48 @@
+<template>
+    <div class="titulo-contenedor">
+        <h2 class="titulo">Soluciones recomendadas para ti</h2>
+        <a href={urlSolucionesRecomendadas} class="ver-todo">
+            <img src={botonVolverAtrasImg} alt="" class="boton-volver-atras"></a>
+    </div>
+    <div class="container">
+        <div class="titulo-container">
+            <p class="subtitulo">Seguro Vida </p>
+            <span class="category-dot" style={getStyleRamoSeguro}></span>
+        </div>
+        <div class="solucion-detalle">
+            <div class="solucion-card">
+                <p class="titulo">Información del Producto</p>
+                <div class="img-container">
+                    <img src={getSolucionImagen} alt="imagen nota" class="imagen-solucion">
+                </div>
+
+                <p class="subtitulo">Vida Individual - Protección Garantizada:</p>
+                <p class="contenido">La vida está llena de momentos que nos sacan de nuestra zona de confort.</p>
+                <p class="contenido">Por eso es importante garantizar la estabilidad financiera para tu familia ante sucesos inesperados: accidentes, enfermedades, incapacidades o hasta el fallecimiento.</p>
+                <p class="contenido1">Protégete con nuestro seguro y adquiere estos beneficios:</p>
+                <ul class="lista">
+                    <li>Un máximo valor asegurado de hasta $4.000 millones</li>
+                    <li>Posibilidad de recibir un valor adicional por motivo de incapacidad total y permanente.</li>
+                    <li>Por medio del ahorro atado a nuestro portafolio de inversión, construir un capital para cumplir tus objetivos.</li>
+                    <li>El valor asegurado aumentará anualmente de acuerdo con el IPC.</li>
+                </ul>
+
+                <p class="subtitulo">Vida Individual - Educación Protegida:</p>
+                <p class="contenido">Es cierto que no tenemos la vida comprada y que todos los días nos sorprende con algo nuevo. Por eso diseñamos la solución que garantiza la escolaridad de tus hijos ante tu fallecimiento o la incapacidad total y permanente.</p>
+                <p class="contenido">Porque no es lo mismo darles una buena educación a tus hijos, que asegurar en caso de llegar a faltar el pago completo de su educación.</p>
+                <p class="contenido1">Asegúrate con todos los beneficios:</p>
+                <ul class="lista">
+                    <li>Elegir como valor de indemnización mensual entre $500.000 y $4.100.000 según tu capacidad financiera.</li>
+                    <li>Asegurar a los dos padres con un valor independiente y obteniendo un descuento del 11% en el valor del seguro (prima) de menor costo.</li>
+                    <li>Elegir la duración del seguro hasta terminar la colegiatura o hasta cinco años más para cubrir sus estudios profesionales.</li>
+                    <li>El valor elegido aumentará según el IPC anual.</li>
+                </ul>
+            </div>
+            <div class="contactanos-card">
+                <img src={getContactanosImagen} alt="imagen nota" class="contactanos-imagen">
+                <p class="contactanos">Puedes contactarte con tu asesor de confianza o uno nuevo.</p>
+                <img src={botonAgendaCitaImg} alt="agenda cita" class="boton-agenda-cita">
+            </div>
+        </div>
+    </div>
+</template>

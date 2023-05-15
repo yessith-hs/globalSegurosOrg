@@ -49,10 +49,11 @@
 .prensa-card {
     background-color: var(--global-portal-color-ffffff);
     border-radius: 5px;
-    min-width: 16.25rem;
+    min-width: 20.25rem;
     display: flex;
     flex-direction: column;
     align-self: normal;
+    height: 34.4rem;
 }
 
 .titulo {
@@ -73,6 +74,7 @@
     .prensa-card {
         display: flex;
         align-self: normal;
+        height: 34.4rem;
     }
 
 }
@@ -82,6 +84,7 @@
     .prensa-card {
         display: flex;
         flex-direction: row;
+        height: auto;
     }
 
     .nota-prensa {

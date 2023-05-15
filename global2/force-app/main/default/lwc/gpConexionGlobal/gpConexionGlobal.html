@@ -2,18 +2,25 @@
     <div class="gp-conexion-global-container">
         <div class="titulo-container">
             <h2 class="titulo">Soy Global</h2>
-            <a href={urlSoyGlobal} class="ver-todo"><img src={botonVerTodoImg} alt="" class="boton-ver-todo"></a>
+            <a href={urlConexionGlobal} class="ver-todo"><img src={botonVerTodoImg} alt="" class="boton-ver-todo"></a>
             <div class="top-navigator">
-                <c-gp-carousel-navigator color="#003696" width="36px" maxitems="4"></c-gp-carousel-navigator>
+                <c-gp-carousel-navigator color="#003696" width="36px"
+                    maxitems={maxItems} active={active}
+                    margin-right="9px" texto-evento="globalcardchange"
+                    onglobalcardchange={handleItemSelected}></c-gp-carousel-navigator>
             </div>
         </div>
         <div class="gp-inicio-conexion-global">
             <template for:each={items} for:item="item">
-                <c-gp-conexion-global-card key={item.key} conexion-detail={item}></c-gp-conexion-global-card>
+                <c-gp-conexion-global-card key={item.key} conexion-detail={item}
+                    data-id={item.notaId}></c-gp-conexion-global-card>
             </template>
         </div>
         <div class="bottom-navigator">
-            <c-gp-carousel-navigator color="#003696" width="36px" maxitems="4"></c-gp-carousel-navigator>
+            <c-gp-carousel-navigator color="#003696" width="36px"
+                maxitems={maxItems} active={active}
+                margin-right="9px" texto-evento="globalcardchange"
+                onglobalcardchange={handleItemSelected}></c-gp-carousel-navigator>
         </div>
     </div>
 </template>

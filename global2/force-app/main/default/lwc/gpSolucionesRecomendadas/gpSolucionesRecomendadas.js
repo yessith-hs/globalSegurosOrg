@@ -1,7 +1,6 @@
 import { LightningElement, wire } from 'lwc';
 
 import globalSegurosPortal from "@salesforce/resourceUrl/global_seguros_portal";
-// import { getDataSolucionesRecomendadas } from "c/gpInicioDataConfig";
 import BASE_PATH from "@salesforce/community/basePath";
 import getContentList from "@salesforce/apex/ManagedContentController.getContentList";
 
@@ -11,13 +10,6 @@ export default class SolucionesRecomendadas extends LightningElement {
     active
     items;
     currentItem;
-    // constructor() {
-    //   super();
-    //   this.active = 1;
-    //   this.solucionesRecomendadas = getDataSolucionesRecomendadas();
-    //   this.items = this.solucionesRecomendadas.items;
-    //   this.currentItem = this.items[0];
-    // }
 
   @wire(getContentList, {
     page: 0,

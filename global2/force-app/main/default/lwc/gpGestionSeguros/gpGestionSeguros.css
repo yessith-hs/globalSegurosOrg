@@ -100,6 +100,10 @@
         flex-direction: row;
     }
 
+    .imagen-gestion-seguros {
+        height: 100%;
+    }
+
     .botonera {
         width: calc(100% - 7.62rem);
         align-items: center;

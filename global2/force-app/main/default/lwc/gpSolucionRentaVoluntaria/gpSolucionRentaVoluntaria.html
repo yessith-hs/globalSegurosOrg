@@ -1,0 +1,37 @@
+<template>
+    <div class="titulo-contenedor">
+        <h2 class="titulo">Soluciones recomendadas para ti</h2>
+        <a href={urlSolucionesRecomendadas} class="ver-todo">
+            <img src={botonVolverAtrasImg} alt="" class="boton-volver-atras"></a>
+    </div>
+    <div class="container">
+        <div class="titulo-container">
+            <p class="subtitulo">Renta Voluntaria</p>
+            <span class="category-dot" style={getStyleRamoSeguro}></span>
+        </div>
+        <div class="solucion-detalle">
+            <div class="solucion-card">
+                <p class="titulo">Información del Producto</p>
+                <div class="img-container">
+                    <img src={getSolucionImagen} alt="imagen nota" class="imagen-solucion">
+                </div>
+                <p class="contenido">Todos tenemos proyectos que nos gustaría realizar, pero pocos pensamos en haber construido un capital en el pasado para hacerlos realidad.</p>
+                <p class="contenido">Por eso te ofrecemos la solución ideal para que empieces a acumular desde hoy el capital que requieres para materializarlos en el futuro.</p>
+                <p class="contenido1">Nuestro seguro cuenta con beneficios para ayudarte a cumplir tu meta:</p>
+                <ul class="lista">
+                    <li>Eliges cómodamente el valor y fecha para pago de tus aportes periódicos o la posibilidad de hacer un solo aporte (prima).</li>
+                    <li>Puedes realizar abonos adicionales a tus aportes periódicos o aporte único, para aumentar el valor de renta pactado.</li>
+                    <li>Recibirás tu capital acumulado por medio de un ingreso (renta) donde puedes escoger la fecha de inicio, el valor y durante cuánto tiempo deseas recibirla así como la periodicidad de la misma.</li>
+                    <li>El valor de la renta se ajusta anualmente en cada aniversario desde la emisión de la póliza con la variación del IPC de los últimos 12 meses.</li>
+                    <li>Posibilidad de modificar los beneficiarios, tiempo y monto de la renta.</li>
+                    <li>Si eliges realizar pago de aportes periódicos cuentas con un amparo de vida que cubrirá el valor faltante para completar el capital necesario para el pago de la renta programada para ti en caso de una incapacidad total y permanente o a tus beneficiarios en caso que llegues a morir.</li>
+                </ul>
+            </div>
+            <div class="contactanos-card">
+                <img src={getContactanosImagen} alt="imagen nota" class="contactanos-imagen">
+                <p class="contactanos">Puedes contactarte con tu asesor de confianza o nuevo.</p>
+                <img src={botonAgendaCitaImg} alt="agenda cita" class="boton-agenda-cita">
+            </div>
+        </div>
+    </div>
+</template>
