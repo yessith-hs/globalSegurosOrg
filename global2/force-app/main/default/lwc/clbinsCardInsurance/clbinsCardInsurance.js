@@ -41,8 +41,7 @@ export default class ClbinsCardInsurance extends NavigationMixin(LightningElemen
   get styleRamoSeguroBorder() {
     return `
     box-shadow:  0 2px 0 0 ${this.insuranceColor};
-    margin-bottom: 0.7rem;
-    padding: 1rem 1rem 0;
+    padding: 1rem 0.5rem 0;
     `
   }
 
@@ -56,7 +55,7 @@ export default class ClbinsCardInsurance extends NavigationMixin(LightningElemen
   get progressBar() {
     return `
     background-color:  ${this.insuranceColor};
-    width: ${this.timeLeft};
+    width: ${this.insurance.timeLeft}%;
     `
   }
 

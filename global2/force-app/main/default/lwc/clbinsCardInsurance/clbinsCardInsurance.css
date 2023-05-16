@@ -1,16 +1,25 @@
 .insuranceCard {
+  height: 300px;
+  display: grid;
+  align-content: space-between;
   background-color: #ffffff;
   font-weight: 400;
   border-radius: 0.3rem;
-  display: grid;
-  height: 300px;
 }
 
 .insuranceHead h2 {
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   margin-bottom: 1rem;
   text-transform: lowercase;
+}
+
+.insuranceHead h2::first-letter {
+  text-transform: uppercase;
+}
+
+.insuranceHead {
+  height: 100px;
 }
 
 .insuranceHead,
@@ -59,7 +68,7 @@
   text-align: end;
 }
 
-.insuranceProgressBar{
+.insuranceProgressBar {
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -51,6 +51,7 @@ export default class ClbinsInsuranceDetails extends LightningElement {
         await loadScript(this, DataUserModule)
         this.sigleInsurance = window.DataUserModule.getSinglePolicy(message.data, this.insuranceId)
 
+        // * Set color by insurance type
         if (this.sigleInsurance) {
           const color = this.sigleInsurance.insuranceLineDescription.toLowerCase()
 
@@ -61,7 +62,7 @@ export default class ClbinsInsuranceDetails extends LightningElement {
       }
     } catch (error) {
       console.log(
-        '🚀 ~ file: clbinsInsuranceManagement.js:42 ~ ClbinsInsuranceManagement ~ handleMessage ~ error:',
+        '🚀 ~ file: clbinsInsuranceManagement.js:64 ~ ClbinsInsuranceManagement ~ handleMessage ~ error:',
         error
       )
     }
