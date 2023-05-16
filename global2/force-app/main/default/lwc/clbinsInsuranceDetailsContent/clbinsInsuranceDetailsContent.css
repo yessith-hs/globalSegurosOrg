@@ -16,8 +16,16 @@
 }
 
 .insuranceDetaiContent_left--title,
-.insuranceDetaiContent_text h3 {
+.insuranceDetaiContent_text h3,
+.insuranceDetaiContent_text a {
   color: #003696;
+  font-size: 1rem;
+}
+
+.insuranceDetaiContent_text a {
+  text-transform: capitalize;
+  font-size: 0.8rem;
+  font-weight: 700;
 }
 
 .insuranceDetaiContent_left--title {
@@ -28,6 +36,12 @@
 
 .insuranceDetaiContent_text p {
   max-width: 300px;
+  text-transform: lowercase;
+  font-size: 1rem;
+}
+
+.insuranceDetaiContent_text p::first-letter {
+  text-transform: uppercase;
 }
 
 @media only screen and (min-width: 600px) {

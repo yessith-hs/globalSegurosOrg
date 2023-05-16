@@ -1,50 +1,57 @@
-.insuranceDetaiContent_right {
-  padding: 0.5rem;
-  background-color: #f2f2f2;
+.detailCard {
+  background-color: #fff;
   border-radius: 0.3rem;
   max-width: 600px;
   display: grid;
+  border: 1px solid #707070;
 }
 
-.insuranceDetaiContent_right h3 {
-  font-weight: 700;
-  font-size: 1rem;
-}
-
-.insuranceDetaiContent_date {
+.detailCard_head {
+  background-color: #003696;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.5);
+  height: 30px;
   display: flex;
+  place-items: center;
   place-content: center;
-  box-shadow: 0 2px 0 0 #70707080;
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
 }
 
-.insuranceDetaiContent_date div:first-child {
-  box-shadow: 2px 0 0 0 #70707080;
-  padding-right: 0.5rem;
-}
-.insuranceDetaiContent_date div:nth-child(2) {
-  padding-left: 0.5rem;
-}
-
-.insuranceDetaiContent_date h4,
-.insuranceDetaiContent_year h4 {
-  color: #003696;
-}
-
-.insuranceDetaiContent_date h4 {
-  max-width: 150px;
-}
-
-.insuranceDetaiContent_date,
-.insuranceDetaiContent_right h3 {
+.detailCard_head h3 {
   text-align: center;
-}
-
-.insuranceDetaiContent_date span,
-.insuranceDetaiContent_year span {
-  color: #707070;
+  color: #fff;
   font-weight: 700;
+  font-size: 0.7rem;
 }
 
+.detailCard_main {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.detailCard_vigencia {
+  display: flex;
+  place-items: center;
+  gap: 1rem;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.detailCard_date {
+  display: grid;
+  gap: 0.5rem;
+  width: 200px;
+}
+
+.detailCard_date h3 {
+  font-size: 0.8rem;
+  color: #707070;
+}
+
+.detailCard_date span {
+  border: 1px solid #bdbdbd;
+  padding: 0.3rem;
+  text-align: center;
+  border-radius: 0.3rem;
+}

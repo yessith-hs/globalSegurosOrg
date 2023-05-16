@@ -51,15 +51,15 @@
         </template>
         <template if:true={insurance.guardian}>
           <div class="insuranceDetaiContent_text">
-            <h3>Acudiente</h3>
-            <p>{insurance.guardian.guardianName}</p>
+            <h3>Acudiente </h3>
+            <p>{insurance.guardian.guardianName} <a href={insurance.guardian.updateLink} target="_blank" rel="noopener noreferrer">| Editar datos de contacto</a></p>
           </div>
         </template>
         <template if:true={insurance.beneficiaries}>
           <div class="insuranceDetaiContent_text">
             <h3>Beneficiario/os</h3>
             <template for:each={insurance.beneficiaries} for:item="beneficiary">
-              <p key={beneficiary.beneficiaryId}> {beneficiary.beneficiaryName}</p>
+              <p key={beneficiary.beneficiaryId}> {beneficiary.beneficiaryName} <a href={beneficiary.updateLink} target="_blank" rel="noopener noreferrer">| Editar datos de contacto</a></p>
             </template>
           </div>
         </template>
@@ -80,6 +80,6 @@
       </div>
     </div>
     <!-- * card del detalle del prducto -->
-    <c-clbins-insurance-details-content-card></c-clbins-insurance-details-content-card>
+    <c-clbins-insurance-details-content-card insurance={insurance}></c-clbins-insurance-details-content-card>
   </section>
 </template>

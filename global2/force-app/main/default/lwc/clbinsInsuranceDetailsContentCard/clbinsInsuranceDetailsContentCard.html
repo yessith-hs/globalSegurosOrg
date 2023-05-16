@@ -1,19 +1,28 @@
 <template>
-    <div class="insuranceDetaiContent_right">
-      <h3>Global Universidad Garantizada Platino</h3>
-      <div class="insuranceDetaiContent_date">
-        <div>
-          <h4>Fecha inicio vigencia del seguro de vida</h4>
-          <span>31/05/2023</span>
-        </div>
-        <div>
-          <h4>Fecha fin de vigencia del seguro de vida</h4>
-          <span>31/05/2023</span>
-        </div>
-      </div>
-      <div class="insuranceDetaiContent_year">
-        <h4>Año de ingreso a la Universidad</h4>
-        <span>2035</span>
-      </div>
-    </div>
+  <article class="detailCard">
+    <header class="detailCard_head">
+      <h3>{insurance.productDescription}</h3>
+    </header>
+    <main class="detailCard_main">
+      <section class="detailCard_vigencia">
+       <div class="detailCard_date">
+        <h3>Inicio de vigencia</h3>
+         <span>
+          <lightning-formatted-date-time value={insurance.validFrom} time-zone="UTC" day="numeric" month="long" year="numeric">
+          </lightning-formatted-date-time>
+         </span>
+       </div>
+       <div class="detailCard_date">
+        <h3>Fecha de maduración</h3>
+         <span>
+          <lightning-formatted-date-time value={insurance.validThru} time-zone="UTC"  day="numeric" month="long" year="numeric" >
+          </lightning-formatted-date-time>
+         </span>
+       </div>
+      </section>
+      <section class="detailCard_coberturas">
+        <h3>coberturas y valor asegurado</h3>
+      </section>
+    </main>
+  </article>
 </template>
