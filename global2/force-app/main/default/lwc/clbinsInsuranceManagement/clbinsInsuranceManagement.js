@@ -1,9 +1,8 @@
 import { LightningElement, track, wire } from 'lwc'
-
+import { loadScript } from 'lightning/platformResourceLoader'
+import DataUserModule from '@salesforce/resourceUrl/DataUserModule'
 import { subscribe, unsubscribe, APPLICATION_SCOPE, MessageContext } from 'lightning/messageService'
-
 import INSURANCE_LIST_CHANNEL from '@salesforce/messageChannel/insurance__c'
-
 import { firstAdditionalCard, secondAdditionalCard } from 'c/clbinsUtils'
 
 export default class ClbinsInsuranceManagement extends LightningElement {
@@ -33,10 +32,19 @@ export default class ClbinsInsuranceManagement extends LightningElement {
     this.subscription = null
   }
 
-  handleMessage(message) {
-    if (message) {
-      this.insurances = message.data
-      this.loading = false
+  async handleMessage(message) {
+    try {
+      if (message) {
+        await loadScript(this, DataUserModule)
+        this.insurances = window.DataUserModule.getPolicies(message.data)
+
+        this.loading = false
+      }
+    } catch (error) {
+      console.log(
+        '🚀 ~ file: clbinsInsuranceManagement.js:42 ~ ClbinsInsuranceManagement ~ handleMessage ~ error:',
+        error
+      )
     }
   }
 

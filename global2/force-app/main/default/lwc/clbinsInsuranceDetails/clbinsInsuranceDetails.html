@@ -3,36 +3,43 @@
     <h1>Gestiona tus seguros</h1>
     <a href={gestionSeguros}>Volver a todos mis seguros</a>
   </section>
-  <section class="insuranceDetailMain">
-    <!-- insurance Detail Header -->
-    <div class="insuranceDetailHeader">
-      <div class="insuranceDetailHeader_title">
-        <h3>Número de Póliza</h3>
-        <span>12345678</span>
-        <h2>Seguro Educativo</h2>
-      </div>
-      <span class="insuranceDetailBullet"></span>
-      <!-- <a href="" class="insuranceDetailHeader_btn">Ver pagos realizados</a> -->
-    </div>
-    <!-- insurance-details-content -->
-    <div class="insuranceDetailContent">
-      <c-clbins-insurance-details-content></c-clbins-insurance-details-content>
-      <c-clbins-insurance-details-payment></c-clbins-insurance-details-payment>
 
-    </div>
-    <!-- insurance documents -->
-   <!-- <div class="insuranceDetailDocumentsBox">
-      <h2>Documentos o Certificados</h2>
-     <div class="insuranceDetailDocuments">
-       <template for:each={documents} for:item="document">
-         <article class="insuranceDetailDocuments_card" key={document.id}>
-           <h3>{document.documentType}</h3>
-           <lightning-button variant="brand" label="Descargar" title="Descargar documento" icon-name="utility:download"
-             class="dowmload">
-           </lightning-button>
-         </article>
-       </template>
-     </div>
-   </div> -->
-  </section>
+  <template if:true={loading}>
+    <span>Cargando....</span>
+  </template>
+
+  <template if:false={loading}>
+    <section class="insuranceDetailMain">
+      <!-- insurance Detail Header -->
+      <div style={styleRamoSeguroBorder} class="insuranceDetailHeader">
+        <div class="insuranceDetailHeader_title">
+          <h3>Número de Póliza</h3>
+          <span>{sigleInsurance.policyNumber}</span>
+          <h2>{sigleInsurance.insuranceType}</h2>
+        </div>
+        <span style={styleRamoSeguro}></span>
+
+      </div>
+      <!-- insurance-details-content -->
+      <div class="insuranceDetailContent">
+        <c-clbins-insurance-details-content insurance={sigleInsurance}></c-clbins-insurance-details-content>
+        <c-clbins-insurance-details-payment></c-clbins-insurance-details-payment>
+
+      </div>
+      <!-- insurance documents -->
+      <!-- <div class="insuranceDetailDocumentsBox">
+        <h2>Documentos o Certificados</h2>
+       <div class="insuranceDetailDocuments">
+         <template for:each={documents} for:item="document">
+           <article class="insuranceDetailDocuments_card" key={document.id}>
+             <h3>{document.documentType}</h3>
+             <lightning-button variant="brand" label="Descargar" title="Descargar documento" icon-name="utility:download"
+               class="dowmload">
+             </lightning-button>
+           </article>
+         </template>
+       </div>
+     </div> -->
+    </section>
+  </template>
 </template>

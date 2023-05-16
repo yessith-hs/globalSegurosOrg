@@ -16,7 +16,8 @@ export default class ClbInsLmsPublisherWebComponent extends LightningElement {
     if (data) {
       this.loading = false
       const response = JSON.parse(data)
-      const insurance = response['responseData'].responseData.policys
+      // const insurance = response['responseData'].responseData.policys
+      const insurance = response['responseData'].responseData
 
       // * Publish LMS
       this.publishEvent = setTimeout(() => {

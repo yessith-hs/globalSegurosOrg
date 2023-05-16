@@ -13,8 +13,7 @@ export default class ClbinsBlogLayout extends LightningElement {
   avatarImg = URL_AVATAR
   defaultTopic = 'orientacion_educativa'
   haveResults
-  @track
-  blogId
+  @track blogId
   itemTopic
   topicUrl
   _topic

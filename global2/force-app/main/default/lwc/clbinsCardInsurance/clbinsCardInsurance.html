@@ -25,13 +25,13 @@
         <!-- * Progress Bar -->
         <div class="insuranceProgressBar" style={progressBarTitle}>
           <h3 style={progressBarTitle}>Tiempo restante</h3>
-          <span>75%</span>
+          <span>{insurance.timeLeft}%</span>
         </div>
         <div
           class="slds-progress-bar slds-progress-bar_circular slds-progress-bar_large"
           aria-valuemin="0"
           aria-valuemax="100"
-          aria-valuenow="75"
+          aria-valuenow={insurance.timeLeft}
           role="progressbar">
           <span class="slds-progress-bar__value" style={progressBar}>
           </span>

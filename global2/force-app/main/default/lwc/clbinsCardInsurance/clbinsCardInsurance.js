@@ -56,7 +56,7 @@ export default class ClbinsCardInsurance extends NavigationMixin(LightningElemen
   get progressBar() {
     return `
     background-color:  ${this.insuranceColor};
-    width: 75%;
+    width: ${this.timeLeft};
     `
   }
 
