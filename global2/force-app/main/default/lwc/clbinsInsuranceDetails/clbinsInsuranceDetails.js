@@ -12,6 +12,7 @@ export default class ClbinsInsuranceDetails extends LightningElement {
   gestionSeguros = `${BASE_PATH}/gestiona-tus-seguros`
   @track insuranceId
   @track sigleInsurance = {}
+  @track productConditions=[]
   loading = true
   subscription = null
   defaultColor = 'rgb(80, 80, 80)'
@@ -50,6 +51,10 @@ export default class ClbinsInsuranceDetails extends LightningElement {
       if (message) {
         await loadScript(this, DataUserModule)
         this.sigleInsurance = window.DataUserModule.getSinglePolicy(message.data, this.insuranceId)
+        this.productConditions = window.DataUserModule.getProductConditions(
+          message.data,
+          this.insuranceId
+        )
 
         // * Set color by insurance type
         if (this.sigleInsurance) {
@@ -62,7 +67,7 @@ export default class ClbinsInsuranceDetails extends LightningElement {
       }
     } catch (error) {
       console.log(
-        '🚀 ~ file: clbinsInsuranceManagement.js:64 ~ ClbinsInsuranceManagement ~ handleMessage ~ error:',
+        '🚀 ~ file: ClbinsInsuranceDetails.js:70 ~ ClbinsInsuranceDetails ~ handleMessage ~ error:',
         error
       )
     }

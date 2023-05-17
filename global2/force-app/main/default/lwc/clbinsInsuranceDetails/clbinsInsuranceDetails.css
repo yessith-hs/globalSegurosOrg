@@ -44,18 +44,12 @@
   font-size: 0.8331rem;
 }
 
-.insuranceDetailHeader_title h2{
+.insuranceDetailHeader_title h2 {
   text-transform: lowercase;
 }
 
-.insuranceDetailHeader_title h2:first-letter{
+.insuranceDetailHeader_title h2:first-letter {
   text-transform: capitalize;
-}
-
-.insuranceDetailHeader_title h2,
-.insuranceDetailDocumentsBox h2 {
-  font-weight: 700;
-  font-size: 1.4rem;
 }
 
 .insuranceDetailHeader_btn {
@@ -75,20 +69,37 @@
   padding-bottom: 1rem;
 }
 
-/** insurance documents */
-.insuranceDetailDocumentsBox {
+/** insurance Product description */
+.insuranceProductDescription {
   box-shadow: 0 -2px 0 0 #003696;
   margin-top: 2rem;
   padding: 0 0.5rem 1rem;
 }
 
-.insuranceDetailDocumentsBox h2 {
+.insuranceProductDescriptionBox,
+.insuranceProductDescription_card {
+  display: grid;
+  gap: 1rem;
+}
+
+.insuranceProductDescription h2 {
+  font-weight: 700;
+  font-size: 1.6rem;
   padding: 1rem 0;
 }
 
-button.slds-button.slds-button_brand {
-  color: #fff;
+.insuranceProductDescription_card {
+  line-height: 1.5;
+  font-size: 0.8rem;
 }
+
+.insuranceProductDescription h2,
+.insuranceProductDescription_card h3 {
+  color: #003696;
+}
+/* button.slds-button.slds-button_brand {
+  color: #fff;
+} */
 
 @media only screen and (min-width: 600px) {
   .insuranceDetailHead {
@@ -116,5 +127,11 @@ button.slds-button.slds-button_brand {
     display: grid;
     gap: 2rem;
     grid-template-columns: 2fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .insuranceProductDescriptionBox {
+    width: 75%;
   }
 }

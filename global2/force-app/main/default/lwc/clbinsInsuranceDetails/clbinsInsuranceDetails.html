@@ -27,19 +27,17 @@
 
       </div>
       <!-- * insurance Product description -->
-      <!-- <div class="insuranceDetailDocumentsBox">
-        <h2>Documentos o Certificados</h2>
-       <div class="insuranceDetailDocuments">
-         <template for:each={documents} for:item="document">
-           <article class="insuranceDetailDocuments_card" key={document.id}>
-             <h3>{document.documentType}</h3>
-             <lightning-button variant="brand" label="Descargar" title="Descargar documento" icon-name="utility:download"
-               class="dowmload">
-             </lightning-button>
-           </article>
-         </template>
-       </div>
-     </div> -->
+      <div class="insuranceProductDescription">
+        <h2>Condiciones del producto</h2>
+        <div class="insuranceProductDescriptionBox">
+          <template for:each={productConditions} for:item="condition">
+            <article class="insuranceProductDescription_card" key={condition.id}>
+              <h3>{condition.title}</h3>
+              <lightning-formatted-rich-text value={condition.description}></lightning-formatted-rich-text>
+            </article>
+          </template>
+        </div>
+      </div>
     </section>
   </template>
 </template>
