@@ -1,20 +1,20 @@
 .detailCard {
   background-color: #fff;
   border-radius: 0.3rem;
-  max-width: 600px;
+  max-width: 550px;
   display: grid;
-  border: 1px solid #707070;
+  box-shadow: 0px 5px 20px 0px rgba(100, 100, 111, 0.2);
 }
 
 .detailCard_head {
   background-color: #003696;
   border-top-left-radius: 0.3rem;
   border-top-right-radius: 0.3rem;
-  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.5);
   height: 30px;
   display: flex;
   place-items: center;
   place-content: center;
+  box-shadow: 0px 2px 10px 0px rgb(0 0 0 / 30%);
 }
 
 .detailCard_head h3 {
@@ -26,11 +26,11 @@
 
 .detailCard_main {
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
   padding: 1rem;
 }
 
-.detailCard_vigencia {
+.detailCard_wrapper {
   display: flex;
   place-items: center;
   gap: 1rem;
@@ -38,20 +38,51 @@
   justify-content: space-between;
 }
 
-.detailCard_date {
+.detailCard_content {
   display: grid;
   gap: 0.5rem;
   width: 200px;
 }
 
-.detailCard_date h3 {
+.detailCard_content h3 {
   font-size: 0.8rem;
   color: #707070;
 }
 
-.detailCard_date span {
+.detailCard_content span {
   border: 1px solid #bdbdbd;
-  padding: 0.3rem;
-  text-align: center;
+  padding: 0.5rem;
   border-radius: 0.3rem;
+  text-transform: lowercase;
+}
+
+.detailCard_coberturas {
+  display: grid;
+  gap: 1rem;
+}
+
+.detailCard_coberturas,
+.detailCard_CoberturasBtn {
+  position: relative;
+}
+
+.detailCard_CoberturasBtn {
+  height: 28px;
+  width: 300px;
+  color: #003696;
+  background-color: #ffd300;
+  border-radius: 0.3rem;
+  justify-self: center;
+  border: none;
+  outline: none;
+}
+
+.showcoverage {
+  display: none;
+  transition: 0.5s;
+}
+
+.active {
+  display: grid;
+  gap: 1rem;
 }

@@ -4,24 +4,48 @@
       <h3>{insurance.productDescription}</h3>
     </header>
     <main class="detailCard_main">
-      <section class="detailCard_vigencia">
-       <div class="detailCard_date">
-        <h3>Inicio de vigencia</h3>
-         <span>
-          <lightning-formatted-date-time value={insurance.validFrom} time-zone="UTC" day="numeric" month="long" year="numeric">
-          </lightning-formatted-date-time>
-         </span>
-       </div>
-       <div class="detailCard_date">
-        <h3>Fecha de maduración</h3>
-         <span>
-          <lightning-formatted-date-time value={insurance.validThru} time-zone="UTC"  day="numeric" month="long" year="numeric" >
-          </lightning-formatted-date-time>
-         </span>
-       </div>
+      <section class="detailCard_wrapper">
+        <div class="detailCard_content">
+          <h3>Inicio de vigencia</h3>
+          <span>
+            <lightning-formatted-date-time value={insurance.validFrom} time-zone="UTC" day="numeric" month="long"
+              year="numeric">
+            </lightning-formatted-date-time>
+          </span>
+        </div>
+        <div class="detailCard_content">
+          <h3>Fecha de maduración</h3>
+          <span>
+            <lightning-formatted-date-time value={insurance.validThru} time-zone="UTC" day="numeric" month="long"
+              year="numeric">
+            </lightning-formatted-date-time>
+          </span>
+        </div>
       </section>
       <section class="detailCard_coberturas">
-        <h3>coberturas y valor asegurado</h3>
+        <template if:true={hasCoverages}>
+          <button onclick={showCoverage} class="detailCard_CoberturasBtn">coberturas y valor asegurado</button>
+          <div class="showcoverage">
+            <template for:each={insurance.coverages} for:item="coverage">
+              <div key={coverage.coverageId} class="detailCard_wrapper">
+                <div class="detailCard_content">
+                  <h3>Cobertura</h3>
+                  <span>
+                    <p>{coverage.coverageName}</p>
+                  </span>
+                </div>
+                <div class="detailCard_content">
+                  <h3>Valor asegurado</h3>
+                  <span>
+                    <lightning-formatted-number value={coverage.coverageValue} format-style="currency"
+                      currency-code="COP" currency-display-as="symbol">
+                    </lightning-formatted-number>
+                  </span>
+                </div>
+              </div>
+            </template>
+          </div>
+        </template>
       </section>
     </main>
   </article>
