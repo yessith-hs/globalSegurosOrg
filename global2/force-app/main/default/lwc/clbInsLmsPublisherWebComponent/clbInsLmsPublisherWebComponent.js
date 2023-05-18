@@ -14,19 +14,23 @@ export default class ClbInsLmsPublisherWebComponent extends LightningElement {
   @wire(getInsurance)
   insurance({ data, error }) {
     if (data) {
-      this.loading = false
-      const response = JSON.parse(data)
-      // const insurance = response['responseData'].responseData.policys
-      const insurance = response['responseData'].responseData
+      try {
+        this.loading = false
+        const response = JSON.parse(data)
+        const insurance = response['responseData'].responseData
 
-      // * Publish LMS
-      this.publishEvent = setTimeout(() => {
-        const payload = {
-          data: insurance
-        }
+        // * Publish LMS
+        this.publishEvent = setTimeout(() => {
+          const payload = {
+            data: insurance
+          }
 
-        publish(this.messageContext, INSURANCE_LIST_CHANNEL, payload)
-      }, 1000)
+          publish(this.messageContext, INSURANCE_LIST_CHANNEL, payload)
+          console.log('Publish Data')
+        }, 1000)
+      } catch (error) {
+        console.log('Catch Error: ' + JSON.parse(error))
+      }
     }
     if (error) {
       console.log('response data Error: ' + JSON.parse(error))

@@ -32,7 +32,7 @@
         <div class="insuranceProductDescriptionBox">
           <template for:each={productConditions} for:item="condition">
             <article class="insuranceProductDescription_card" key={condition.id}>
-              <h3>{condition.title}</h3>
+              <h3><lightning-formatted-rich-text value={condition.title}></lightning-formatted-rich-text></h3>
               <lightning-formatted-rich-text value={condition.description}></lightning-formatted-rich-text>
             </article>
           </template>

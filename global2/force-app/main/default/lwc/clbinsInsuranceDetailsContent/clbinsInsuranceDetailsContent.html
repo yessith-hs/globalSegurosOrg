@@ -1,5 +1,11 @@
 <template>
-  <h2 class="insuranceDetaiContent_left--title ">Información del producto</h2>
+  <div class="insuranceDetaiContentHead">
+    <h2 class="insuranceDetaiContent_left--title ">Información del producto</h2>
+    <div class="insuranceDetaiContentState">
+      <span>Estado:</span>
+      <p style={stateColor}>{insurance.policyStatus}</p>
+    </div>
+  </div>
   <section class="insuranceDetaiContent">
     <!-- * información del producto -->
     <div class="insuranceDetaiContent_left">
@@ -51,7 +57,7 @@
             <p>{insurance.insuredName}</p>
           </div>
         </template>
-        <template if:true={insurance.guardian}>
+        <template if:true={insurance.guardian.guardianName}>
           <div class="insuranceDetaiContent_text">
             <h3>Acudiente </h3>
             <p>{insurance.guardian.guardianName} <a href={insurance.guardian.updateLink} target="_blank"

@@ -20,8 +20,12 @@
 .detailCard_head h3 {
   text-align: center;
   color: #fff;
-  font-weight: 700;
-  font-size: 0.7rem;
+}
+
+.detailCard_head h3,
+.detailCard_CoberturasBtn {
+  font-weight: 500;
+  font-size: 0.8rem;
 }
 
 .detailCard_main {
@@ -51,9 +55,8 @@
 
 .detailCard_content span {
   border: 1px solid #bdbdbd;
-  padding: 0.5rem;
+  padding: 0.3rem;
   border-radius: 0.3rem;
-  text-transform: lowercase;
 }
 
 .detailCard_coberturas {
@@ -75,6 +78,7 @@
   justify-self: center;
   border: none;
   outline: none;
+  text-transform: uppercase;
 }
 
 .showcoverage {

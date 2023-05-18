@@ -63,14 +63,34 @@ export const URL_TOPICS = {
 }
 
 export const INSURANCE_COLORS = {
-  'seguro educativo': 'rgb(0, 135, 220)',
-  'seguro vida': 'rgb(255, 90, 90)',
-  'seguro pensión': 'rgb(0, 180, 120)',
-  'accidentes personales': 'rgb(190, 45, 85)',
-  'renta voluntaria': 'rgb(155, 80, 145)',
-  'global life': 'rgb(255, 90, 90)',
-  'vida grupo deudor': 'rgb(0, 135, 220)',
-  'vida grupo voluntario': 'rgb(0, 135, 220)'
+  seguro_educativo: 'rgb(0, 135, 220)',
+  seguro_vida: 'rgb(255, 90, 90)',
+  seguro_pension: 'rgb(0, 180, 120)',
+  accidentes_personales: 'rgb(190, 45, 85)',
+  renta_voluntaria: 'rgb(155, 80, 145)',
+  global_life: 'rgb(255, 90, 90)',
+  vida_grupo_deudor: 'rgb(0, 135, 220)',
+  vida_grupo_voluntario: 'rgb(0, 135, 220)'
+}
+
+export const STATE_COLORS = {
+  vigente: 'rgb(19, 206, 102)',
+  en_pago_de_beneficios: 'rgb(45, 142, 255)',
+  en_pago_de_pension: 'rgb(0, 156, 104)',
+  poliza_pendiente_de_inicio_de_pension: 'rgb(140, 128, 0)',
+  en_pago_de_renta: 'rgb(155, 80, 145)',
+  poliza_pendiente_de_inicio_de_renta: 'rgb(140, 128, 0)',
+  prorroga: 'rgb(255, 204, 61)'
+}
+
+export const normalizeStr = str => {
+  const string = str
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .split(' ')
+    .join('_')
+    .toLowerCase()
+  return string
 }
 
 export const skeletonPosts = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 }]

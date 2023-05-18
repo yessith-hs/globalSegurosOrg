@@ -33,18 +33,19 @@ export default class ClbinsInsuranceManagement extends LightningElement {
   }
 
   async handleMessage(message) {
-    try {
-      if (message) {
+    if (message) {
+      try {
+        console.log('Subscribe To Message Channel')
         await loadScript(this, DataUserModule)
         this.insurances = window.DataUserModule.getPolicies(message.data)
 
         this.loading = false
+      } catch (error) {
+        console.log(
+          '🚀 ~ file: clbinsInsuranceManagement.js:42 ~ ClbinsInsuranceManagement ~ handleMessage ~ error:',
+          error
+        )
       }
-    } catch (error) {
-      console.log(
-        '🚀 ~ file: clbinsInsuranceManagement.js:42 ~ ClbinsInsuranceManagement ~ handleMessage ~ error:',
-        error
-      )
     }
   }
 

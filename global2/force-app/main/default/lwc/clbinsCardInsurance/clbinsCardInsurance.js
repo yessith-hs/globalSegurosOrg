@@ -1,6 +1,6 @@
 import { LightningElement, api } from 'lwc'
 import { NavigationMixin } from 'lightning/navigation'
-import { INSURANCE_COLORS } from 'c/clbinsUtils'
+import { INSURANCE_COLORS, normalizeStr } from 'c/clbinsUtils'
 
 import basePath from '@salesforce/community/basePath'
 export default class ClbinsCardInsurance extends NavigationMixin(LightningElement) {
@@ -10,7 +10,7 @@ export default class ClbinsCardInsurance extends NavigationMixin(LightningElemen
 
   connectedCallback() {
     if (this.insurance) {
-      const color = this.insurance.insuranceLineDescription.toLowerCase()
+      const color = normalizeStr(this.insurance.insuranceLineDescription)
 
       this.insuranceColor = INSURANCE_COLORS[color] ?? this.defaultColor
     }

@@ -5,14 +5,14 @@ import { subscribe, unsubscribe, APPLICATION_SCOPE, MessageContext } from 'light
 import INSURANCE_LIST_CHANNEL from '@salesforce/messageChannel/insurance__c'
 import BASE_PATH from '@salesforce/community/basePath'
 import { CurrentPageReference } from 'lightning/navigation'
-import { INSURANCE_COLORS } from 'c/clbinsUtils'
+import { INSURANCE_COLORS, normalizeStr } from 'c/clbinsUtils'
 
 export default class ClbinsInsuranceDetails extends LightningElement {
   static renderMode = 'light'
   gestionSeguros = `${BASE_PATH}/gestiona-tus-seguros`
   @track insuranceId
   @track sigleInsurance = {}
-  @track productConditions=[]
+  @track productConditions = []
   loading = true
   subscription = null
   defaultColor = 'rgb(80, 80, 80)'
@@ -47,8 +47,8 @@ export default class ClbinsInsuranceDetails extends LightningElement {
   }
 
   async handleMessage(message) {
-    try {
-      if (message) {
+    if (message) {
+      try {
         await loadScript(this, DataUserModule)
         this.sigleInsurance = window.DataUserModule.getSinglePolicy(message.data, this.insuranceId)
         this.productConditions = window.DataUserModule.getProductConditions(
@@ -58,18 +58,18 @@ export default class ClbinsInsuranceDetails extends LightningElement {
 
         // * Set color by insurance type
         if (this.sigleInsurance) {
-          const color = this.sigleInsurance.insuranceLineDescription.toLowerCase()
+          const color = normalizeStr(this.sigleInsurance.insuranceLineDescription)
 
           this.insuranceColor = INSURANCE_COLORS[color] ?? this.defaultColor
         }
 
         this.loading = false
+      } catch (error) {
+        console.log(
+          '🚀 ~ file: ClbinsInsuranceDetails.js:70 ~ ClbinsInsuranceDetails ~ handleMessage ~ error:',
+          error
+        )
       }
-    } catch (error) {
-      console.log(
-        '🚀 ~ file: ClbinsInsuranceDetails.js:70 ~ ClbinsInsuranceDetails ~ handleMessage ~ error:',
-        error
-      )
     }
   }
 
