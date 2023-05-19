@@ -39,7 +39,7 @@
   place-items: center;
   gap: 1rem;
   width: 100%;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 .detailCard_content {
@@ -71,7 +71,8 @@
 
 .detailCard_CoberturasBtn {
   height: 28px;
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
   color: #003696;
   background-color: #ffd300;
   border-radius: 0.3rem;
@@ -89,4 +90,11 @@
 .active {
   display: grid;
   gap: 1rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .detailCard_wrapper {
+    justify-content: space-between;
+    flex-direction: row;
+  }
 }

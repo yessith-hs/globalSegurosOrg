@@ -21,7 +21,7 @@ const uuidv4 = () => {
       return singlePolicy
     },
 
-    // * get product conditions
+    // * get product conditions by id
     getProductConditions: function (data, id) {
       const policies = data.policys
       const singlePolicy = policies.find(({ endorsementId }) => endorsementId === id)
